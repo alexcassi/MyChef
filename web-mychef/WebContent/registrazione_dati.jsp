@@ -43,7 +43,7 @@
 	</div>
 
 	<br>
-	<div class="w-50 p-3 card " style="background-color: #eee; text-align:center;">
+	<div class="w-50 p-3 card " style="background-color: #eee; text-align:center; position: relative; left: 25%">
 		<input class="form-control form-control-lg" type="text" placeholder="Nome">
 		<input class="form-control form-control-lg" type="text" placeholder="Cognome">
 		<form>
