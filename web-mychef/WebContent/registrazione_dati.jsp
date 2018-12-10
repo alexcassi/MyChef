@@ -4,7 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<jsp:include page="frammenti/stili.frammento"></jsp:include>
+
 <title>MyChef-registrazione dati</title>
+
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -16,8 +19,8 @@
 </style>
 </head>
 <body>
-
-	<div class="navbar navbar-primary bg-primary"
+<jsp:include page="frammenti/navbar.html"></jsp:include>
+	<%--<div class="navbar navbar-primary bg-primary"
 		style="background-color: #ffa200 !important;">
 		<h2>
 			
@@ -40,7 +43,7 @@
 			<button class="btn btn-outline-success my-2 my-sm-0 btn-secondary" type="submit">Search</button>
 		</form>
 
-	</div>
+	</div> --%>
 
 	<br>
 	<div class="w-50 p-3 card " style="background-color: #eee; text-align:center; position: relative; left: 25%">
