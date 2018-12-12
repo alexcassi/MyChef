@@ -16,6 +16,7 @@
 }
 div.absolute {psition: absolute;
 }
+
 </style>
 </head>
 <body>
@@ -28,7 +29,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Silvio Ferrari</h5>
     <p class="card-text">Specialita: Carbonara al nero di seppia</p>
     <p class="card-text">Area: Sesto San Giovanni</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none" class="btn btn-primary" >visualizza</a>
+    <a  href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary" >visualizza</a>
 	</div>
  </div>
  <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -37,7 +38,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Auguste Gusteau</h5>
     <p class="card-text">Specialita: Bouillabaisse</p>
     <p class="card-text">Area: Galleria Vittorio Emanuele II, Milano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none" class="btn btn-primary">visualizza</a>
+    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
   <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -46,16 +47,16 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Giovanni Storti</h5>
     <p class="card-text">Specialita: chips di kale</p>
     <p class="card-text">Area: Rozzano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none" class="btn btn-primary">visualizza</a>
+    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
    <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
   <img class="card-img-top" src="https://josannecassar.com/wp-content/uploads/2017/11/IMG_9505-1.jpg">
   <div class="card-body">
     <h5 class="card-title">Bruno Cuochi</h5>
-    <p class="card-text">Specialità: Aragosta alla catalana</p>
+    <p class="card-text">Specialità: Zuppa di tartaruga</p>
     <p class="card-text">Area: Sempione, Milano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none" class="btn btn-primary">visualizza</a>
+    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
     <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -64,7 +65,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Matteo Montesi</h5>
     <p class="card-text">Specialita: Anatra all'arancia</p>
     <p class="card-text">Area: Brera, Milano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none" class="btn btn-primary">visualizza</a>
+    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
      <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -73,7 +74,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Giuliana Dantes</h5>
     <p class="card-text">Specialita: Pollo al curry</p>
     <p class="card-text">Area: Corbetto</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none" class="btn btn-primary">visualizza</a>
+    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
       <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -82,7 +83,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Karl von Munchhausen</h5>
     <p class="card-text">Specialita: Tagliatelle al ragu di cinghiale</p>
     <p class="card-text">Area: San Vittore, Milano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none" class="btn btn-primary">visualizza</a>
+    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
       <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -91,32 +92,11 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Beatrice Archetti</h5>
     <p class="card-text">Specialita: Zuppa inglese</p>
     <p class="card-text">Area: Citta Studi, Milano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none" class="btn btn-primary">visualizza</a>
+    <a href="#" style="background-color:#ffa200 !important; border-style:none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
  </div>
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="..." alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
 
 </body>
 </html>
