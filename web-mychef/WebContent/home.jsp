@@ -29,7 +29,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Silvio Ferrari</h5>
     <p class="card-text">Specialita: Carbonara al nero di seppia</p>
     <p class="card-text">Area: Sesto San Giovanni</p>
-    <a  href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary" >visualizza</a>
+    <a  href="silvio_ferrari.jsp" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary" >visualizza</a>
 	</div>
  </div>
  <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -38,7 +38,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Auguste Gusteau</h5>
     <p class="card-text">Specialita: Bouillabaisse</p>
     <p class="card-text">Area: Galleria Vittorio Emanuele II, Milano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
+    <a href="auguste_gusteau.jsp" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
   <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -47,7 +47,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Giovanni Storti</h5>
     <p class="card-text">Specialita: chips di kale</p>
     <p class="card-text">Area: Rozzano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
+    <a href="giovanni_storti.jsp" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
    <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -56,7 +56,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Bruno Cuochi</h5>
     <p class="card-text">Specialità: Zuppa di tartaruga</p>
     <p class="card-text">Area: Sempione, Milano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
+    <a href="bruno_cuochi.jsp" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
     <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
