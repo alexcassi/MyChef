@@ -65,7 +65,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Matteo Montesi</h5>
     <p class="card-text">Specialita: Anatra all'arancia</p>
     <p class="card-text">Area: Brera, Milano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
+    <a href="matteo_montesi.jsp" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
      <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -74,7 +74,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Giuliana Dantes</h5>
     <p class="card-text">Specialita: Pollo al curry</p>
     <p class="card-text">Area: Corbetto</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
+    <a href="giuliana_dantes.jsp" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
       <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -83,7 +83,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Karl von Munchhausen</h5>
     <p class="card-text">Specialita: Tagliatelle al ragu di cinghiale</p>
     <p class="card-text">Area: San Vittore, Milano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
+    <a href="karl_von_munchhausen.jsp" style="background-color:#ffa200 !important; border-style: none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
       <div class="card" style="width: 18rem; left: 20px;margin: 15px;">
@@ -92,7 +92,7 @@ div.absolute {psition: absolute;
     <h5 class="card-title">Beatrice Archetti</h5>
     <p class="card-text">Specialita: Zuppa inglese</p>
     <p class="card-text">Area: Citta Studi, Milano</p>
-    <a href="#" style="background-color:#ffa200 !important; border-style:none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
+    <a href="beatrice_archetti.jsp" style="background-color:#ffa200 !important; border-style:none; margin-bottom:20px" class="btn btn-primary">visualizza</a>
   </div>
  </div>
  </div>
