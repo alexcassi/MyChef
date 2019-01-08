@@ -12,7 +12,7 @@ import javax.persistence.ManyToMany;
  *
  */
 @Entity
-public class Ricette {
+public class Ricetta {
 
 	@Id
 	private int ID;

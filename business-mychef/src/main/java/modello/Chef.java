@@ -23,7 +23,7 @@ public class Chef extends Utente {
 	private int prezzo; //in centesimi
 	
 	@ManyToMany(mappedBy="chefs")
-	private List<Ricette> ricette;
+	private List<Ricetta> ricette;
 	
 	public String getProvincia() {
 		return provincia;
