@@ -13,16 +13,18 @@
 
 
 <br>
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-     <button type="button" class="btn btn-success">sono uno<img src="chef.jpg"></img></button>
-    </div>
-    <div class="col-sm">
-      <button type="button" class="btn btn-success">sono un<img src="cliente.png"></img></button>
-    </div>
-   </div>
+
+<div class=" btn-group btn-group-lg">
+  <button type="button" class="btn btn-success">sono uno<img src="frammenti/chef.jpg"></img></button> &nbsp;
+  <button type="button" class="btn btn-success">sono un<img src="frammenti/cliente.png"></img></button>
+ 
+
 </div>
+
+
+
+
+
 
 
 

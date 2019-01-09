@@ -1,21 +1,27 @@
 package modello;
 
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+
+/**
+ * Entity implementation class for Entity: Utente
+ *
+ */
+@Entity
+@Inheritance(strategy=InheritanceType.JOINED)
 
 public class Utente {
 
-	private int ID;
+	@Id
+	@Column(nullable=false)
 	private String email;
+	@Column(nullable=false)
 	private String password;
-	private String nome;
-	private String cognome;
-	private int numero_telefono;
 	
-	public int getID() {
-		return ID;
-	}
-	public void setID(int iD) {
-		ID = iD;
-	}
 	public String getEmail() {
 		return email;
 	}
@@ -28,23 +34,5 @@ public class Utente {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public String getCognome() {
-		return cognome;
-	}
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
-	public int getNumero_telefono() {
-		return numero_telefono;
-	}
-	public void setNumero_telefono(int numero_telefono) {
-		this.numero_telefono = numero_telefono;
-	}
-
+	
 }
