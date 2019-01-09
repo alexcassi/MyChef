@@ -23,19 +23,19 @@ div.absolute {psition: absolute;
 
 	<div class="row">
 	
-<jsp:include page="frammenti\Card.html"></jsp:include>
+<jsp:include page="frammenti\Card.jsp"></jsp:include>
 <hr>
-<jsp:include page="frammenti\Card.html"></jsp:include> 
+<jsp:include page="frammenti\Card.jsp"></jsp:include> 
 <hr>
-<jsp:include page="frammenti\Card.html"></jsp:include> 
+<jsp:include page="frammenti\Card.jsp"></jsp:include> 
 <hr>
-<jsp:include page="frammenti\Card.html"></jsp:include> 
+<jsp:include page="frammenti\Card.jsp"></jsp:include> 
 <hr>
-<jsp:include page="frammenti\Card.html"></jsp:include> 
+<jsp:include page="frammenti\Card.jsp"></jsp:include> 
 <hr>
-<jsp:include page="frammenti\Card.html"></jsp:include> 
+<jsp:include page="frammenti\Card.jsp"></jsp:include> 
 <hr>
-<jsp:include page="frammenti\Card.html"></jsp:include> 
+<jsp:include page="frammenti\Card.jsp"></jsp:include> 
  </div>
 
 
