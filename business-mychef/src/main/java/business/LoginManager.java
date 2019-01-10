@@ -25,6 +25,7 @@ public class LoginManager {
 				System.out.println("Driver non trovato");
 			}
 			catch (SQLException e) {
+				e.printStackTrace();
 				System.out.println("Conn fallita");
 			}
 		return result;
