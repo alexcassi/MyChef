@@ -15,7 +15,7 @@
 		.navbar {
 			min-height: 100px
 			}
-		div.absolute {psition: absolute;
+		div.absolute {psition: relative;
 		}
 		</style>
 	</head>
@@ -35,7 +35,5 @@
 				<hr>
 			<jsp:include page="card_home/card.jsp"></jsp:include> 
 		 </div>
-
-
 	</body>
 </html>
