@@ -8,22 +8,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import business.SignUpManager;
-import utility.JPAUtility;
+import business.SignUpClienteManager;
 
 /**
  * Servlet implementation class SignUpControleer
  */
-@WebServlet("/SignUpController")
-public class SignUpController extends HttpServlet {
+@WebServlet("/SignUpClienteController")
+public class SignUpClienteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public SignUpController() {
+	public SignUpClienteController() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -42,11 +40,11 @@ public class SignUpController extends HttpServlet {
 		String password = new String(request.getParameter("password"));
 		request.getSession().removeAttribute("errorMessage1");
 		try {
-			if (SignUpManager.checkUsernameExists(email)) {
+			if (SignUpClienteManager.checkUsernameExists(email)) {
 				response.getWriter().append(
 						"{\"esito\": false, \"messaggio\": \"Attenzione! L'indirizzo email fornito corrisponde ad un utente già registrato.\"}");
 			} else {
-				SignUpManager.signUp(nome, cognome, citta, provincia, indirizzo, email, password);
+				SignUpClienteManager.signUp(nome, cognome, citta, provincia, indirizzo, email, password);
 				response.getWriter().append("{\"esito\": true, \"messaggio\": \"ok\"}");
 			}
 		} catch (Exception e) {

@@ -24,7 +24,7 @@ public class Ricetta {
 	private String tempo_preparazione;
 	
 	@ManyToMany
-	private List<Chef> chefs;
+	private List<Chef> chef;
 	
 	public String getNome_ricetta() {
 		return nome_ricetta;
@@ -47,6 +47,5 @@ public class Ricetta {
 	public int getID() {
 		return ID;
 	}
-	
    
 }

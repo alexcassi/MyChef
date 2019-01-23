@@ -1,7 +1,6 @@
 package modello;
 
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
@@ -21,10 +20,17 @@ public class Utente {
 	private String email;
 	@Column(nullable=false)
 	private String password;
-	
 	private String nome;
 	private String cognome;
 	
+	@Column(nullable=false)
+	private String provincia;
+	@Column(nullable=false)
+	private String comune;
+	private String frazione;
+	@Column(nullable=false)
+	private String indirizzo;
+
 	private Double latitudine;
 	private Double longitudine;
 	
@@ -65,4 +71,29 @@ public class Utente {
 		this.longitudine = longitudine;
 	}
 	
+	public String getProvincia() {
+		return provincia;
+	}
+	public void setProvincia(String provincia) {
+		this.provincia = provincia;
+	}
+	public String getComune() {
+		return comune;
+	}
+	public void setComune(String comune) {
+		this.comune = comune;
+	}
+	public String getFrazione() {
+		return frazione;
+	}
+	public void setFrazione(String frazione) {
+		this.frazione = frazione;
+	}
+	public String getIndirizzo() {
+		return indirizzo;
+	}
+	public void setIndirizzo(String indirizzo) {
+		this.indirizzo = indirizzo;
+	}
+
 }

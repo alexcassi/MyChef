@@ -2,10 +2,11 @@ package business;
 
 import javax.persistence.EntityManager;
 
+import modello.Cliente;
 import modello.Utente;
 import utility.JPAUtility;
 
-public class SignUpManager {
+public class SignUpClienteManager {
 	public static boolean checkUsernameExists(String email) {
 		return JPAUtility.getEntityManager().find(Utente.class, email) != null;
 	}
@@ -13,11 +14,14 @@ public class SignUpManager {
 	public static void signUp(String nome, String cognome, String citta, String provincia, String indirizzo,
 			String email, String password) {
 		EntityManager em = JPAUtility.getEntityManager();
-		Utente u = new Utente();
+		Cliente u = new Cliente();
 		u.setEmail(email);
 		u.setPassword(password);
 		u.setNome(nome);
 		u.setCognome(cognome);
+		u.setComune(citta);
+		u.setProvincia(provincia);
+		u.setIndirizzo(indirizzo);
 		
 		em.getTransaction().begin();
 		em.persist(u);
