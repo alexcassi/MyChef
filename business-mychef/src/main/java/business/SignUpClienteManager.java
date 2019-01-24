@@ -11,7 +11,7 @@ public class SignUpClienteManager {
 		return JPAUtility.getEntityManager().find(Utente.class, email) != null;
 	}
 
-	public static void signUp(String nome, String cognome, String citta, String provincia, String indirizzo,
+	public static void signUp(String nome, String cognome, String comune, String provincia, String indirizzo,
 			String email, String password) {
 		EntityManager em = JPAUtility.getEntityManager();
 		Cliente u = new Cliente();
@@ -19,10 +19,10 @@ public class SignUpClienteManager {
 		u.setPassword(password);
 		u.setNome(nome);
 		u.setCognome(cognome);
-		u.setComune(citta);
+		u.setComune(comune);
 		u.setProvincia(provincia);
 		u.setIndirizzo(indirizzo);
-		
+
 		em.getTransaction().begin();
 		em.persist(u);
 		em.getTransaction().commit();

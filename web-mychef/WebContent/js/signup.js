@@ -3,7 +3,7 @@ $(function() {
 	$('#btnRegistra').click(e => {
 		e.preventDefault();
 		$.ajax({
-			url: 'SignUpController',
+			url: 'SignUpClienteController',
 			method: 'post',
 			data: $('#fmSignup').serialize()
 		})

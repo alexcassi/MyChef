@@ -11,8 +11,7 @@ public class SignUpChefManager {
 		return JPAUtility.getEntityManager().find(Utente.class, email) != null;
 	}
 
-	public static void signUp(String nome, String cognome, String citta, String provincia, String indirizzo,
-			String email, String password) {
+	public static void signUp(String nome, String cognome, String email, String password) {
 		EntityManager em = JPAUtility.getEntityManager();
 		Chef u = new Chef();
 		u.setEmail(email);

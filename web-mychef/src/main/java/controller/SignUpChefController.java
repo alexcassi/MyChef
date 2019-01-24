@@ -8,19 +8,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import business.SignUpClienteManager;
+import business.SignUpChefManager;
 
 /**
- * Servlet implementation class SignUpClienteControleer
+ * Servlet implementation class SignUpChefControleer
  */
-@WebServlet("/SignUpClienteController")
-public class SignUpClienteController extends HttpServlet {
+@WebServlet("/SignUpChefController")
+public class SignUpChefController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public SignUpClienteController() {
+	public SignUpChefController() {
 		super();
 	}
 
@@ -34,18 +34,15 @@ public class SignUpClienteController extends HttpServlet {
 		response.setContentType("application/json");
 		String nome = new String(request.getParameter("nome"));
 		String cognome = new String(request.getParameter("cognome"));
-		String comune = new String(request.getParameter("comune"));
-		String provincia = new String(request.getParameter("provincia"));
-		String indirizzo = new String(request.getParameter("indirizzo"));
 		String email = new String(request.getParameter("email"));
 		String password = new String(request.getParameter("password"));
 
 		try {
-			if (SignUpClienteManager.checkUsernameExists(email)) {
+			if (SignUpChefManager.checkUsernameExists(email)) {
 				response.getWriter().append(
 						"{\"esito\": false, \"messaggio\": \"Attenzione! L'indirizzo email fornito corrisponde ad un utente già registrato.\"}");
 			} else {
-				SignUpClienteManager.signUp(nome, cognome, comune, provincia, indirizzo, email, password);
+				SignUpChefManager.signUp(nome, cognome, email, password);
 				response.getWriter().append("{\"esito\": true, \"messaggio\": \"ok\"}");
 			}
 		} catch (Exception e) {

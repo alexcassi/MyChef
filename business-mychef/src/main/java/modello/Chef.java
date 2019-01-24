@@ -12,17 +12,9 @@ import javax.persistence.ManyToMany;
 @Entity
 public class Chef extends Utente {
 
-	private int prezzo; //in centesimi
-	
-	@ManyToMany(mappedBy="chef")
+	// private int prezzo; // in centesimi
+
+	@ManyToMany(mappedBy = "chef")
 	private List<Ricetta> ricette;
-	
-	public int getPrezzo() {
-		return prezzo;
-	}
-	public void setPrezzo(int prezzo) {
-		this.prezzo = prezzo;
-	}
-	
-   
+
 }
