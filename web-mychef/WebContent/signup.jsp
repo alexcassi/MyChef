@@ -17,6 +17,12 @@
 .navbar {
 	min-height: 100px
 }
+
+input[type=number] {
+width: 150px;}
+
+input[type=time] {
+width: 150px;}
 </style>
 
 </head>
@@ -39,13 +45,15 @@
     <a class="nav-item nav-link" onclick="asCliente()" id="nav-profile-tab" data-toggle="tab" href="#nav-cliente" role="tab" aria-controls="nav-cliente" aria-selected="false">Cliente</a>
   </div>
 </nav>
-<div class="tab-content" id="nav-tabContent">
+<div class="tab-content" id="nav-tabContent" align="center">
+  <!-- da portare in un form a parte specifico per le ricette -->
   <div class="tab-pane fade show active" id="nav-chef" role="tabpanel" aria-labelledby="nav-chef-tab">
   <input class="form-control form-control-lg" id="nomeric" type="text" placeholder="Nome Ricetta" name="nome_ricetta" autocomplete="on" required/>
   <input class="form-control form-control-lg" id="ingr" type="text" placeholder="Ingredienti" name="ingredienti" autocomplete="on" required/>
-  <input class="form-control form-control-lg" id="tempoprep" type="text" placeholder="Tempo di Preparazione" name="tempo_preparazione" autocomplete="on" required/>
-  <input class="form-control form-control-lg" id="pr" type="text" placeholder="Prezzo" name="prezzo" autocomplete="on" required/>
+  <input style="display:inline" class="form-control form-control-lg" id="tempoprep" type="number" min="0" placeholder="Tempo di Preparazione" name="tempo_preparazione" autocomplete="on" required/>&nbsp min &nbsp
+  <input style="display:inline" class="form-control form-control-lg" id="pr" type="number" min="0" step="0.01" placeholder="Prezzo" name="prezzo" autocomplete="on" required/>&nbsp &#8364
   </div>
+  <!-- 	 -->
   <div class="tab-pane fade" id="nav-cliente" role="tabpanel" aria-labelledby="nav-cliente-tab">
   <input class="form-control form-control-lg" id="ind" type="text" placeholder="Indirizzo" name="indirizzo" autocomplete="on"/>
   <input class="form-control form-control-lg" id="prov" type="text"  placeholder="Provincia" name="provincia" autocomplete="on"/>
