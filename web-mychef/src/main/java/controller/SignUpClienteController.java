@@ -42,15 +42,16 @@ public class SignUpClienteController extends HttpServlet {
 
 		try {
 			if (SignUpClienteManager.checkUsernameExists(email)) {
-				request.getSession().setAttribute("errorMessage", "Email gi√† utilizzata, usare un'altra mail.");
+				request.getSession().setAttribute("errorMessage", "Email gi‡† utilizzata, usare un'altra mail.");
 				request.getRequestDispatcher("signup.jsp").forward(request, response);
 			} else {
+				SignUpClienteManager.signUp(nome, cognome, comune, provincia, indirizzo, email, password);
 				request.getSession().setAttribute("errorMessage", "");
 				request.getRequestDispatcher("welcome.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			response.getWriter().append("errore, riprovare, se persiste contattarci");
+			response.getWriter().append("Errore interno. Riprovare. Se persiste contattarci");
 		}
 	}
 }

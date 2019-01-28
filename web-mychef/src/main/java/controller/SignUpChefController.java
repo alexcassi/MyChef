@@ -45,15 +45,16 @@ public class SignUpChefController extends HttpServlet {
 
 		try {
 			if (SignUpChefManager.checkUsernameExists(email)) {
-				request.getSession().setAttribute("errorMessage", "Email gi√† utilizzata, usare un'altra mail.");
+				request.getSession().setAttribute("errorMessage", "Email gi‡† utilizzata, usare un'altra mail.");
 				request.getRequestDispatcher("signup.jsp").forward(request, response);
 			} else {
+				SignUpChefManager.signUp(nome, cognome, email, password, nuova_ricetta);
 				request.getSession().setAttribute("errorMessage", "");
 				request.getRequestDispatcher("welcome.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			response.getWriter().append("errore sconosciuto, riprovare, se persiste contattarci");
+			response.getWriter().append("Errore interno. Riprovare. Se persiste contattarci");
 		}
 	}
 }
