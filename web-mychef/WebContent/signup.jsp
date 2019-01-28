@@ -29,7 +29,7 @@ width: 150px;}
 <body>
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 	<br>
-	<div class="w-50 p-3 card " style="background-color: #eee; text-align:center; position: relative; left: 25%">
+	<div class="w-50 p-3 card " style="background-color: #eee; text-align:center; position: relative; left: 25%;min-width:250px;">
 		<form id="f" name="signup" method="post"
 		action="SignUpChefController">
 		<div style="color: #FF0000;">${errorMessage1}</div>
@@ -39,19 +39,23 @@ width: 150px;}
 		<input class="form-control form-control-lg" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'La password deve essere di almeno 6 caratteri!' : ''); if(this.checkValidity()) form.confpassword.pattern = this.value;"  placeholder="Password" name="password" required/>
 		<input class="form-control form-control-lg" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Le password non coincidono!' : '');"placeholder="Conferma Password" name="confpassword" required/>
 	
+	<div style="padding-top:16px;">
 	<nav class="nav justify-content-center">
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <a class="nav-item nav-link active" onclick="asChef()" id="nav-home-tab" data-toggle="tab" href="#nav-chef" role="tab" aria-controls="nav-chef" aria-selected="true">Chef</a>
     <a class="nav-item nav-link" onclick="asCliente()" id="nav-profile-tab" data-toggle="tab" href="#nav-cliente" role="tab" aria-controls="nav-cliente" aria-selected="false">Cliente</a>
   </div>
 </nav>
+</div>
 <div class="tab-content" id="nav-tabContent" align="center">
   <!-- da portare in un form a parte specifico per le ricette -->
   <div class="tab-pane fade show active" id="nav-chef" role="tabpanel" aria-labelledby="nav-chef-tab">
   <input class="form-control form-control-lg" id="nomeric" type="text" placeholder="Nome Ricetta" name="nome_ricetta" autocomplete="on" required/>
   <input class="form-control form-control-lg" id="ingr" type="text" placeholder="Ingredienti" name="ingredienti" autocomplete="on" required/>
+  <div align="justify">
   <input style="display:inline" class="form-control form-control-lg" id="tempoprep" type="number" min="0" placeholder="Tempo di Preparazione" name="tempo_preparazione" autocomplete="on" required/>&nbsp min &nbsp
   <input style="display:inline" class="form-control form-control-lg" id="pr" type="number" min="0" step="0.01" placeholder="Prezzo" name="prezzo" autocomplete="on" required/>&nbsp &#8364
+  </div>
   </div>
   <!-- 	 -->
   <div class="tab-pane fade" id="nav-cliente" role="tabpanel" aria-labelledby="nav-cliente-tab">
@@ -62,8 +66,9 @@ width: 150px;}
   </div>
   
 </div>	
-		
-		<input type="submit" class="btn btn btn-success" value="Clicca per Registrarti">
+		<div style="padding-top:16px;">
+		<input type="submit" class="btn btn btn-outline-success" value="Clicca per Registrarti">
+		</div>
 		</form>
 	</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -23,7 +23,9 @@
 		<div style="color: #FF0000;">${errorMessage}</div>
 		<input class="form-control form-control-lg" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Inserire un indirizzo email valido!' : '');" placeholder="Email"name="email" autocomplete="on" required/>
 		<input class="form-control form-control-lg" type="password" placeholder="Password" name="password" required/>
+		<div style="padding-top:16px;">
 		<input type="submit" class="btn btn btn-outline-success" value="Clicca per accedere">
+		</div>
 		</form>
 	</div>
 
