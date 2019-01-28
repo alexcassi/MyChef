@@ -42,15 +42,15 @@ public class SignUpClienteController extends HttpServlet {
 
 		try {
 			if (SignUpClienteManager.checkUsernameExists(email)) {
-				response.getWriter().append(
-						"{\"esito\": false, \"messaggio\": \"Attenzione! L'indirizzo email fornito corrisponde ad un utente gi‡ registrato.\"}");
+				request.getSession().setAttribute("errorMessage", "Email gi√† utilizzata, usare un'altra mail.");
+				request.getRequestDispatcher("signup.jsp").forward(request, response);
 			} else {
-				SignUpClienteManager.signUp(nome, cognome, comune, provincia, indirizzo, email, password);
-				response.getWriter().append("{\"esito\": true, \"messaggio\": \"ok\"}");
+				request.getSession().setAttribute("errorMessage", "");
+				request.getRequestDispatcher("welcome.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			response.getWriter().append("{\"esito\": true, \"messaggio\": \"" + e.getMessage() + "\"}");
+			response.getWriter().append("errore, riprovare, se persiste contattarci");
 		}
 	}
 }
