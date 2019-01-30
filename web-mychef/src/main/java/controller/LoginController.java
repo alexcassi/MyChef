@@ -35,7 +35,7 @@ public class LoginController extends HttpServlet {
 		request.getSession().removeAttribute("errorMessage");
 		if (LoginManager.login(email, password)) {
 
-			request.getRequestDispatcher("welcome.jsp").forward(request, response);
+			request.getRequestDispatcher("/profilo_chef.jsp?email=" + email).forward(request, response);
 		} else {
 			request.getSession().setAttribute("errorMessage", "Email o password errati.");
 			request.getRequestDispatcher("/login.jsp").include(request, response);
