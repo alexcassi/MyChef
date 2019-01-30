@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import business.LoginManager;
 import modello.Chef;
+import modello.Cliente;
 
 /**
  * Servlet implementation class LoginController
@@ -34,11 +35,15 @@ public class LoginController extends HttpServlet {
 		String email = new String(request.getParameter("email"));
 		String password = new String(request.getParameter("password"));
 		request.getSession().removeAttribute("errorMessage");
-		Chef c = LoginManager.login(email, password);
+		Chef c = LoginManager.loginChef(email, password);
+		Cliente u = LoginManager.loginCliente(email, password);
 		if (c != null) {
 			request.getSession().setAttribute("chef", c);
 			request.getRequestDispatcher("/profilo_chef.jsp?email=" + email).forward(request, response);
-		} else {
+		} else if (u != null) {
+			request.getSession().setAttribute("cliente", u);
+			request.getRequestDispatcher("/profilo_cliente.jsp?email=" + email).forward(request, response);
+		}else {
 			request.getSession().setAttribute("errorMessage", "Email o password errati.");
 			request.getRequestDispatcher("/login.jsp").include(request, response);
 		}

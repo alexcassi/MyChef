@@ -13,9 +13,6 @@
 
 <br>
 <h1><span id="lblNome"></span> <span id="lblCognome"></span></h1>
-	<br>
-	la mia specialità ${ chef.ricette[0].nome_ricetta }
-	<br>
 	<img src="immagini_piatti/zuppaing.jpg" height="25%" width="25%"></img>
 	<br>
 	l'Area dove mi trovo è Citta Studi, Milano
@@ -31,9 +28,9 @@
  	
 	<jsp:include page="frammenti/scripts.jsp"></jsp:include>
 	<script>
-		sessionStorage.setItem('chef', '${ chef.email }');
+		sessionStorage.setItem('cliente', '${ cliente.email }');
 	</script>
-	<script src="js/profiloChef.js"></script>
+	<script src="js/profiloCliente.js"></script>
 	
 </body>
 </html>
