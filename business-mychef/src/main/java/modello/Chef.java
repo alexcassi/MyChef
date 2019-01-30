@@ -9,6 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Entity implementation class for Entity: Chef
  *
@@ -18,6 +20,7 @@ public class Chef extends Utente {
 
 	// Private int prezzo; // in centesimi
 
+	@JsonIgnore
 	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	@JoinTable(name = "chefs_ricette", joinColumns = @JoinColumn(name = "email"), inverseJoinColumns = @JoinColumn(name = "id"))
 	private List<Ricetta> ricette = new ArrayList<Ricetta>();

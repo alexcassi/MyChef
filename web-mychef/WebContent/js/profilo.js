@@ -1,5 +1,5 @@
 $(() => {
-	var email = getUrlVars()["email"];
+	var email = sessionStorage.getItem('chef');
 	$.ajax({
 		url: 'leggiUtente?email=' + email,
 		method: 'get'

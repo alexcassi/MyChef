@@ -12,7 +12,7 @@ public class SignUpChefManager {
 		return JPAUtility.getEntityManager().find(Utente.class, email) != null;
 	}
 
-	public static void signUp(String nome, String cognome, String email, String password, Ricetta r) {
+	public static Chef signUp(String nome, String cognome, String email, String password, Ricetta r) {
 		EntityManager em = JPAUtility.getEntityManager();
 		Chef u = new Chef();
 		u.setEmail(email);
@@ -24,5 +24,6 @@ public class SignUpChefManager {
 		em.getTransaction().begin();
 		em.persist(u);
 		em.getTransaction().commit();
+		return u;
 	}
 }

@@ -14,7 +14,7 @@
 <br>
 <h1><span id="lblNome"></span> <span id="lblCognome"></span></h1>
 	<br>
-	la mia specialità
+	la mia specialità ${ chef.ricette[0].nome_ricetta }
 	<br>
 	<img src="immagini_piatti/zuppaing.jpg" height="25%" width="25%"></img>
 	<br>
@@ -30,7 +30,9 @@
 	  crossorigin="anonymous"></script>
  	
 	<jsp:include page="frammenti/scripts.jsp"></jsp:include>
-	
+	<script>
+		sessionStorage.setItem('chef', '${ chef.email }');
+	</script>
 	<script src="js/profilo.js"></script>
 	
 </body>

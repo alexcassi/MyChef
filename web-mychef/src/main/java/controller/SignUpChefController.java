@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import business.SignUpChefManager;
+import modello.Chef;
 import modello.Ricetta;
 
 /**
@@ -46,11 +47,13 @@ public class SignUpChefController extends HttpServlet {
 		try {
 			if (SignUpChefManager.checkUsernameExists(email)) {
 				request.getSession().setAttribute("errorMessage", "Email già  utilizzata, usare un'altra mail.");
+				request.setAttribute("nome", nome);
 				request.getRequestDispatcher("signup.jsp").forward(request, response);
 			} else {
-				SignUpChefManager.signUp(nome, cognome, email, password, nuova_ricetta);
+				Chef c = SignUpChefManager.signUp(nome, cognome, email, password, nuova_ricetta);
 				request.getSession().setAttribute("errorMessage", "");
-				request.getRequestDispatcher("welcome.jsp").forward(request, response);
+				request.getSession().setAttribute("chef", c);
+				request.getRequestDispatcher("profilo_chef.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
