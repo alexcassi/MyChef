@@ -13,14 +13,11 @@
 
 <br>
 <h1><span id="lblNome"></span> <span id="lblCognome"></span></h1>
-	<img src="immagini_piatti/zuppaing.jpg" height="25%" width="25%"></img>
 	<br>
-	l'Area dove mi trovo è Citta Studi, Milano
+	l'Area dove mi trovo è ${ cliente.provincia }, ${ cliente.comune }, ${ cliente.indirizzo }
 
 	<br>
-	<div id="map">
- 	</div>
- 	
+	 	
  		<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
 	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

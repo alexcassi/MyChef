@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>myhef- beatrice archetti</title>
+<title>profilo</title>
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 </head>
 <body>
@@ -16,13 +16,21 @@
 	<br>
 	la mia specialità ${ chef.ricette[0].nome_ricetta }
 	<br>
-	<img src="immagini_piatti/zuppaing.jpg" height="25%" width="25%"></img>
 	<br>
-	l'Area dove mi trovo è Citta Studi, Milano
+	l'Area dove mi trovo è ${ chef.luogo_lavoro }
 
 	<br>
-	<div id="map">
- 	</div>
+
+
+<form id="form_ricetta" name="form_ricetta" method="post"
+		action="NewRicettaController">
+  <input class="form-control form-control-lg" id="nomeric" type="text" placeholder="Nome Ricetta" name="nome_ricetta" autocomplete="on" required/>
+  <input class="form-control form-control-lg" id="ingr" type="text" placeholder="Ingredienti" name="ingredienti" autocomplete="on" required/>
+  <input style="display:inline" class="form-control form-control-lg" id="tempoprep" type="number" min="0" placeholder="Tempo di Preparazione" name="tempo_preparazione" autocomplete="on" required/>&nbsp min &nbsp
+  <input style="display:inline" class="form-control form-control-lg" id="pr" type="number" min="0" step="0.01" placeholder="Prezzo" name="prezzo" autocomplete="on" required/>&nbsp &#8364
+		</form>
+
+
  	
  		<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -34,6 +42,10 @@
 		sessionStorage.setItem('chef', '${ chef.email }');
 	</script>
 	<script src="js/profiloChef.js"></script>
+	
+			 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	
 </body>
 </html>

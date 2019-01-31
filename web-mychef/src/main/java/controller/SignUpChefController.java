@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import business.SignUpChefManager;
 import modello.Chef;
-import modello.Ricetta;
 
 /**
  * Servlet implementation class SignUpChefControleer
@@ -38,20 +37,20 @@ public class SignUpChefController extends HttpServlet {
 		String cognome = new String(request.getParameter("cognome"));
 		String email = new String(request.getParameter("email"));
 		String password = new String(request.getParameter("password"));
-		Ricetta nuova_ricetta = new Ricetta();
+		String luogo_lavoro = new String(request.getParameter("luogo_lavoro"));		
+		
+		/*Ricetta nuova_ricetta = new Ricetta();
 		nuova_ricetta.setNome_ricetta(request.getParameter("nome_ricetta"));
 		nuova_ricetta.setIngredienti(request.getParameter("ingredienti"));
 		nuova_ricetta.setTempo_preparazione(request.getParameter("tempo_preparazione"));
-		nuova_ricetta.setPrezzo(Double.valueOf(request.getParameter("prezzo")));
+		nuova_ricetta.setPrezzo(Double.valueOf(request.getParameter("prezzo")));*/
 
 		try {
 			if (SignUpChefManager.checkUsernameExists(email)) {
-				request.getSession().setAttribute("errorMessage", "Email già  utilizzata, usare un'altra mail.");
-				request.setAttribute("nome", nome);
+				request.setAttribute("errorMessage", "Email già  utilizzata, usare un'altra mail.");
 				request.getRequestDispatcher("signup.jsp").forward(request, response);
 			} else {
-				Chef c = SignUpChefManager.signUp(nome, cognome, email, password, nuova_ricetta);
-				request.getSession().setAttribute("errorMessage", "");
+				Chef c = SignUpChefManager.signUp(nome, cognome, email, password, luogo_lavoro);
 				request.getSession().setAttribute("chef", c);
 				request.getRequestDispatcher("profilo_chef.jsp").forward(request, response);
 			}

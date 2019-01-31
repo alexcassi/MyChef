@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import business.SignUpClienteManager;
+import modello.Cliente;
 
 /**
  * Servlet implementation class SignUpClienteControleer
@@ -42,11 +43,11 @@ public class SignUpClienteController extends HttpServlet {
 
 		try {
 			if (SignUpClienteManager.checkUsernameExists(email)) {
-				request.getSession().setAttribute("errorMessage", "Email già  utilizzata, usare un'altra mail.");
+				request.setAttribute("errorMessage", "Email già  utilizzata, usare un'altra mail.");
 				request.getRequestDispatcher("signup.jsp").forward(request, response);
 			} else {
-				SignUpClienteManager.signUp(nome, cognome, comune, provincia, indirizzo, email, password);
-				request.getSession().setAttribute("errorMessage", "");
+				Cliente u = SignUpClienteManager.signUp(nome, cognome, comune, provincia, indirizzo, email, password);
+				request.getSession().setAttribute("cliente", u);
 				request.getRequestDispatcher("profilo_cliente.jsp").forward(request, response);
 			}
 		} catch (Exception e) {

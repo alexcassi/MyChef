@@ -48,16 +48,9 @@ width: 150px;}
 </nav>
 </div>
 <div class="tab-content" id="nav-tabContent" align="center">
-  <!-- da portare in un form a parte specifico per le ricette -->
   <div class="tab-pane fade show active" id="nav-chef" role="tabpanel" aria-labelledby="nav-chef-tab">
-  <input class="form-control form-control-lg" id="nomeric" type="text" placeholder="Nome Ricetta" name="nome_ricetta" autocomplete="on" required/>
-  <input class="form-control form-control-lg" id="ingr" type="text" placeholder="Ingredienti" name="ingredienti" autocomplete="on" required/>
-  <div align="justify">
-  <input style="display:inline" class="form-control form-control-lg" id="tempoprep" type="number" min="0" placeholder="Tempo di Preparazione" name="tempo_preparazione" autocomplete="on" required/>&nbsp min &nbsp
-  <input style="display:inline" class="form-control form-control-lg" id="pr" type="number" min="0" step="0.01" placeholder="Prezzo" name="prezzo" autocomplete="on" required/>&nbsp &#8364
+  	  <input class="form-control form-control-lg" id="luogo_lavoro" type="text"  placeholder="Luogo di lavoro" name="luogo_lavoro" autocomplete="on" required/>
   </div>
-  </div>
-  <!-- 	 -->
   <div class="tab-pane fade" id="nav-cliente" role="tabpanel" aria-labelledby="nav-cliente-tab">
   <input class="form-control form-control-lg" id="ind" type="text" placeholder="Indirizzo" name="indirizzo" autocomplete="on"/>
   <input class="form-control form-control-lg" id="prov" type="text"  placeholder="Provincia" name="provincia" autocomplete="on"/>
@@ -81,17 +74,11 @@ width: 150px;}
 		document.getElementById("ind").removeAttribute("required");
 		document.getElementById("prov").removeAttribute("required");
 		document.getElementById("cit").removeAttribute("required");
-		document.getElementById("nomeric").setAttribute("required","");
-		document.getElementById("ingr").setAttribute("required","");
-		document.getElementById("tempoprep").setAttribute("required","");
-		document.getElementById("pr").setAttribute("required","");
+		document.getElementById("luogo_lavoro").setAttribute("required","");
 	}
 	function asCliente() {
 		document.getElementById("f").setAttribute("action", "SignUpClienteController");
-		document.getElementById("nomeric").removeAttribute("required");
-		document.getElementById("ingr").removeAttribute("required");
-		document.getElementById("tempoprep").removeAttribute("required");
-		document.getElementById("pr").removeAttribute("required");
+		document.getElementById("luogo_lavoro").removeAttribute("required");
 		document.getElementById("ind").setAttribute("required","");
 		document.getElementById("prov").setAttribute("required","");
 		document.getElementById("cit").setAttribute("required","");
