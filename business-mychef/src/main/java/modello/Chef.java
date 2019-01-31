@@ -18,8 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Chef extends Utente {
 
-	// Private int prezzo; // in centesimi
-
+	private String luogo_lavoro;
 	@JsonIgnore
 	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	@JoinTable(name = "chefs_ricette", joinColumns = @JoinColumn(name = "email"), inverseJoinColumns = @JoinColumn(name = "id"))
@@ -35,6 +34,14 @@ public class Chef extends Utente {
 
 	public void setRicette(List<Ricetta> ricette) {
 		this.ricette = ricette;
+	}
+
+	public String getLuogo_lavoro() {
+		return luogo_lavoro;
+	}
+
+	public void setLuogo_lavoro(String luogo_lavoro) {
+		this.luogo_lavoro = luogo_lavoro;
 	}
 
 }
