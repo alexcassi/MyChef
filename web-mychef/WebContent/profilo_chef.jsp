@@ -7,14 +7,6 @@
 <title>profilo</title>
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 
-<style type="text/css">
-input[type=number] {
-width: 150px;}
-input[type=time] {
-width: 150px;}
-</style>
-
-
 </head>
 <body>
 <jsp:include page="frammenti/navbar.html"></jsp:include>
