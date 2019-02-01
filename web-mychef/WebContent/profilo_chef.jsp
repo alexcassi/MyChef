@@ -27,11 +27,9 @@ width: 150px;}
 	<br>
 	<br>
 	l'Area dove mi trovo è ${ chef.luogo_lavoro }
-
 	<br>
-
-
-
+ 	<br>
+ 	<a href = "addRicetta.jsp">aggiungi ricetta</a>
 
 
  	

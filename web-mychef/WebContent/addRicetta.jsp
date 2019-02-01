@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 
-<title>MyChef-aggiungi ricetta</title>
+<title>aggiungi ricetta</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -30,6 +30,9 @@
   <input class="form-control form-control-lg" id="ingr" type="text" placeholder="Ingredienti" name="ingredienti" autocomplete="on" required/>
   <input style="display:inline" class="form-control form-control-lg" id="tempoprep" type="number" min="0" placeholder="Tempo di Preparazione" name="tempo_preparazione" autocomplete="on" required/>&nbsp min &nbsp
   <input style="display:inline" class="form-control form-control-lg" id="pr" type="number" min="0" step="0.01" placeholder="Prezzo" name="prezzo" autocomplete="on" required/>&nbsp &#8364
+  
+  <input type="hidden" name="chef_email" value="${ chef.email }" />
+  
   <div style="color: green;">${OKMessage}</div>
   <div style="padding-top:16px;">
 		<input type="submit" class="btn btn btn-outline-success" value="Aggiungi ricetta">
