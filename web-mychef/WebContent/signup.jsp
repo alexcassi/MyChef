@@ -17,12 +17,6 @@
 .navbar {
 	min-height: 100px
 }
-
-input[type=number] {
-width: 150px;}
-
-input[type=time] {
-width: 150px;}
 </style>
 
 </head>
