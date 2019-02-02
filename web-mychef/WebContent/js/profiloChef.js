@@ -1,3 +1,4 @@
+//crea lista delle ricette
 $(() => {
 	var email = sessionStorage.getItem('chef_email');
 	$.ajax({
@@ -13,6 +14,7 @@ $(() => {
 		    var li = $('<li/>')
 		        .appendTo(cList);
 		    var aaa = $('<a/>')
+		    	.attr('href','DettagliRicettaServlet?id_ricetta='+lista_ricette[i].id)
 		        .text(lista_ricette[i].nome_ricetta)
 		        .appendTo(li);
 		});

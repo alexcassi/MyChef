@@ -12,18 +12,19 @@
 
 
 <br>
+<h1>${ ricetta.nome_ricetta }</h1>
+<br>
+<h4>ingredienti:</h4>
+<p>${ ricetta.ingredienti }</p>
+<br>
+<h4>tempo di preparazione:</h4>
+<p>${ ricetta.tempo_preparazione }min</p>
+<br>
+<h4>prezzo:</h4>
+<p>${ ricetta.prezzo }&nbsp &#8364</p>
 
-	<br>
-	<h1><span id="lblNomeRicetta">${ Ricetta.nome_ricetta }</span> 
-	<br>
-	<br>
-	<span id="lblIngredienti"></span></h1>
-	<br>
-	<br>
-	<span id="lblTempo"></span></h1>
-	<br>
-	<br>
-	<span id="lblPrezzo"></span></h1>
+
+
 	 	
  		<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -31,9 +32,7 @@
 	  crossorigin="anonymous"></script>
  	
 	<jsp:include page="frammenti/scripts.jsp"></jsp:include>
-	<script>
-		sessionStorage.setItem('ricetta', '${ ricetta.id }');
-	</script>
+	
 	<script src="js/dettaglioRicetta.js"></script>
 	
 

@@ -34,18 +34,17 @@ public class LoginController extends HttpServlet {
 			throws ServletException, IOException {
 		String email = new String(request.getParameter("email"));
 		String password = new String(request.getParameter("password"));
-		request.removeAttribute("errorMessage");
 		Chef c = LoginManager.loginChef(email, password);
 		Cliente u = LoginManager.loginCliente(email, password);
 		if (c != null) {
 			request.getSession().setAttribute("chef", c);
-			request.getRequestDispatcher("/profilo_chef.jsp?email=" + email).forward(request, response);
+			request.getRequestDispatcher("profilo_chef.jsp").forward(request, response);
 		} else if (u != null) {
 			request.getSession().setAttribute("cliente", u);
-			request.getRequestDispatcher("/profilo_cliente.jsp?email=" + email).forward(request, response);
+			request.getRequestDispatcher("profilo_cliente.jsp").forward(request, response);
 		} else {
 			request.setAttribute("errorMessage", "Email o password errati.");
-			request.getRequestDispatcher("/login.jsp").include(request, response);
+			request.getRequestDispatcher("login.jsp").include(request, response);
 		}
 
 	}
