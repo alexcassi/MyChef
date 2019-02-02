@@ -11,30 +11,31 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import modello.Ricetta;
+import modello.Chef;
 import utility.JPAUtility;
 
 /**
  * Servlet implementation class LeggiRicettaService
  */
-@WebServlet("/LeggiRicettaService")
-public class LeggiRicettaService extends HttpServlet {
+@WebServlet("/ListaRicetteServlet")
+public class ListaRicetteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LeggiRicettaService() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public ListaRicetteServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		EntityManager em = JPAUtility.getEntityManager();
-		Ricetta r = em.find(Ricetta.class, request.getParameter("id"));
+		Chef c = em.find(Chef.class, request.getParameter("chef_email"));
 		ObjectMapper om = new ObjectMapper();
 		response.setContentType("application/json");
-		response.getWriter().append(om.writeValueAsString(r));
+		response.getWriter().append(om.writeValueAsString(c.getRicette()));
 	}
 
 }

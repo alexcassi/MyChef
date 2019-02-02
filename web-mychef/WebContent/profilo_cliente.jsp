@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>myhef- beatrice archetti</title>
+<title>profilo</title>
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 </head>
 <body>
@@ -12,7 +12,7 @@
 
 
 <br>
-<h1><span id="lblNome"></span> <span id="lblCognome"></span></h1>
+<h1><span id="lblNome">${ cliente.nome }</span> <span id="lblCognome">${ cliente.cognome }</span></h1>
 	<br>
 	l'Area dove mi trovo è ${ cliente.provincia }, ${ cliente.comune }, ${ cliente.indirizzo }
 
@@ -24,9 +24,7 @@
 	  crossorigin="anonymous"></script>
  	
 	<jsp:include page="frammenti/scripts.jsp"></jsp:include>
-	<script>
-		sessionStorage.setItem('cliente', '${ cliente.email }');
-	</script>
+	
 	<script src="js/profiloCliente.js"></script>
 	
 </body>

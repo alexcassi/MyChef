@@ -6,14 +6,13 @@
 <meta charset="ISO-8859-1">
 <title>profilo</title>
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
-
 </head>
 <body>
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 
 
 <br>
-<h1><span id="lblNome"></span> <span id="lblCognome"></span></h1>
+<h1><span id="lblNome">${ chef.nome }</span> <span id="lblCognome">${ chef.cognome }</span></h1>
 	<br>
 	la mia specialità ${ chef.ricette[0].nome_ricetta }
 	<br>
@@ -22,8 +21,13 @@
 	<br>
  	<br>
  	<a href = "addRicetta.jsp">aggiungi ricetta</a>
-
-
+ 	<br>
+ 	<br>
+ 	le tue ricette:
+ 	<br>
+ 	
+ 	<ul class="mylist">
+ 	</ul>
  	
  		<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -31,14 +35,12 @@
 	  crossorigin="anonymous"></script>
  	
 	<jsp:include page="frammenti/scripts.jsp"></jsp:include>
+	
 	<script>
-		sessionStorage.setItem('chef', '${ chef.email }');
+		sessionStorage.setItem('chef_email', '${ chef.email }');
 	</script>
+	
 	<script src="js/profiloChef.js"></script>
-	
-			 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-	
+			
 </body>
 </html>
