@@ -1,14 +1,11 @@
 package modello;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 /**
  * Entity implementation class for Entity: Ricetta
@@ -28,9 +25,8 @@ public class Ricetta {
 	private String tempo_preparazione;
 	@Column(nullable = false)
 	private Double prezzo;
-
-	@ManyToMany(mappedBy = "ricette")
-	private List<Chef> chefs = new ArrayList<Chef>();
+	@ManyToOne
+	private Chef chef;
 
 	public String getNome_ricetta() {
 		return nome_ricetta;
@@ -72,12 +68,11 @@ public class Ricetta {
 		return id;
 	}
 
-	public List<Chef> getChef() {
-		return chefs;
+	public Chef getChef() {
+		return chef;
 	}
 
-	public void setChef(List<Chef> chef) {
-		this.chefs = chef;
+	public void setChef(Chef chef) {
+		this.chef = chef;
 	}
-
 }

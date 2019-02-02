@@ -3,11 +3,8 @@ package modello;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -20,12 +17,15 @@ public class Chef extends Utente {
 
 	private String luogo_lavoro;
 	@JsonIgnore
-	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-	@JoinTable(name = "chefs_ricette", joinColumns = @JoinColumn(name = "email"), inverseJoinColumns = @JoinColumn(name = "id"))
-	private List<Ricetta> ricette = new ArrayList<Ricetta>();
+	@OneToMany(mappedBy = "chef")
+	private List<Ricetta> ricette;
 
 	public void aggiungiRicetta(Ricetta r) {
+		if (ricette == null) {
+			ricette = new ArrayList<Ricetta>();
+		}
 		this.ricette.add(r);
+		r.setChef(this);
 	}
 
 	public List<Ricetta> getRicette() {

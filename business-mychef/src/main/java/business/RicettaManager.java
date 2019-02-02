@@ -20,6 +20,7 @@ public class RicettaManager {
 		Chef c = em.find(Chef.class, id_chef);
 		em.getTransaction().begin();
 		c.aggiungiRicetta(r);
+		em.persist(r);
 		em.getTransaction().commit();
 		return r;
 	}
