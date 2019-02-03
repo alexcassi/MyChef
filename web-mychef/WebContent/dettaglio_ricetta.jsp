@@ -14,8 +14,11 @@
 	<br>
 	<div style="display: flex;">
 		<h1>${ ricetta.nome_ricetta }</h1>
-		<a href="RimuoviRicettaController?id_ricetta=${ ricetta.id }"
-			style="margin-left: 50px">elimina</a>
+		<a href="updateRicetta.jsp?id_ricetta=${ ricetta.id }"
+			style="margin-left: 50px">aggiorna</a> 
+			<a href="RimuoviRicettaController?id_ricetta=${ ricetta.id }"
+				style="margin-left: 50px">elimina</a>
+
 	</div>
 	<br>
 	<h4>ingredienti:</h4>
@@ -34,7 +37,4 @@
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
 
-	<jsp:include page="frammenti/scripts.jsp"></jsp:include>
-
-	<script src="js/dettaglioRicetta.js"></script>
 </html>

@@ -34,4 +34,17 @@ public class RicettaManager {
 
 	}
 
+	public static void updateRicetta(Integer id, String nome_ricetta, String ingredienti, String tempo_preparazione,
+			Double prezzo) {
+		EntityManager em = JPAUtility.getEntityManager();
+		Ricetta r = em.find(Ricetta.class, id);
+		em.getTransaction().begin();
+		r.setId(id);
+		r.setNome_ricetta(nome_ricetta);
+		r.setIngredienti(ingredienti);
+		r.setTempo_preparazione(tempo_preparazione);
+		r.setPrezzo(prezzo);
+		em.getTransaction().commit();
+	}
+
 }
