@@ -2,7 +2,6 @@ package controller;
 
 import java.io.IOException;
 
-import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import business.RicettaManager;
 import modello.Ricetta;
-import utility.JPAUtility;
 
 /**
  * Servlet implementation class LeggiRicettaService
@@ -31,8 +30,7 @@ public class DettagliRicettaDaAggiornareServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		EntityManager em = JPAUtility.getEntityManager();
-		Ricetta r = em.find(Ricetta.class, Integer.valueOf(request.getParameter("id_ricetta")));
+		Ricetta r = RicettaManager.findRicetta(Integer.valueOf(request.getParameter("id_ricetta")));
 		ObjectMapper om = new ObjectMapper();
 		response.setContentType("application/json");
 		response.getWriter().append(om.writeValueAsString(r));

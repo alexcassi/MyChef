@@ -8,6 +8,12 @@ import utility.JPAUtility;
 
 public class RicettaManager {
 
+	public static Ricetta findRicetta(Integer id) {
+		EntityManager em = JPAUtility.getEntityManager();
+		Ricetta r = em.find(Ricetta.class, id);
+		return r;
+	}
+
 	public static Ricetta addRicetta(String nome_ricetta, String ingredienti, String tempo_preparazione, Double prezzo,
 			String id_chef) {
 		EntityManager em = JPAUtility.getEntityManager();

@@ -12,16 +12,17 @@ public class LoginManager {
 		EntityManager em = JPAUtility.getEntityManager();
 		Chef result = em.find(Chef.class, email);
 		if (result != null && result.getPassword().equals(password)) {
-			return result;	
+			return result;
 		} else {
 			return null;
 		}
 	}
+
 	public static Cliente loginCliente(String email, String password) {
 		EntityManager em = JPAUtility.getEntityManager();
 		Cliente result = em.find(Cliente.class, email);
 		if (result != null && result.getPassword().equals(password)) {
-			return result;	
+			return result;
 		} else {
 			return null;
 		}

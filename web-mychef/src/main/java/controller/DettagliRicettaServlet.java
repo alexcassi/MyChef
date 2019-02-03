@@ -2,15 +2,14 @@ package controller;
 
 import java.io.IOException;
 
-import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import business.RicettaManager;
 import modello.Ricetta;
-import utility.JPAUtility;
 
 /**
  * Servlet implementation class LeggiRicettaService
@@ -29,8 +28,7 @@ public class DettagliRicettaServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		EntityManager em = JPAUtility.getEntityManager();
-		Ricetta r = em.find(Ricetta.class, Integer.valueOf(request.getParameter("id_ricetta")));
+		Ricetta r = RicettaManager.findRicetta(Integer.valueOf(request.getParameter("id_ricetta")));
 		request.setAttribute("ricetta", r);
 		request.getRequestDispatcher("dettaglio_ricetta.jsp").include(request, response);
 	}
