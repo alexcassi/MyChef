@@ -35,7 +35,7 @@
 	  crossorigin="anonymous"></script>
  		
 	<script>
-		sessionStorage.setItem('chef_email', '${ chef.email }');
+		sessionStorage.setItem('email', '${ chef.email }');
 	</script>
 	
 	<script src="js/profiloChef.js"></script>

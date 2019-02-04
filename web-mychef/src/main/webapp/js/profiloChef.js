@@ -1,6 +1,6 @@
 //crea lista delle ricette
 $(() => {
-	var email = sessionStorage.getItem('chef_email');
+	var email = sessionStorage.getItem('email');
 	$.ajax({
 		url: 'ListaRicetteServlet?chef_email=' + email,
 		method: 'get'
