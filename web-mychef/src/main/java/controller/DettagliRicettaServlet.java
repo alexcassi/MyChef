@@ -30,7 +30,7 @@ public class DettagliRicettaServlet extends HttpServlet {
 			throws ServletException, IOException {
 		Ricetta r = RicettaManager.findRicetta(Integer.valueOf(request.getParameter("id_ricetta")));
 		request.setAttribute("ricetta", r);
-		request.getRequestDispatcher("dettaglio_ricetta.jsp").include(request, response);
+		request.getRequestDispatcher("dettaglio_ricetta.jsp").forward(request, response);
 	}
 
 }

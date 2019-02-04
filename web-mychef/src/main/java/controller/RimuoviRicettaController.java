@@ -28,7 +28,7 @@ public class RimuoviRicettaController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		RicettaManager.removeRicetta(Integer.valueOf(request.getParameter("id_ricetta")));
-		request.getRequestDispatcher("profilo_chef.jsp").include(request, response);
+		response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
 	}
 
 }

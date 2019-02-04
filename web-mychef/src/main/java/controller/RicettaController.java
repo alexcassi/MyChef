@@ -41,8 +41,7 @@ public class RicettaController extends HttpServlet {
 
 		try {
 			RicettaManager.addRicetta(nome_ricetta, ingredienti, tempo_preparazione, prezzo, email);
-			request.setAttribute("OKMessage", "La ricetta è stata aggiunta");
-			request.getRequestDispatcher("addRicetta.jsp").forward(request, response);
+			response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
 		} catch (Exception e) {
 			e.printStackTrace();
 			response.getWriter().append("Errore interno. Riprovare. Se persiste contattarci");

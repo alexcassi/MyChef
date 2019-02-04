@@ -42,8 +42,7 @@ public class AggiornaRicettaController extends HttpServlet {
 		try {
 			RicettaManager.updateRicetta(id, nome_ricetta, ingredienti,
 					tempo_preparazione, prezzo);
-			request.setAttribute("OKMessage", "La ricetta è stata aggiornata");
-			request.getRequestDispatcher("updateRicetta.jsp").forward(request, response);
+			response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
 		} catch (Exception e) {
 			e.printStackTrace();
 			response.getWriter().append("Errore interno. Riprovare. Se persiste contattarci");

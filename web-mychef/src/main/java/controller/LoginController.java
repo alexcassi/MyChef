@@ -46,7 +46,7 @@ public class LoginController extends HttpServlet {
 			response.sendRedirect(response.encodeRedirectURL("profilo_cliente.jsp"));
 		} else {
 			request.setAttribute("errorMessage", "Email o password errati.");
-			request.getRequestDispatcher("login.jsp").include(request, response);		
+			response.sendRedirect(response.encodeRedirectURL("login.jsp"));
 		}
 
 	}
