@@ -32,6 +32,7 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.getSession().invalidate();
 		String email = new String(request.getParameter("email"));
 		String password = new String(request.getParameter("password"));
 		Chef c = LoginManager.loginChef(email, password);
