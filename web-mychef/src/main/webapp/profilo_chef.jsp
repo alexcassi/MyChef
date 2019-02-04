@@ -14,11 +14,10 @@
 
 <br>
 <h1><span id="lblNome">${ chef.nome }</span> <span id="lblCognome">${ chef.cognome }</span></h1>
+	<p id = "spec"></p>
 	<br>
-	<span id ="spec">la mia specialità è: ${ chef.ricette[0].nome_ricetta }</span>
 	<br>
-	<br>
-	l'Area dove mi trovo è ${ chef.luogo_lavoro }
+	<p>l'Area dove mi trovo è ${ chef.luogo_lavoro }</p>
 	<br>
  	<br>
  	<a href = "addRicetta.jsp">aggiungi ricetta</a>
