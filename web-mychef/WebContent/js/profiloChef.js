@@ -18,6 +18,10 @@ $(() => {
 		        .text(lista_ricette[i].nome_ricetta)
 		        .appendTo(li);
 		});
+		
+		var eee = $('<a/>')
+			.text('la mia specialit\u00E0 \u00E8: '+lista_ricette[0].nome_ricetta)
+			.appendTo('#spec');
 
 	});
 });

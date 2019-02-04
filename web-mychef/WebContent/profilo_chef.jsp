@@ -13,8 +13,7 @@
 
 <br>
 <h1><span id="lblNome">${ chef.nome }</span> <span id="lblCognome">${ chef.cognome }</span></h1>
-	<br>
-	<span id ="spec">la mia specialità è: ${ chef.ricette[0].nome_ricetta }</span>
+	<br id = "spec">
 	<br>
 	<br>
 	l'Area dove mi trovo è ${ chef.luogo_lavoro }
