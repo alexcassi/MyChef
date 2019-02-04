@@ -38,9 +38,11 @@ public class LoginController extends HttpServlet {
 		Cliente u = LoginManager.loginCliente(email, password);
 		if (c != null) {
 			request.getSession().setAttribute("chef", c);
+			request.getSession().setAttribute("tipo", "chef");
 			response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
 		} else if (u != null) {
 			request.getSession().setAttribute("cliente", u);
+			request.getSession().setAttribute("tipo", "cliente");
 			response.sendRedirect(response.encodeRedirectURL("profilo_cliente.jsp"));
 		} else {
 			request.setAttribute("errorMessage", "Email o password errati.");
