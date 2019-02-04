@@ -52,7 +52,8 @@ public class SignUpChefController extends HttpServlet {
 			} else {
 				Chef c = SignUpChefManager.signUp(nome, cognome, email, password, luogo_lavoro);
 				request.getSession().setAttribute("chef", c);
-				request.getRequestDispatcher("profilo_chef.jsp").forward(request, response);
+				request.getSession().setAttribute("tipo", "chef");
+				response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
