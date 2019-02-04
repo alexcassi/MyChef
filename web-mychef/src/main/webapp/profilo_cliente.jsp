@@ -13,11 +13,11 @@
 
 
 <br>
+<div style="margin-left: 1%;">
 <h1><span id="lblNome">${ cliente.nome }</span> <span id="lblCognome">${ cliente.cognome }</span></h1>
 	<br>
-	l'Area dove mi trovo è ${ cliente.provincia }, ${ cliente.comune }, ${ cliente.indirizzo }
-
-	<br>
+	l'Area dove mi trovo è ${ cliente.comune }, ${ cliente.provincia }, ${ cliente.indirizzo }
+</div>
 	 	
  		<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"

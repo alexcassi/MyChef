@@ -13,6 +13,7 @@
 
 
 <br>
+<div style="margin-left: 1%;">
 <h1><span id="lblNome">${ chef.nome }</span> <span id="lblCognome">${ chef.cognome }</span></h1>
 	<p id = "spec"></p>
 	<br>
@@ -28,6 +29,7 @@
  	
  	<ul class="mylist">
  	</ul>
+</div>
  	
  		<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
