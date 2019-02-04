@@ -7,8 +7,7 @@
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 <title>Insert title here</title>
 </head>
-<body background="frammenti/layer1.png" style="height:100%; background-position: center;
-	background-repeat: no-repeat; background-size: 2000px 2000px; ">
+<body>
 	<jsp:include page="frammenti/navbar.html"></jsp:include>
 	
 	

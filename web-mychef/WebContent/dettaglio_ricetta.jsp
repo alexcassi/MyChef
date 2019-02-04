@@ -6,9 +6,9 @@
 <meta charset="ISO-8859-1">
 <title></title>
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
+<link rel="stylesheet" href="css/stile.css">
 </head>
-<body background="frammenti/layer1.png" style="height:100%; background-position: center;
-	background-repeat: no-repeat; background-size: 2000px 2000px; ">
+<body class="sfondo">
 	<jsp:include page="frammenti/navbar.html"></jsp:include>
 
 

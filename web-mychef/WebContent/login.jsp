@@ -9,14 +9,9 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-<style type="text/css">
-.navbar {
-	min-height: 100px
-}
-</style>
+<link rel="stylesheet" href="css/stile.css">
 </head>
-<body background="frammenti/layer1.png" style="height:100%; background-position: center;
-	background-repeat: no-repeat; background-size: 2000px 2000px; ">
+<body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 	<br>
 	<div class="w-50 p-3 card " style="background-color: #eee; text-align:center; position: relative; left: 25%">

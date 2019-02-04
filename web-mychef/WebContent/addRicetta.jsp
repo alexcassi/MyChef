@@ -24,8 +24,7 @@ width: 150px;}
 </style>
 
 </head>
-<body background="frammenti/layer1.png" style="height:100%; background-position: center;
-	background-repeat: no-repeat; background-size: 2000px 2000px; ">
+<body>
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 	<br>
 	<div class="w-50 p-3 card " style="background-color: #eee; text-align:center; position: relative; left: 25%;min-width:250px;">

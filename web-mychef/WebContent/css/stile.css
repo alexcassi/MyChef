@@ -1,0 +1,15 @@
+.navbar {
+	min-height: 100px
+}
+
+div.absolute {
+	psition: relative;
+}
+
+.sfondo {
+	background-image: url("../frammenti/layer1.png");
+	height: 100%;
+	background-position: fixed;
+	background-repeat: no-repeat;
+	background-size: 2000px 2000px;
+}
