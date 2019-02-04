@@ -13,10 +13,10 @@
 
 <br>
 <h1><span id="lblNome">${ chef.nome }</span> <span id="lblCognome">${ chef.cognome }</span></h1>
-	<br id = "spec">
+	<p id = "spec"></p>
 	<br>
 	<br>
-	l'Area dove mi trovo è ${ chef.luogo_lavoro }
+	<p>l'Area dove mi trovo è ${ chef.luogo_lavoro }</p>
 	<br>
  	<br>
  	<a href = "addRicetta.jsp">aggiungi ricetta</a>
