@@ -5,6 +5,9 @@
 	<groupId>web-mychef</groupId>
 	<artifactId>web-mychef</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -23,7 +26,6 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.9.8</version>
 		</dependency>
-
 		<dependency>
 			<groupId>MyChef2</groupId>
 			<artifactId>business-mychef</artifactId>
@@ -32,7 +34,6 @@
 	</dependencies>
 	<packaging>war</packaging>
 	<build>
-		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
@@ -51,13 +52,6 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>3.2.1</version>
-				<configuration>
-					<warSourceDirectory>WebContent</warSourceDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
