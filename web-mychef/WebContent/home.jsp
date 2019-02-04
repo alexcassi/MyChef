@@ -19,7 +19,8 @@
 		}
 		</style>
 	</head>
-	<body>
+	<body background="frammenti/layer1.png" style="height:100%; background-position: center;
+	background-repeat: no-repeat;">
 	<jsp:include page="frammenti/navbar.html"></jsp:include>
 		<div class="row" style="width: 100%;">
 	
