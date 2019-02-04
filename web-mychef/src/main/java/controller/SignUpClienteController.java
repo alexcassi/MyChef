@@ -48,7 +48,7 @@ public class SignUpClienteController extends HttpServlet {
 			} else {
 				Cliente u = SignUpClienteManager.signUp(nome, cognome, comune, provincia, indirizzo, email, password);
 				request.getSession().setAttribute("cliente", u);
-				request.getRequestDispatcher("profilo_cliente.jsp").forward(request, response);
+				response.sendRedirect(response.encodeRedirectURL("profilo_cliente.jsp"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

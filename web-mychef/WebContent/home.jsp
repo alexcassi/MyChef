@@ -21,18 +21,18 @@
 	</head>
 	<body>
 	<jsp:include page="frammenti/navbar.html"></jsp:include>
-		<div class="row">
+		<div class="row" style="width: 100%;">
 	
 			<jsp:include page="card_home/card.jsp"></jsp:include>
-				<hr>
+				
 			<jsp:include page="card_home/card.jsp"></jsp:include> 
-				<hr>
+				
 			<jsp:include page="card_home/card.jsp"></jsp:include> 
-				<hr>
+				
 			<jsp:include page="card_home/card.jsp"></jsp:include> 
-				<hr>
+				
 			<jsp:include page="card_home/card.jsp"></jsp:include> 
-				<hr>
+				
 			<jsp:include page="card_home/card.jsp"></jsp:include> 
 		 </div>
 		 
