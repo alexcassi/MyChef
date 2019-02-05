@@ -46,6 +46,7 @@ public class SignUpChefController extends HttpServlet {
 		nuova_ricetta.setPrezzo(Double.valueOf(request.getParameter("prezzo")));*/
 
 		try {
+			request.getSession().invalidate();
 			if (SignUpChefManager.checkUsernameExists(email)) {
 				request.setAttribute("errorMessage", "Email già  utilizzata, usare un'altra mail.");
 				request.getRequestDispatcher("signup.jsp").forward(request, response);

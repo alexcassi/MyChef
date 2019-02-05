@@ -42,6 +42,7 @@ public class SignUpClienteController extends HttpServlet {
 		String password = new String(request.getParameter("password"));
 
 		try {
+			request.getSession().invalidate();
 			if (SignUpClienteManager.checkUsernameExists(email)) {
 				request.setAttribute("errorMessage", "Email già  utilizzata, usare un'altra mail.");
 				request.getRequestDispatcher("signup.jsp").forward(request, response);
