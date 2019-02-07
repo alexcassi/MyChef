@@ -32,17 +32,16 @@ public class ProfileController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		Chef c;
 		try {
-			Chef x = (Chef) request.getSession().getAttribute("chef");
-			c = UtenteManager.findChef(x.getEmail());
-			if (c!=null) {
+			Chef u = (Chef) request.getSession().getAttribute("chef");
+			u = UtenteManager.findChef(u.getEmail());
+			if (u!=null) {
 				response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
 			}
 		} catch (Exception e) {
 			try {
-				Cliente z = (Cliente) request.getSession().getAttribute("cliente");
-				Cliente u = UtenteManager.findCliente(z.getEmail());
+				Cliente u = (Cliente) request.getSession().getAttribute("cliente");
+				u = UtenteManager.findCliente(u.getEmail());
 				response.sendRedirect(response.encodeRedirectURL("profilo_cliente.jsp"));
 			} catch (Exception e2) {
 				response.getWriter().append("Devi ancora fare il login!");
