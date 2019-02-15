@@ -4,18 +4,20 @@ $(() => {
 		url: 'ListaChefServlet',
 		method: 'get'
 	})
-	.done((u) => {
-		console.log(u);
-		var lista_chef = u;
-		var cList = $('ul.mylist')
-		$('.card').each(function(i)
+	.done((lista_chef) => {
+		var l = lista_chef;
+		console.log(l);
+		$('.card-body').each(function(i)
 		{
-			$(this).children('.card-body').each(function() {
-				$(this).children().each(function(){
-					$(this).text(''+lista_chef[i].nome);
-				})
-			})
-		    
+			var text1 = $('<h5/>')
+		    	.attr('class','card-title')
+		        .text(l[i].nome + ' ' + l[i].cognome);
+		    var text2 = $('<p/>')
+		    	.attr('class','card-text')
+		        .text(l[i].luogo_lavoro);
+		    $(this).append(text1);
+		    $(this).append(text2);
+			
 		});
 	});
 });
