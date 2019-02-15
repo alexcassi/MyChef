@@ -1,5 +1,8 @@
 package business;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.EntityManager;
 
 import modello.Chef;
@@ -18,5 +21,10 @@ public class UtenteManager {
 		EntityManager em = JPAUtility.getEntityManager();
 		Cliente result = em.find(Cliente.class, email);
 		return result;
+	}
+
+	public static List<Chef> findChefList() {
+		EntityManager em = JPAUtility.getEntityManager();
+		return (ArrayList<Chef>) (em.createQuery("SELECT c FROM Chef c").getResultList());
 	}
 }
