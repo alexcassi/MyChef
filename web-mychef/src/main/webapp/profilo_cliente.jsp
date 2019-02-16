@@ -7,6 +7,14 @@
 <title>profilo</title>
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 <link rel="stylesheet" href="css/stile.css">
+
+	<style>
+	img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+	</style>
+
 </head>
 <body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>

@@ -11,6 +11,14 @@
 			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 			crossorigin="anonymous">
 		<link rel="stylesheet" href="css/stile.css">
+		
+			<style>
+	img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+	</style>
+		
 	</head>
 	<body class="sfondo">
 	
