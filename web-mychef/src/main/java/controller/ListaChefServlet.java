@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,6 +33,7 @@ public class ListaChefServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		ArrayList<Chef> c = (ArrayList<Chef>) UtenteManager.findChefList();
+		Collections.shuffle(c);
 		ObjectMapper om = new ObjectMapper();
 		response.setContentType("application/json");
 		response.getWriter().append(om.writeValueAsString(c));
