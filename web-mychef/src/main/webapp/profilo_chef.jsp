@@ -23,6 +23,23 @@
 <br>
 <div style="margin-left: 1%;">
 <h1><span id="lblNome">${ chef.nome }</span> <span id="lblCognome">${ chef.cognome }</span></h1>
+<br>
+<br>
+	<img src="immagini_caricate/profili/${ chef.immagine_profilo }">
+<br>
+<br>
+    <body> 
+        <div>
+            <h3> aggiungi immagine del profilo </h3>
+            <form action="upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" />
+                <input type="hidden" name="tipo_immagine" value="profilo"/>
+                <input type="hidden" name="valore_id" value="${ chef.email }"/>
+                <input type="submit" value="upload" />
+            </form>          
+        </div>
+    </body>
+
 	<p id = "spec"></p>
 	<br>
 	<br>

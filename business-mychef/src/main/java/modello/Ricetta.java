@@ -27,6 +27,7 @@ public class Ricetta {
 	private Double prezzo;
 	@ManyToOne
 	private Chef chef;
+	private String immagine_ricetta;
 
 	public String getNome_ricetta() {
 		return nome_ricetta;
@@ -75,4 +76,13 @@ public class Ricetta {
 	public void setChef(Chef chef) {
 		this.chef = chef;
 	}
+
+	public String getImmagine_ricetta() {
+		return immagine_ricetta;
+	}
+
+	public void setImmagine_ricetta(String immagine_ricetta) {
+		this.immagine_ricetta = immagine_ricetta;
+	}
+
 }
