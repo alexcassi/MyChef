@@ -3,6 +3,7 @@ package modello;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
@@ -15,10 +16,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Chef extends Utente {
 
+	@Column(nullable = false)
 	private String luogo_lavoro;
 	@JsonIgnore
 	@OneToMany(mappedBy = "chef")
 	private List<Ricetta> ricette;
+	private String immagine_profilo;
 
 	public void aggiungiRicetta(Ricetta r) {
 		if (ricette == null) {
@@ -42,6 +45,14 @@ public class Chef extends Utente {
 
 	public void setLuogo_lavoro(String luogo_lavoro) {
 		this.luogo_lavoro = luogo_lavoro;
+	}
+
+	public String getImmagine_profilo() {
+		return immagine_profilo;
+	}
+
+	public void setImmagine_profilo(String immagine_profilo) {
+		this.immagine_profilo = immagine_profilo;
 	}
 
 }

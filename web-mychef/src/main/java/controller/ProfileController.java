@@ -44,7 +44,7 @@ public class ProfileController extends HttpServlet {
 				u = UtenteManager.findCliente(u.getEmail());
 				response.sendRedirect(response.encodeRedirectURL("profilo_cliente.jsp"));
 			} catch (Exception e2) {
-				response.getWriter().append("Devi ancora fare il login!");
+				response.sendRedirect(response.encodeRedirectURL("login.jsp"));
 			}
 		}
 	}

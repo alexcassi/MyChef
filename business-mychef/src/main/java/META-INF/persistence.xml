@@ -9,7 +9,6 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://mychefdatabase.mssql.somee.com:1433;databaseName=mychefdatabase"/>
 			<property name="javax.persistence.jdbc.user" value="lexcassi_SQLLogin_1"/>
 			<property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-			<property name="javax.persistence.schema-generation.database.action" value="create"/>
 			<property name="eclipselink.query-results-cache" value="false"/>
 			<property name="javax.persistence.jdbc.password" value="thunder777"/>
 		</properties>

@@ -23,6 +23,13 @@ input[type=time] {
 width: 150px;}
 </style>
 
+	<style>
+	img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+	</style>
+
 </head>
 <body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>

@@ -6,6 +6,14 @@
 <meta charset="ISO-8859-1">
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 <title>Insert title here</title>
+
+	<style>
+	img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+	</style>
+
 </head>
 <body>
 	<jsp:include page="frammenti/navbar.html"></jsp:include>
