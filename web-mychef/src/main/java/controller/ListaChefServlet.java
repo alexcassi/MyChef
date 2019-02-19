@@ -33,7 +33,7 @@ public class ListaChefServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		ArrayList<Chef> c = (ArrayList<Chef>) UtenteManager.findChefList();
-		Collections.shuffle(c);
+		//Collections.shuffle(c);
 		ObjectMapper om = new ObjectMapper();
 		response.setContentType("application/json");
 		response.getWriter().append(om.writeValueAsString(c));
