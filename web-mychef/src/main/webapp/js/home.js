@@ -1,4 +1,3 @@
-//mostra gli chef
 $(() => {
 	$.ajax({
 		url: 'ListaChefServlet',
@@ -7,15 +6,18 @@ $(() => {
 	.done((lista_chef) => {
 		var l = lista_chef;
 		console.log(l);
+		//mostra le immagini degli chef
+		$('.card-img-top').each(function(i){
+			if(l[i].immagine_profilo===null) {
+				$(this).attr('src','card_home/placeholder.jpg')
+					}else {
+						$(this).attr('src',('immagini_caricate/profili/'+l[i].immagine_profilo));
+					}
+			});
+
+		//mostra i nomi degli chef
 		$('.card-body').each(function(i)
 		{
-			var img = $('#imgp')
-			if(l[i].immagine_profilo===null) {
-						img.attr('src','card_home/placeholder.jpg')
-					}else {
-						img.attr('src',('immagini_caricate/profili/'+l[i].immagine_profilo));
-					}
-			img.css({"width": "270px", "height":"550px", "opacity":"100%"})
 			var text1 = $('<h5/>')
 		    	.attr('class','card-title')
 		        .text(l[i].nome + ' ' + l[i].cognome);
@@ -24,7 +26,6 @@ $(() => {
 		        .text(l[i].luogo_lavoro);
 		    $(this).append(text1);
 		    $(this).append(text2);
-		    $(this).append(img);
 			});
 	});
 });
