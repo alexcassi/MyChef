@@ -28,4 +28,19 @@ public class SignUpClienteManager {
 		em.getTransaction().commit();
 		return u;
 	}
+	
+	public static void modificaIndirizzoCliente(String email, String comune, String indirizzo, String provincia) {
+		EntityManager em = JPAUtility.getEntityManager();
+		Cliente r = em.find(Cliente.class, email);
+		if(r==null)
+		{
+			
+		} else {
+		em.getTransaction().begin();	
+		r.setComune(comune);
+		r.setIndirizzo(indirizzo);
+		r.setProvincia(provincia);
+		em.getTransaction().commit();
+		}
+	}
 }

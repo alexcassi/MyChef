@@ -24,7 +24,8 @@
 <div style="margin-left: 1%;">
 <h1><span id="lblNome">${ cliente.nome }</span> <span id="lblCognome">${ cliente.cognome }</span></h1>
 	<br>
-	l'Area dove mi trovo è ${ cliente.comune }, ${ cliente.provincia }, ${ cliente.indirizzo }
+	<p id="indir"></p>
+	<a href = "modificaIndirizzoCliente.jsp">modifica indirizzo</a>
 </div>
 	 	
  		<script

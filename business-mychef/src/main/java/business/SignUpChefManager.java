@@ -3,7 +3,7 @@ package business;
 import javax.persistence.EntityManager;
 
 import modello.Chef;
-import modello.Ricetta;
+import modello.Cliente;
 import modello.Utente;
 import utility.JPAUtility;
 
