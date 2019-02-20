@@ -19,9 +19,9 @@
 <body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 
-<div class="card" style="width: 600px; height: relative; left: 15px;margin: 15px;">
+<div class="card" style="width: responsive; height: relative; margin: 15px;">
 <br>
-<div style="margin-left: 5%;">
+<div style="margin-left: 2%;">
 <h1><span id="lblNome">${ chef.nome }</span> <span id="lblCognome">${ chef.cognome }</span></h1>
 <br>
 <br>
@@ -43,7 +43,7 @@
 	<p>l'Area dove mi trovo è ${ chef.luogo_lavoro }</p>
 	<br>
 	<br>
-	<p>la mia specialità è:</p><p id = "spec"></p>
+	<b>la mia specialità è:</b><p id = "spec"></p>
 	<br>
 	<br>
  	<a href = "addRicetta.jsp">aggiungi ricetta</a>
