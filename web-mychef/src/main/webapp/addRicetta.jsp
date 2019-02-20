@@ -31,7 +31,7 @@ width: 150px;}
 	</style>
 
 </head>
-<body>
+<body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 	<br>
 	<div class="w-50 p-3 card " style="background-color: #eee; text-align:center; position: relative; left: 25%;min-width:250px;">

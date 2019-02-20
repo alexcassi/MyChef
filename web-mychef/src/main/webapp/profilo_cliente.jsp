@@ -19,12 +19,14 @@
 <body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 
-
+<div class="card" style="width: 600px; height: relative; left: 15px; margin: 15px; padding-bottom: 25px">
 <br>
-<div style="margin-left: 1%;">
+<div style="margin-left: 2%;">
 <h1><span id="lblNome">${ cliente.nome }</span> <span id="lblCognome">${ cliente.cognome }</span></h1>
 	<br>
-	l'Area dove mi trovo è ${ cliente.comune }, ${ cliente.provincia }, ${ cliente.indirizzo }
+	l'Area dove mi trovo è: ${ cliente.comune }<br>
+	in provincia di ${ cliente.provincia }<br>
+	in ${ cliente.indirizzo }<br>
 </div>
 	 	
  		<script
