@@ -21,7 +21,7 @@
 #submit {
   background-color: #FF6A00; /* colore di sfondo    */
   border: 2px solid #FF6A00; /* bordo dell'elemento */
-  color: black;               /* colore del testo    */
+  color: white;               /* colore del testo    */
   font-weight: bold;         /* testo in grassetto  */
   /*height: 25px;  */            /* altezza             */
  /* width: 80px;    */           /* larghezza           */
