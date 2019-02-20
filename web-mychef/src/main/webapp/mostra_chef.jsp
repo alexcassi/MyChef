@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/stile.css">
 
 	<style>
-	nav_img:hover {
+	.nav_img:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -26,7 +26,15 @@
 <h1><span id="lblNome">${ requested_chef.nome }</span> <span id="lblCognome">${ requested_chef.cognome }</span></h1>
 <br>
 <br>
+<<<<<<< HEAD
 	<img src="immagini_caricate/profili/${ requested_chef.immagine_profilo }"style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+=======
+	<img id="i" style="
+    height: 400px;
+    width: 400px;
+" src="immagini_caricate/profili/${ requested_chef.immagine_profilo }" onerror="standby()">
+
+>>>>>>> branch 'master' of https://github.com/alexcassi/MyChef2.git
 <br>
 <br>
 	<p><b>l'Area dove si trova è: </b> ${ requested_chef.luogo_lavoro }</p>

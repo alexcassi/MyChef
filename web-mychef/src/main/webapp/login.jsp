@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/stile.css">
 
 	<style>
-	nav_img:hover {
+	.nav_img:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
