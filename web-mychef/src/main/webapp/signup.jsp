@@ -17,15 +17,31 @@
 .navbar {
 	min-height: 100px
 }
-</style>
-<link rel="stylesheet" href="css/stile.css">
 
-	<style>
-	img:hover {
+.nav_img:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
-	</style>
+
+
+
+#submit {
+  background-color: #FF6A00; /* colore di sfondo    */
+  border: 2px solid #FF6A00; /* bordo dell'elemento */
+  color: white;               /* colore del testo    */
+  font-weight: bold;         /* testo in grassetto  */
+  /*height: 25px;  */            /* altezza             */
+ /* width: 80px;    */           /* larghezza           */
+}
+
+
+
+
+
+</style>
+<link rel="stylesheet" href="css/stile.css">
+
+	
 
 </head>
 <body class="sfondo">
@@ -70,7 +86,7 @@
   
 </div>	
 		<div style="padding-top:16px;">
-		<input type="submit" class="btn btn btn-outline-success" value="Clicca per Registrarti">
+		<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Clicca per Registrarti">
 		</div>
 		</form>
 	</div>

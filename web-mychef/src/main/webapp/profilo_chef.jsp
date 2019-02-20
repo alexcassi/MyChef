@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/stile.css">
 
 	<style>
-	img:hover {
+	.nav_img:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -19,13 +19,16 @@
 <body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 
-
+<div class="card" style="width: responsive; height: relative; margin: 15px;">
 <br>
-<div style="margin-left: 1%;">
+<div style="margin-left: 2%;">
 <h1><span id="lblNome">${ chef.nome }</span> <span id="lblCognome">${ chef.cognome }</span></h1>
 <br>
 <br>
-	<img src="immagini_caricate/profili/${ chef.immagine_profilo }">
+	<img style="
+    height: 400px;
+    width: 400px;
+" src="immagini_caricate/profili/${ chef.immagine_profilo }" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <br>
 <br>
     <body> 
@@ -39,14 +42,14 @@
             </form>          
         </div>
     </body>
-
-	<p id = "spec"></p>
-	<br>
 	<br>
 	<p id="indir"></p>
 	<a href = "modificaIndirizzo.jsp">modifica indirizzo</a>
 	<br>
- 	<br>
+	<br>
+	<b>la mia specialità è:</b><p id = "spec"></p>
+	<br>
+	<br>
  	<a href = "addRicetta.jsp">aggiungi ricetta</a>
  	<br>
  	<br>
@@ -56,7 +59,7 @@
  	<ul class="mylist">
  	</ul>
 </div>
- 	
+</div>
  		<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
 	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
