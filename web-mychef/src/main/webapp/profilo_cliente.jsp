@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/stile.css">
 
 	<style>
-	img:hover {
+	.nav_img:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -24,9 +24,8 @@
 <div style="margin-left: 2%;">
 <h1><span id="lblNome">${ cliente.nome }</span> <span id="lblCognome">${ cliente.cognome }</span></h1>
 	<br>
-	l'Area dove mi trovo è: ${ cliente.comune }<br>
-	in provincia di ${ cliente.provincia }<br>
-	in ${ cliente.indirizzo }<br>
+	<p id="indir"></p>
+	<a href = "modificaIndirizzoCliente.jsp">modifica indirizzo</a>
 </div>
 	 	
  		<script

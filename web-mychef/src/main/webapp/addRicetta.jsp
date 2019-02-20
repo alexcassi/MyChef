@@ -24,7 +24,7 @@ width: 150px;}
 </style>
 
 	<style>
-	img:hover {
+	.nav_img:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
