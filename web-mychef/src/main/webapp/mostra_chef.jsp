@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/stile.css">
 
 	<style>
-	img:hover {
+	nav_img:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -31,7 +31,7 @@
 	<p id = "spec"></p>
 	<br>
 	<br>
-	<p>l'Area dove mi trovo è ${ requested_chef.luogo_lavoro }</p>
+	<p>l'Area dove si trova è ${ requested_chef.luogo_lavoro }</p>
  	<br>
  	<br>
  	le sue ricette:

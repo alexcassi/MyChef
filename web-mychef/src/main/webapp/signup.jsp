@@ -18,7 +18,7 @@
 	min-height: 100px
 }
 
-img:hover {
+nav_img:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
