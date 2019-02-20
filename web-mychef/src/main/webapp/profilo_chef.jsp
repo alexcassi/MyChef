@@ -43,7 +43,8 @@
         </div>
     </body>
 	<br>
-	<p>l'Area dove mi trovo è ${ chef.luogo_lavoro }</p>
+	<p id="indir"></p>
+	<a href = "modificaIndirizzo.jsp">modifica indirizzo</a>
 	<br>
 	<br>
 	<b>la mia specialità è:</b><p id = "spec"></p>
