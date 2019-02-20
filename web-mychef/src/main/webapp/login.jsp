@@ -24,8 +24,9 @@
   border: 2px solid #FF6A00; /* bordo dell'elemento */
   color: white;               /* colore del testo    */
   font-weight: bold;         /* testo in grassetto  */
-  /*height: 25px;  */            /* altezza             */
- /* width: 80px;    */           /* larghezza           */
+ -moz-border-radius: 20px;
+ -webkit-border-radius: 20px;
+ border-radius:20px;
 }
 
 	</style>
