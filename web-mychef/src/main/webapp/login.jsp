@@ -16,6 +16,17 @@
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
+
+
+#submit {
+  background-color: #FF6A00; /* colore di sfondo    */
+  border: 2px solid #FF6A00; /* bordo dell'elemento */
+  color: black;               /* colore del testo    */
+  font-weight: bold;         /* testo in grassetto  */
+  /*height: 25px;  */            /* altezza             */
+ /* width: 80px;    */           /* larghezza           */
+}
+
 	</style>
 
 </head>
@@ -36,7 +47,7 @@
 		<input class="form-control form-control-lg" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Inserire un indirizzo email valido!' : '');" placeholder="Email"name="email" autocomplete="on" required/>
 		<input class="form-control form-control-lg" type="password" placeholder="Password" name="password" required/>
 		<div style="padding-top:16px;">
-		<input type="submit" class="btn btn btn-outline-success" value="Clicca per accedere">
+		<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Clicca per accedere">
 		</div>
 		</form>
 	</div>
