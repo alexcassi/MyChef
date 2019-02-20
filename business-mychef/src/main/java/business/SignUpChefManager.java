@@ -3,6 +3,7 @@ package business;
 import javax.persistence.EntityManager;
 
 import modello.Chef;
+import modello.Ricetta;
 import modello.Utente;
 import utility.JPAUtility;
 
@@ -24,5 +25,13 @@ public class SignUpChefManager {
 		em.persist(u);
 		em.getTransaction().commit();
 		return u;
+	}
+	
+	public static void modificaIndirizzo(String email, String luogo_lavoro) {
+		EntityManager em = JPAUtility.getEntityManager();
+		Chef r = em.find(Chef.class, email);
+		em.getTransaction().begin();	
+		r.setLuogo_lavoro(luogo_lavoro);
+		em.getTransaction().commit();
 	}
 }

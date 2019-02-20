@@ -43,7 +43,8 @@
 	<p id = "spec"></p>
 	<br>
 	<br>
-	<p>l'Area dove mi trovo è ${ chef.luogo_lavoro }</p>
+	<p id="indir"></p>
+	<a href = "modificaIndirizzo.jsp">modifica indirizzo</a>
 	<br>
  	<br>
  	<a href = "addRicetta.jsp">aggiungi ricetta</a>
