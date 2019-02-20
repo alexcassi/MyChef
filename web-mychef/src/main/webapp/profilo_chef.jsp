@@ -40,8 +40,7 @@
         </div>
     </body>
 	<br>
-	<p>l'Area dove mi trovo è ${ chef.luogo_lavoro }</p>
-	<br>
+	<p><b>l'Area dove mi trovo è: </b> ${ chef.luogo_lavoro }</p>
 	<br>
 	<b>la mia specialità è:</b><p id = "spec"></p>
 	<br>
@@ -49,7 +48,7 @@
  	<a href = "addRicetta.jsp">aggiungi ricetta</a>
  	<br>
  	<br>
- 	le tue ricette:
+ 	<b>le tue ricette:</b>
  	<br>
  	
  	<ul class="mylist">

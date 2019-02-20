@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
+<link rel="stylesheet" href="css/stile.css">
 
 <title>aggiungi ricetta</title>
 
