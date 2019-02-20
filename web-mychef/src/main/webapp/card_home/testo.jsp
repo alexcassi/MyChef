@@ -1,3 +1,2 @@
-<center><div class="card-body" style="position-buttom:60%">
-</div>
-</center>
+<center> <div class="card-body" style="position-buttom:60%">
+</div> </center>
