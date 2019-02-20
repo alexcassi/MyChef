@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 	<meta charset="UTF-8">
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 <link rel="stylesheet" href="css/stile.css">

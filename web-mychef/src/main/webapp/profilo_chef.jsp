@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 <meta charset="ISO-8859-1">
 <title>profilo</title>
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
@@ -19,7 +20,7 @@
 <body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 
-<div class="card" style="width: responsive; height: relative; margin: 15px;">
+<div class="card" style="width:800px; height: relative; left: 15px; margin: 15px; padding-bottom: 25px">
 <br>
 <div style="margin-left: 2%;">
 <h1><span id="lblNome">${ chef.nome }</span> <span id="lblCognome">${ chef.cognome }</span></h1>

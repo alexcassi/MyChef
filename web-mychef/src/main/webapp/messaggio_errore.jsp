@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Errore</title>
     </head>
