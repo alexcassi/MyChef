@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/stile.css">
 
 	<style>
-	img:hover {
+	.nav_img:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
@@ -25,13 +25,17 @@
 <h1><span id="lblNome">${ requested_chef.nome }</span> <span id="lblCognome">${ requested_chef.cognome }</span></h1>
 <br>
 <br>
-	<img src="immagini_caricate/profili/${ requested_chef.immagine_profilo }">
+	<img style="
+    height: 400px;
+    width: 400px;
+" src="immagini_caricate/profili/${ requested_chef.immagine_profilo }">
+
 <br>
 <br>
 	<p id = "spec"></p>
 	<br>
 	<br>
-	<p>l'Area dove mi trovo è ${ requested_chef.luogo_lavoro }</p>
+	<p>l'Area dove si trova è ${ requested_chef.luogo_lavoro }</p>
  	<br>
  	<br>
  	le sue ricette:
