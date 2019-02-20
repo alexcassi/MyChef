@@ -5,6 +5,7 @@ $(() => {
 	})
 	.done((lista_chef) => {
 		var l = lista_chef;
+		l.sort();
 		console.log(l);
 		//mostra le immagini degli chef
 		$('.card-img-top').each(function(i){
