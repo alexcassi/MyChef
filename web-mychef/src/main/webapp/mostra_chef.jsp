@@ -25,10 +25,10 @@
 <h1><span id="lblNome">${ requested_chef.nome }</span> <span id="lblCognome">${ requested_chef.cognome }</span></h1>
 <br>
 <br>
-	<img style="
+	<img id="i" style="
     height: 400px;
     width: 400px;
-" src="immagini_caricate/profili/${ requested_chef.immagine_profilo }">
+" src="immagini_caricate/profili/${ requested_chef.immagine_profilo }" onerror="standby()">
 
 <br>
 <br>
@@ -55,6 +55,12 @@
 	</script>
 	
 	<script src="js/profiloChef.js"></script>
+	
+	<script type="text/javascript">
+	function standby() {
+	    document.getElementById('i').src = 'card_home/placeholder.jpg'
+	}
+	</script>
 	
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	
