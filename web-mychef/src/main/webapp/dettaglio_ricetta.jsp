@@ -19,15 +19,16 @@
 <body class="sfondo">
 	<jsp:include page="frammenti/navbar.html"></jsp:include>
 
-
-	<br>
+<div class="card" style="width: 800px; height: relative; margin: 15px;">
+<br>
+<div style="margin: 2%;">
 	<div style="display: flex;">
 		<h1>${ ricetta.nome_ricetta }</h1>
 		<a href="updateRicetta.jsp?id_ricetta=${ ricetta.id }"
 			style="margin-left: 50px">aggiorna</a> 
 			<a href="RimuoviRicettaController?id_ricetta=${ ricetta.id }"
 				style="margin-left: 50px">elimina</a>
-
+				
 	</div>
 	<br>
 	<h4>ingredienti:</h4>
@@ -39,7 +40,8 @@
 	<h4>prezzo:</h4>
 	<p>${ ricetta.prezzo }&nbsp&#8364</p>
 
-
+</div>
+</div>
 
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
