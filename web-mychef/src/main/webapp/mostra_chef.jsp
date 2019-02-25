@@ -20,9 +20,9 @@
 <body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 
-<div class="card" style="width: relative; height: relative; margin: 15px;">
+<div class="card" style="width: relative; min-width: 425px; height: relative; margin: 15px;">
 <br>
-<div style="margin-left: 2%;">
+<div style="margin-left: 1.81%;">
 <h1><span id="lblNome">${ requested_chef.nome }</span> <span id="lblCognome">${ requested_chef.cognome }</span></h1>
 <br>
 <br>
