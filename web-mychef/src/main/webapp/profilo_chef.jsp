@@ -26,10 +26,10 @@
 <h1><span id="lblNome">${ chef.nome }</span> <span id="lblCognome">${ chef.cognome }</span></h1>
 <br>
 <br>
-	<img src="immagini_caricate/profili/${ chef.immagine_profilo }" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+	<img id="i" src="immagini_caricate/profili/${ chef.immagine_profilo }" style="height: 400px;
+    width: 400px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" onerror="standby()">
 <br>
 <br>
-    <body> 
         <div>
             <h3> aggiungi immagine del profilo </h3>
             <form action="upload" method="post" enctype="multipart/form-data">
@@ -41,7 +41,7 @@
         </div>
     </body>
 	<br>
-	<p><b>l'Area dove mi trovo è: </b> ${ chef.luogo_lavoro }</p>
+	<p><b>L' area dove mi trovo è: </b> ${ chef.luogo_lavoro }</p>
 	<br>
 	<b>la mia specialità è:</b><p id = "spec"></p>
 	<br>
@@ -66,6 +66,10 @@
 	</script>
 	
 	<script src="js/profiloChef.js"></script>
+	
+	<script type="text/javascript">
+	function standby() { document.getElementById('i').src = "card_home/placeholder.jpg"}
+	</script>
 	
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	
