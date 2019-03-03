@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 
-<title>aggiungi ricetta</title>
+<title>modifica indirizzo</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -37,9 +37,9 @@ width: 150px;}
 	<div class="w-50 p-3 card " style="background-color: #eee; text-align:center; position: relative; left: 25%;min-width:250px;">
 <form id="form_indirizzo" name="form_indirizzo" method="post"
 		action="ModificaIndirizzoClienteController">
+  <input class="form-control form-control-lg" id="indir" type="text" placeholder="Provincia" name="provincia" autocomplete="on" required/>
   <input class="form-control form-control-lg" id="indir" type="text" placeholder="Comune" name="comune" autocomplete="on" required/>
   <input class="form-control form-control-lg" id="indir" type="text" placeholder="Indirizzo" name="indirizzo" autocomplete="on" required/>
-  <input class="form-control form-control-lg" id="indir" type="text" placeholder="Provincia" name="provincia" autocomplete="on" required/>
   
   <input type="hidden" name="cliente_email" value="${ cliente.email }" />
   

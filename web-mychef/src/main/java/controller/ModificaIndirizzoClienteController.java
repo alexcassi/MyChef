@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import business.SignUpClienteManager;
+import business.UtenteManager;
+import modello.Cliente;
 
 /**
  * Servlet implementation class RicettaController
@@ -40,11 +42,21 @@ public class ModificaIndirizzoClienteController extends HttpServlet {
 
 		try {
 			SignUpClienteManager.modificaIndirizzoCliente(email, comune, indirizzo, provincia);
-			response.sendRedirect(response.encodeRedirectURL("profilo_cliente.jsp"));
 		} catch (Exception e) {
 			e.printStackTrace();
 			response.getWriter().append("Errore interno. Riprovare. Se persiste contattarci");
 		}
+		
+		// rimette nella sessione il cliente col campo aggiornato riprendendolo dal db
+		Cliente c = UtenteManager.findCliente(email);
+		if (c != null) {
+			request.getSession().setAttribute("cliente", c);
+			response.sendRedirect(response.encodeRedirectURL("profilo_cliente.jsp"));
+		} else {
+			request.setAttribute("message", "cliente non ritrovato nel database ");
+			request.getRequestDispatcher("/messaggio_errore.jsp").forward(request, response);
+		}
+
 	}
 
 }

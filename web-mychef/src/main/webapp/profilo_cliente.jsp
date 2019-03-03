@@ -25,7 +25,10 @@
 <div style="margin-left: 2%;">
 <h1><span id="lblNome">${ cliente.nome }</span> <span id="lblCognome">${ cliente.cognome }</span></h1>
 	<br>
-	<p id="indir"></p>
+	<br>
+	<p><b>L' area dove mi trovo è: </b> ${ cliente.provincia }, ${ cliente.comune }, ${ cliente.indirizzo }</p>
+	<br>
+	<br>
 	<a href = "modificaIndirizzoCliente.jsp">modifica indirizzo</a>
 </div>
 	 	
@@ -38,8 +41,6 @@
 		sessionStorage.setItem('email', '${ cliente.email }');
 	</script>
 	  
- 		
-	<script src="js/profiloCliente.js"></script>
 	
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	
