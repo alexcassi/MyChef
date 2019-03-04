@@ -122,5 +122,8 @@
 	}
 </script>
 
+	<script src="js/global_scripts.js"></script>
+
+
 </body>
 </html>
