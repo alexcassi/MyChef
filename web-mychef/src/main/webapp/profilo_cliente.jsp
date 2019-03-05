@@ -26,7 +26,8 @@
 <h1><span id="lblNome">${ cliente.nome }</span> <span id="lblCognome">${ cliente.cognome }</span></h1>
 	<br>
 	<br>
-	<p><b>L' area dove mi trovo è: </b> ${ cliente.provincia }, ${ cliente.comune }, ${ cliente.indirizzo }</p>
+	<p><b>L' area dove mi trovo è: </b>  ${ cliente.indirizzo }</p>
+	<p><b>In provincia di: </b> ${ cliente.provincia }, ${ cliente.comune },</p>
 	<br>
 	<br>
 	<a href = "modificaIndirizzoCliente.jsp">modifica indirizzo</a>

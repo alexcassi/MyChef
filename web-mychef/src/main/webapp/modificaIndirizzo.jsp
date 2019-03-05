@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 	<meta charset="UTF-8">
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
+<link rel="stylesheet" href="css/stile.css">
 
 <title>aggiungi ricetta</title>
 
@@ -28,10 +30,20 @@ width: 150px;}
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
+#submit {
+  background-color: #FF6A00; /* colore di sfondo    */
+  border: 2px solid #FF6A00; /* bordo dell'elemento */
+  color: white;               /* colore del testo    */
+  font-weight: bold;         /* testo in grassetto  */
+ -moz-border-radius: 20px;
+ -webkit-border-radius: 20px;
+ border-radius:20px;
+}
+
 	</style>
 
 </head>
-<body>
+<body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 	<br>
 	<div class="w-50 p-3 card " style="background-color: #eee; text-align:center; position: relative; left: 25%;min-width:250px;">
@@ -43,7 +55,7 @@ width: 150px;}
   
   <div style="color: green;">${OKMessage}</div>
   <div style="padding-top:16px;">
-		<input type="submit" class="btn btn btn-outline-success" value="Modifica indirizzo">
+		<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Modifica indirizzo">
 		</div>
 		</form>
 </div>
