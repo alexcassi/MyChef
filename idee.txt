@@ -1,0 +1,23 @@
+questo file contiene varie opzione per mettere in comunicazione gli utenti, dobbiamo sceglierne una
+
+1. Forniamo contatto email dello chef al cliente perché si accordino tra loro
+2. Forniamo contatto telefonico dello chef al cliente perché si accordino tra loro (pessima idea)
+3. Implementiamo una chat perché comunichino sul sito
+
+pro
+1.  *semplice da implementare e mantenere
+    *permette agli utenti di autogestirsi
+
+2.  *semplice da implementare e mantenere
+    *permette agli utenti di autogestirsi
+    
+3.  *fornisce grande possibilità di espansione
+    *da un'aria professionale al sito
+    
+contro
+1.  *il sito appare poco professionale
+
+2.  *il sito appare poco professionale
+    *rischi elevati di sicurezza e privacy
+    
+3.  *complesso da implementare e mantenere
