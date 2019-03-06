@@ -20,13 +20,14 @@
 <body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 
-<div class="card" style="width: 600px; height: relative; left: 15px; margin: 15px; padding-bottom: 25px">
+<div class="card" style="width: 600px; height: relative; margin: 15px; padding-bottom: 25px; border-style: none;">
 <br>
-<div style="margin-left: 2%;">
+<div style="margin-left: 15px;">
 <h1><span id="lblNome">${ cliente.nome }</span> <span id="lblCognome">${ cliente.cognome }</span></h1>
+	<br> <!-- implementare lista chef "preferiti"/"provati" e lista non ancora provati tipo lista ordini -->
+		 <!-- implementazione futura lista chef "consigliati" confrontando la zona chef/cliente -->
 	<br>
-	<br>
-	<p><b>L' area dove mi trovo è: </b>  ${ cliente.indirizzo }</p>
+	<p><b>L'area dove mi trovo è: </b>  ${ cliente.indirizzo }</p>
 	<p><b>In provincia di: </b> ${ cliente.provincia }, ${ cliente.comune },</p>
 	<br>
 	<br>
