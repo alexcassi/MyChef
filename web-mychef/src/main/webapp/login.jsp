@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 <meta charset="ISO-8859-1">
 <title>Login</title>
 <link rel="stylesheet"
@@ -23,8 +24,9 @@
   border: 2px solid #FF6A00; /* bordo dell'elemento */
   color: white;               /* colore del testo    */
   font-weight: bold;         /* testo in grassetto  */
-  /*height: 25px;  */            /* altezza             */
- /* width: 80px;    */           /* larghezza           */
+ -moz-border-radius: 20px;
+ -webkit-border-radius: 20px;
+ border-radius:20px;
 }
 
 	</style>
@@ -58,6 +60,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	
+		<script src="js/global_scripts.js"></script>
 	
 </body>
 </html>

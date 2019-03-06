@@ -1,29 +1,18 @@
 
 	<div class="navbar navbar-primary bg-primary"
-		style="background-color: #FF6A00 !important;">
+		style="background-color: #FF6A00 !important; min-width: 880px">
 		<h2>
 			
 			 <button type="button"  class="btn  btn-sm" style="width:220px; background-color: #FF6A00 !important ">
 			  <a href="home.jsp"> <img class="nav_img" src ="immagini/logo_nuovo2.png" style="width:210px; height:64px"> </a>
 			 
 			</button>
-	<style>
-
-	.nav_img:hover {
-  opacity: 10%;
-  filter: alpha(opacity=10);
-}
-dropdown, .dropleft, .dropright, .dropup {
-    position: absolute;
-}
-	</style>
-		</h2>					
-
+		</h2>
 
 <form class="form-inline">
 			<input class="form-control mr-sm-2" type="search"
-				placeholder="Search" aria-label="Search" style ="width: 900px;">
-			<button class="btn btn-light my-2 my-sm-0 btn-light" style="color:#FF6A00 !important;" type="submit">Search</button>
+				placeholder="Search" aria-label="Search" style ="width: 600px; border-style: none;">
+			<button class="btn btn-light my-2 my-sm-0 btn-light" style="color:#FF6A00 !important; margin: 8px; " type="submit">Search</button>
 		</form>
 
 <FORM ACTION="ProfileController" METHOD="POST" NAME="myForm">
@@ -33,10 +22,11 @@ dropdown, .dropleft, .dropright, .dropup {
 <img class="nav_img" style="cursor: pointer;" src="immagini/profile_logo3.png" height="50px" width="50px" onclick="manda()"/>
 <ul style="display: contents;">
   <div class="nav-item dropdown" style="display: inline-block;">
-  	<a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" style="color:white; margin-right: 25px;" href="#"></a>
-    	<div class="dropdown-menu dropdown-menu-right" >
+  	<a id="freccina" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" style="color:white; margin-right: 25px;" href="#"></a>
+    	<div class="dropdown-menu dropdown-menu-right" style="margin: 15px;">
     		<a class="dropdown-item" href="signup.jsp">Registrazione</a>
      		<a class="dropdown-item" href="login.jsp">Login</a>
+     		<a class="dropdown-item" href="LogoutServlet">Logout</a>
       	</div>
   </div> 
 </ul>
@@ -47,7 +37,5 @@ dropdown, .dropleft, .dropright, .dropup {
 
 </div>
 
-
-
-	</div>
+</div>
 

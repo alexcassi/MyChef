@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 <meta charset="ISO-8859-1">
 <title>profilo</title>
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
@@ -24,9 +25,12 @@
 <div style="margin-left: 2%;">
 <h1><span id="lblNome">${ cliente.nome }</span> <span id="lblCognome">${ cliente.cognome }</span></h1>
 	<br>
-	l'Area dove mi trovo è: ${ cliente.comune }<br>
-	in provincia di ${ cliente.provincia }<br>
-	in ${ cliente.indirizzo }<br>
+	<br>
+	<p><b>L' area dove mi trovo è: </b>  ${ cliente.indirizzo }</p>
+	<p><b>In provincia di: </b> ${ cliente.provincia }, ${ cliente.comune },</p>
+	<br>
+	<br>
+	<a href = "modificaIndirizzoCliente.jsp">modifica indirizzo</a>
 </div>
 	 	
  		<script
@@ -38,11 +42,10 @@
 		sessionStorage.setItem('email', '${ cliente.email }');
 	</script>
 	  
- 		
-	<script src="js/profiloCliente.js"></script>
 	
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	
+		<script src="js/global_scripts.js"></script>
 	
 </body>
 </html>

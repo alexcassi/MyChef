@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 <meta charset="ISO-8859-1">
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 
@@ -30,8 +31,14 @@
   border: 2px solid #FF6A00; /* bordo dell'elemento */
   color: white;               /* colore del testo    */
   font-weight: bold;         /* testo in grassetto  */
-  /*height: 25px;  */            /* altezza             */
- /* width: 80px;    */           /* larghezza           */
+  -moz-border-radius: 20px;
+ -webkit-border-radius:20px;
+ border-radius:20px;
+ 
+}
+#submit:active {
+  position: relative;
+  top: 1px;
 }
 
 
@@ -59,7 +66,7 @@
 		<form id="f" name="signup" method="post"
 		action="SignUpChefController">
 		<div style="color: #FF0000;">${errorMessage}</div>
-		<input class="form-control form-control-lg" type="text" placeholder="Nome" name="nome" autocomplete="on" required/>
+		<input class="form-control form-control-lg" type="text" placeholder="Nome" padding="orange" name="nome" autocomplete="on" required/>
 		<input class="form-control form-control-lg" type="text" placeholder="Cognome" name="cognome" autocomplete="on" required/>
 		<input class="form-control form-control-lg" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Inserire un indirizzo email valido!' : '');"  placeholder="Email"name="email" autocomplete="on" required/>
 		<input class="form-control form-control-lg" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'La password deve essere di almeno 6 caratteri!' : ''); if(this.checkValidity()) form.confpassword.pattern = this.value;"  placeholder="Password" name="password" required/>
@@ -114,6 +121,9 @@
 		document.getElementById("cit").setAttribute("required","");
 	}
 </script>
+
+	<script src="js/global_scripts.js"></script>
+
 
 </body>
 </html>

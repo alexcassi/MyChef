@@ -23,14 +23,11 @@
 <div class="card" style="width: 800px; height: relative; margin: 15px;">
 <br>
 <div style="margin: 2%;">
+
 	<div style="display: flex;">
-		<h1>${ ricetta.nome_ricetta }</h1>
-		<a href="updateRicetta.jsp?id_ricetta=${ ricetta.id }"
-			style="margin-left: 50px">aggiorna</a> 
-			<a href="RimuoviRicettaController?id_ricetta=${ ricetta.id }"
-				style="margin-left: 50px">elimina</a>
-				
+		<h1>${ ricetta.nome_ricetta }</h1>				
 	</div>
+	
 	<br>
 	<h4>ingredienti:</h4>
 	<p>${ ricetta.ingredienti }</p>
@@ -50,7 +47,8 @@
 		crossorigin="anonymous"></script>
 		
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+	<script src="js/global_scripts.js"></script>
 		
-			<script src="js/global_scripts.js"></script>
 
 </html>

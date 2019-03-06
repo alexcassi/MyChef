@@ -22,7 +22,8 @@ $(() => {
 		var eee = $('#spec')
 			.text(lista_ricette[0].nome_ricetta);
 	});
-
+	
+/*
 	$.ajax({
 		url: 'IndirizzoChefServlet?chef_email=' + email,
 		method: 'get'
@@ -32,9 +33,9 @@ $(() => {
 		var luogo_lavoro = u;
 		
 		var indir = $('#indir')
-		.text('l\'Area dove mi trovo\u00E0 \u00E8: '+luogo_lavoro);
+		.text('L\' area dove mi trovo \u00E8: '+luogo_lavoro);
 
-	});
+	});*/
 
 });
 

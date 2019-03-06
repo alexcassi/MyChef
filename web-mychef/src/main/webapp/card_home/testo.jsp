@@ -1,2 +1,2 @@
-<center> <div class="card-body" style="position-buttom:60%">
-</div> </center>
+<p> <div class="card-body" style="position-buttom:60%">
+</div> </p>

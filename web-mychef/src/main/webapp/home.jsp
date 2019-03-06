@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 		<title>MyChef-Home</title>
 		<meta charset="ISO-8859-1">
 		<link rel="stylesheet"
@@ -17,7 +17,8 @@
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
-	</style>
+	</style>					
+	
 		
 	</head>
 	<body class="sfondo">
@@ -48,6 +49,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 		 
 		 	<script src="js/home.js"></script>
+		 	
+		 	<script src="js/global_scripts.js"></script>
 		 
 	</body>
 </html>

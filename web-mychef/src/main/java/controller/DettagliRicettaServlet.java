@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import business.RicettaManager;
+import modello.Chef;
 import modello.Ricetta;
 
 /**
@@ -29,8 +30,14 @@ public class DettagliRicettaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Ricetta r = RicettaManager.findRicetta(Integer.valueOf(request.getParameter("id_ricetta")));
+		Chef u = (Chef) request.getSession().getAttribute("chef");
 		request.setAttribute("ricetta", r);
-		request.getRequestDispatcher("dettaglio_ricetta.jsp").forward(request, response);
+		if((r.getChef().getEmail()).equals(u.getEmail())){
+			//lo chef della sessione è il proprietario della ricetta
+			request.getRequestDispatcher("dettaglio_ricetta.jsp").forward(request, response);
+		} else {
+			request.getRequestDispatcher("mostra_ricetta.jsp").forward(request, response);
+		}
 	}
 
 }
