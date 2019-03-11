@@ -12,6 +12,7 @@
 			crossorigin="anonymous">
 		<link rel="stylesheet" href="css/stile.css">
 		
+		
 			<style>
 	.nav_img:hover {
   opacity: 0.5;
@@ -37,6 +38,14 @@
 			<jsp:include page="card_home/card.jsp"></jsp:include> 
 				
 			<jsp:include page="card_home/card.jsp"></jsp:include> 
+			
+			<jsp:include page="card_home/card.jsp"></jsp:include> 
+			
+			<jsp:include page="card_home/card.jsp"></jsp:include> 
+			
+			<jsp:include page="card_home/card.jsp"></jsp:include> 
+			
+			<jsp:include page="card_home/card.jsp"></jsp:include>
 			
 		 </div>
 		 <jsp:include page="frammenti/footer.html"></jsp:include>

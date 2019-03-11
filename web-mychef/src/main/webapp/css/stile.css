@@ -20,3 +20,13 @@ div.absolute {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+#submit {
+  background-color: #FF6A00; /* colore di sfondo    */
+  border: 2px solid #FF6A00; /* bordo dell'elemento */
+  color: white;               /* colore del testo    */
+  font-weight: bold;         /* testo in grassetto  */
+ -moz-border-radius: 20px;
+ -webkit-border-radius: 20px;
+ border-radius:20px;
+}
