@@ -59,11 +59,14 @@ width: 150px;}
   <div style="color: green;">${OKMessage}</div>
   <div style="padding-top:16px;">
 		<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Aggiungi ricetta">
-		<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Clicca per accedere">
 		</div>
 		</form>
 </div>
 
+	<br>
+<p style="text-align: center;"><b><a href="profilo_chef.jsp">Annulla</a></b></p>
+	<br>
+<p style="text-align: center;"><b>Non utilittare ' o caratteri accentati</b></p>
 	<script src="js/global_scripts.js"></script>
 
 
