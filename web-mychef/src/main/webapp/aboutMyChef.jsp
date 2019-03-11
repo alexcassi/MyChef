@@ -30,7 +30,7 @@
 	<div class="card" style=" width: relative; height: relative; margin-top: 15px; margin-left: 15px;">
 		<div style=" margin-left:15px;">
 			<h1>MyChef</h1>
-				<p style="font-family: calibri; font-size: 20;">Questo servizio nasce dall’esigenza di riscoprire i valori e i piaceri della tavola in famiglia,
+				<p style="font-family: calibri; font-size: 30;">Questo servizio nasce dall’esigenza di riscoprire i valori e i piaceri della tavola in famiglia,
 					una cucina ricercata, espressa da professionisti,
 					in un ambiente informale e accogliente: la propria casa.</p>
 				<h3>Scopi e motivazioni</h3>
@@ -42,7 +42,7 @@
 						<li>Ritrovare il piacere della buona cucina</li>
 						<li>Arricchire l’alimentazione dei clienti</li>							<li>Permettere relazioni interpersonali e possibilità di apprendimento da esperti nel settore</li>
 					</ul>
-				</p>
+				 </p>
 		 </div>
 </div>
 </body>
