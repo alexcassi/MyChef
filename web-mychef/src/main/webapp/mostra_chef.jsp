@@ -32,6 +32,8 @@
 <br>
 	<p><b>L' area dove si trova è: </b> ${ requested_chef.luogo_lavoro }</p>
 	<br>
+	<p><b>Contattami: </b> ${ requested_chef.email }</p>
+	<br>
 	<br>
 	<b>la sua specialità è:</b><p id = "spec"></p>
  	<br>
