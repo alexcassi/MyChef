@@ -52,11 +52,11 @@
 		<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Clicca per accedere">
 		</div>
 		</form>
-	</div>
+	
 	
 	<br>
-<p style="text-align: center;"><b>Non sei ancora registrato?<a href="signup.jsp">&nbspFallo ora!</a></b></p>
-
+<p style="text-align: center; margin-bottom: 0px"><b>Non sei ancora registrato?<a href="signup.jsp" style="color: #FF6A00">&nbspFallo ora!</a></b></p>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

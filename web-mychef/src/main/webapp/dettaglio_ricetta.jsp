@@ -22,13 +22,13 @@
 
 <div class="card" style="width: 800px; height: relative; margin: 15px;">
 <br>
-<div style="margin: 2%;">
+<div style="margin: 2%; ">
 	<div style="display: flex;">
 		<h1>${ ricetta.nome_ricetta }</h1>
 		<a href="updateRicetta.jsp?id_ricetta=${ ricetta.id }"
-			style="margin-left: 50px">aggiorna</a> 
+			style="margin-left: 50px; color: #FF6A00">aggiorna</a> 
 			<a href="RimuoviRicettaController?id_ricetta=${ ricetta.id }"
-				style="margin-left: 50px">elimina</a>
+				style="margin-left: 50px; color: #FF6A00">elimina</a>
 				
 	</div>
 	<br>

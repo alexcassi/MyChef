@@ -42,12 +42,12 @@
     </body>
 	<br>
 	<p><b>L' area dove mi trovo è: </b> ${ chef.luogo_lavoro }</p>
-	<a href = "modificaIndirizzo.jsp">modifica indirizzo</a>
+	<a href = "modificaIndirizzo.jsp" style="color: #FF6A00">modifica indirizzo</a>
 	<br><br><br>
 	<b>la mia specialità è:</b><p id = "spec"></p>
 	<br>
 	<br>
- 	<a href = "addRicetta.jsp">aggiungi ricetta</a>
+ 	<a href = "addRicetta.jsp" style="color: #FF6A00">aggiungi ricetta</a>
  	<br>
  	<br>
  	<b>le tue ricette:</b>
