@@ -30,6 +30,15 @@ width: 150px;}
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
+#submit {
+  background-color: #FF6A00; /* colore di sfondo    */
+  border: 2px solid #FF6A00; /* bordo dell'elemento */
+  color: white;               /* colore del testo    */
+  font-weight: bold;         /* testo in grassetto  */
+ -moz-border-radius: 20px;
+ -webkit-border-radius: 20px;
+ border-style: none;
+}
 	</style>
 
 </head>
@@ -48,10 +57,15 @@ width: 150px;}
     
   <div style="color: green;">${OKMessage}</div>
   <div style="padding-top:16px;">
-		<input type="submit" class="btn btn btn-outline-success" value="Aggiorna ricetta">
+		<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Aggiorna ricetta">
 		</div>
 		</form>
 </div>
+
+	<br>
+<p style="text-align: center;"><b><a href="profilo_chef.jsp">Annulla</a></b></p>
+	<br>
+<p style="text-align: center;"><b>Non utilittare ' o caratteri accentati</b></p>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
