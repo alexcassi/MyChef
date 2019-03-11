@@ -39,6 +39,7 @@
 			<jsp:include page="card_home/card.jsp"></jsp:include> 
 			
 		 </div>
+		 <jsp:include page="frammenti/footer.html"></jsp:include>
 		 
  		<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -52,5 +53,7 @@
 		 	
 		 	<script src="js/global_scripts.js"></script>
 		 
+		 <div class="footer">
+		 </div>
 	</body>
 </html>
