@@ -28,20 +28,39 @@
 	
 <body>
 	<div class="card" style=" width: relative; height: relative; margin-top: 15px; margin-left: 15px;">
-		<div style=" margin-left:15px;">
-			<h1>MyChef</h1>
-				<p style="font-family: calibri; font-size: 30;">Questo servizio nasce dall’esigenza di riscoprire i valori e i piaceri della tavola in famiglia,
+		<div style=" margin-left:15px; font-family: calibri; font-size: 20px;"">
+		
+			<h1 style="color: #FF6A00 !important">MyChef</h1>
+				<p>Questo servizio nasce dall’esigenza di riscoprire i valori e i piaceri della tavola in famiglia,
 					una cucina ricercata, espressa da professionisti,
 					in un ambiente informale e accogliente: la propria casa.</p>
-				<h3>Scopi e motivazioni</h3>
-				<p style="font-family: calibri; font-size: 20;">
+					
+					<p><b style="color: #FF6A00 !important">Produced by </b>
+						Michela Biffi, Marco Cantella, Alessandro Cassinari,
+						Riccardo De Gasperi and Gabriele Pasinati</p>
+						
+			<h3 style="color: #FF6A00 !important">Scopi e motivazioni</h3>
+				<p>
 					<ul>
 						<li>Favorire la formazione e l’impiego dei giovani chef</li>
 						<li>Favorire la transizione tra esperienze lavorative</li>
 						<li>Semplificare l’esperienza di ristorazione</li>
 						<li>Ritrovare il piacere della buona cucina</li>
-						<li>Arricchire l’alimentazione dei clienti</li>							<li>Permettere relazioni interpersonali e possibilità di apprendimento da esperti nel settore</li>
+						<li>Arricchire l’alimentazione dei clienti</li>
+						<li>Permettere relazioni interpersonali e possibilità di apprendimento da esperti nel settore</li>
 					</ul>
+					 </p>
+					 
+					<h3 style="color: #FF6A00 !important">Software utilizzati</h3>
+				 <ul>
+						<li>Java</li>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>Android Studio</li>
+						<li>Photoshop</li>
+				</ul>
+				 <p>
 				 </p>
 		 </div>
 </div>
