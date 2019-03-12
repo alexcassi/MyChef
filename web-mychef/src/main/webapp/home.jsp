@@ -48,7 +48,7 @@
 			<jsp:include page="card_home/card.jsp"></jsp:include>
 			
 		 </div>
-		 <jsp:include page="frammenti/footer.html"></jsp:include>
+		 
 		 
  		<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -62,7 +62,11 @@
 		 	
 		 	<script src="js/global_scripts.js"></script>
 		 
-		 <div class="footer">
-		 </div>
 	</body>
+		<b>
+			<a href="home.jsp" style="width: 50px; height: 50px; position: center; right: 0px;
+			 		border-radius: 20px; color: white; background-color: #FF6A00;
+					font-size: 50px; text-decoration: none;">^</a>
+		</b>
+	<jsp:include page="frammenti/footer.html"></jsp:include>
 </html>
