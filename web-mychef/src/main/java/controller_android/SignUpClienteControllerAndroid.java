@@ -10,19 +10,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import business.SignUpChefManager;
+import business.SignUpClienteManager;
 
 /**
- * Servlet implementation class SignUpChefControleer
+ * Servlet implementation class SignUpClienteControleer
  */
-@WebServlet("/SignUpChefControllerAndroid")
-public class SignUpChefControllerAndroid extends HttpServlet {
+@WebServlet("/SignUpClienteControllerAndroid")
+public class SignUpClienteControllerAndroid extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public SignUpChefControllerAndroid() {
+	public SignUpClienteControllerAndroid() {
 		super();
 	}
 
@@ -36,17 +36,19 @@ public class SignUpChefControllerAndroid extends HttpServlet {
 		response.setContentType("application/json");
 		String nome = new String(request.getParameter("nome"));
 		String cognome = new String(request.getParameter("cognome"));
+		String comune = new String(request.getParameter("comune"));
+		String provincia = new String(request.getParameter("provincia"));
+		String indirizzo = new String(request.getParameter("indirizzo"));
 		String email = new String(request.getParameter("email"));
 		String password = new String(request.getParameter("password"));
-		String luogo_lavoro = new String(request.getParameter("luogo_lavoro"));
 
 		ObjectMapper om = new ObjectMapper();
 
 		try {
-			if (SignUpChefManager.checkUsernameExists(email)) {
+			if (SignUpClienteManager.checkUsernameExists(email)) {
 				response.getWriter().append(om.writeValueAsString("Email già  utilizzata, usare un'altra mail."));
 			} else {
-				SignUpChefManager.signUp(nome, cognome, email, password, luogo_lavoro);
+				SignUpClienteManager.signUp(nome, cognome, comune, provincia, indirizzo, email, password);
 				response.getWriter().append(om.writeValueAsString("registrazione avvenuta"));
 			}
 		} catch (Exception e) {

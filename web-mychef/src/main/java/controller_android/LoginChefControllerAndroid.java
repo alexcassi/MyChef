@@ -43,7 +43,7 @@ public class LoginChefControllerAndroid extends HttpServlet {
 		} else {
 			response.getWriter().append("Login fallito");
 		}
-		
+
 	}
 
 }
