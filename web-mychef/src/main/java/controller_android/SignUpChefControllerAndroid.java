@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import business.SignUpChefManager;
 
 /**
@@ -36,18 +38,20 @@ public class SignUpChefControllerAndroid extends HttpServlet {
 		String cognome = new String(request.getParameter("cognome"));
 		String email = new String(request.getParameter("email"));
 		String password = new String(request.getParameter("password"));
-		String luogo_lavoro = new String(request.getParameter("luogo_lavoro"));		
+		String luogo_lavoro = new String(request.getParameter("luogo_lavoro"));
+		
+		ObjectMapper om = new ObjectMapper();
 		
 		try {
 			if (SignUpChefManager.checkUsernameExists(email)) {
-				response.getWriter().append("Email già  utilizzata, usare un'altra mail.");
+				response.getWriter().append(om.writeValueAsString("Email già  utilizzata, usare un'altra mail."));
 			} else {
 				SignUpChefManager.signUp(nome, cognome, email, password, luogo_lavoro);
-				response.getWriter().append("registrazione avvenuta");
+				response.getWriter().append(om.writeValueAsString("registrazione avvenuta"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			response.getWriter().append("Errore interno. Riprovare. Se persiste contattarci");
+			response.getWriter().append(om.writeValueAsString("Errore interno. Riprovare. Se persiste contattarci"));
 		}
 	}
 }
