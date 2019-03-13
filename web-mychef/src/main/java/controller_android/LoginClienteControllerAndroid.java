@@ -11,20 +11,19 @@ import javax.servlet.http.HttpServletResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import business.LoginManager;
-import modello.Chef;
 import modello.Cliente;
 
 /**
  * Servlet implementation class LoginController
  */
-@WebServlet("/LoginControllerAndroid")
-public class LoginControllerAndroid extends HttpServlet {
+@WebServlet("/LoginClienteControllerAndroid")
+public class LoginClienteControllerAndroid extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public LoginControllerAndroid() {
+	public LoginClienteControllerAndroid() {
 		super();
 	}
 
@@ -36,18 +35,13 @@ public class LoginControllerAndroid extends HttpServlet {
 			throws ServletException, IOException {
 		String email = new String(request.getParameter("email"));
 		String password = new String(request.getParameter("password"));
-		Chef c = LoginManager.loginChef(email, password);
-		Cliente u = LoginManager.loginCliente(email, password);
+		Cliente c = LoginManager.loginCliente(email, password);
 		ObjectMapper om = new ObjectMapper();
 		if (c != null) {
 			response.setContentType("application/json");
 			response.getWriter().append(om.writeValueAsString(c));
-		} else if (u != null) {
-			response.setContentType("application/json");
-			response.getWriter().append(om.writeValueAsString(u));
 		} else {
 			response.getWriter().append("Login fallito");
-
 		}
 
 	}
