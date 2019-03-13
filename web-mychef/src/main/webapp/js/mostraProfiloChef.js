@@ -14,7 +14,7 @@ $(() => {
 		    var li = $('<li/>')
 		        .appendTo(cList);
 		    var aaa = $('<a/>')
-		    	.attr('href','DettagliRicettaServlet?id_ricetta='+lista_ricette[i].id)
+		    	.attr('href','MostraRicettaServlet?id_ricetta='+lista_ricette[i].id)
 		        .text(lista_ricette[i].nome_ricetta)
 		        .appendTo(li);
 		});
