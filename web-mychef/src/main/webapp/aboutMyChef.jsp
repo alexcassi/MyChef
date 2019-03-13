@@ -28,7 +28,7 @@
 	
 <body>
 	<div class="card" style=" width: relative; height: relative; margin: 15px">
-		<div style=" margin-left:15px; font-family: calibri; font-size: 20px;"">
+		<div style=" margin-left: 15px; margin-right: 15px; font-family: calibri; font-size: 20px;"">
 		
 			<h1 style="color: #FF6A00 !important">MyChef</h1>
 				<p>Questo servizio nasce dall’esigenza di riscoprire i valori e i piaceri della tavola in famiglia,
@@ -65,10 +65,6 @@
 		 </div>
 </div>
 </body>
-		<b>
-			<a href="aboutMyChef.jsp" style="width: 50px; height: 50px; position: center; right: 0px;
-			 		border-radius: 20px; color: white; background-color: #FF6A00;
-					font-size: 50px; text-decoration: none;">^</a>
-		</b>
+
 		<jsp:include page="frammenti/footer.html"></jsp:include>
 </html>
