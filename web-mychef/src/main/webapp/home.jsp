@@ -47,6 +47,14 @@
 			
 			<jsp:include page="card_home/card.jsp"></jsp:include>
 			
+			<jsp:include page="card_home/card.jsp"></jsp:include>
+			
+			<jsp:include page="card_home/card.jsp"></jsp:include>
+			
+			<jsp:include page="card_home/card.jsp"></jsp:include>
+			
+			<jsp:include page="card_home/card.jsp"></jsp:include>
+			
 		 </div>
 		 
 		 
