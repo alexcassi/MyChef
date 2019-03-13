@@ -54,7 +54,7 @@
 		sessionStorage.setItem('email', '${ requested_chef.email }');
 	</script>
 	
-	<script src="js/profiloChef.js"></script>
+	<script src="js/mostraProfiloChef.js"></script>
 	
 	<script type="text/javascript">
 	function standby() { document.getElementById('i').src = "card_home/placeholder.jpg"}
