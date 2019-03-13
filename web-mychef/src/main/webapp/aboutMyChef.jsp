@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
-		<title>MyChef-Home</title>
+		<title>About</title>
 		<meta charset="ISO-8859-1">
 		<link rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -65,12 +65,10 @@
 		 </div>
 </div>
 </body>
-	<div>
 		<b>
 			<a href="home.jsp" style="width: 50px; height: 50px; position: center; right: 0px;
 			 		border-radius: 20px; color: white; background-color: #FF6A00;
 					font-size: 50px; text-decoration: none;">^</a>
 		</b>
 		<jsp:include page="frammenti/footer.html"></jsp:include>
-	</div>
 </html>

@@ -78,4 +78,10 @@
 	
 			
 </body>
+		<b>
+			<a href="home.jsp" style="width: 50px; height: 50px; position: center; right: 0px;
+			 		border-radius: 20px; color: white; background-color: #FF6A00;
+					font-size: 50px; text-decoration: none;">^</a>
+		</b>
+		<jsp:include page="frammenti/footer.html"></jsp:include>
 </html>
