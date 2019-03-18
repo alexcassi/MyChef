@@ -20,18 +20,18 @@
 <body class="sfondo">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 
-<div class="card" style="width:800px; height: relative; margin: 15px; padding-bottom: 25px">
+<div class="card" style="width: relative; min-width: 800px height: relative; margin: 15px; padding-bottom: 25px; border-style: none">
 <br>
 <div style="margin-left: 1.89%;">
 <h1><span id="lblNome">${ chef.nome }</span> <span id="lblCognome">${ chef.cognome }</span></h1>
-<br>
 <br>
 	<img id="i" src="immagini_caricate/profili/${ chef.immagine_profilo }" style="height: 400px;
     width: 400px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" onerror="standby()">
 <br>
 <br>
         <div>
-            <h3> aggiungi immagine del profilo </h3>
+            <h2> aggiungi immagine del profilo </h2>
+            <br>
             <form action="upload" method="post" enctype="multipart/form-data">
                 <input type="file" name="file" />
                 <input type="hidden" name="tipo_immagine" value="profilo"/>
@@ -41,8 +41,8 @@
         </div>
     </body>
 	<br>
-	<p><b>L' area dove mi trovo è: </b> ${ chef.luogo_lavoro }</p>
-	<a href = "modificaIndirizzo.jsp" style="color: #FF6A00">modifica indirizzo</a>
+	<p><b>L'area dove mi trovo è: </b> ${ chef.luogo_lavoro }</p>
+	<a href = "modificaIndirizzo.jsp" style="color: #FF6A00; text-decoration: none;">modifica indirizzo</a>
 	<br><br><br>
 	<b>la mia specialità è:</b><p id = "spec"></p>
 	<br>
@@ -53,7 +53,7 @@
  	<b>le tue ricette:</b>
  	<br>
  	
- 	<ul class="mylist">
+ 	<ul class="mylist" style="color: black">
  	</ul>
 </div>
 </div>
@@ -78,10 +78,6 @@
 	
 			
 </body>
-		<b>
-			<a href="profilo_chef.jsp" style="width: 50px; height: 50px; position: center; right: 0px;
-			 		border-radius: 20px; color: white; background-color: #FF6A00;
-					font-size: 50px; text-decoration: none;">^</a>
-		</b>
+
 		<jsp:include page="frammenti/footer.html"></jsp:include>
 </html>
