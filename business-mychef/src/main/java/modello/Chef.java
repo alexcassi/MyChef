@@ -22,6 +22,9 @@ public class Chef extends Utente {
 	@OneToMany(mappedBy = "chef")
 	private List<Ricetta> ricette;
 	private String immagine_profilo;
+	@JsonIgnore
+	@OneToMany(mappedBy = "chef")
+	private List<Ordine> ordini;
 
 	public void aggiungiRicetta(Ricetta r) {
 		if (ricette == null) {
