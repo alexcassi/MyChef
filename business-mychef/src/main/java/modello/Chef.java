@@ -33,6 +33,14 @@ public class Chef extends Utente {
 		this.ricette.add(r);
 		r.setChef(this);
 	}
+	
+	public void aggiungiOrdine(Ordine o) {
+		if (ordini == null) {
+			ordini = new ArrayList<Ordine>();
+		}
+		this.ordini.add(o);
+		o.setChef(this);
+	}
 
 	public List<Ricetta> getRicette() {
 		return ricette;

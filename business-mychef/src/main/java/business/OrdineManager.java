@@ -1,29 +1,38 @@
 package business;
 
-import java.sql.Date;
-import java.sql.Time;
+import java.util.Date;
 
 import javax.persistence.EntityManager;
 
 import modello.Chef;
 import modello.Cliente;
 import modello.Ordine;
-import modello.Ricetta;
 import utility.JPAUtility;
 
 public class OrdineManager {
 
-	public static Ordine newOrdine(Date data, Time ora, String indirizzo, Double totale, String note_cliente, Cliente cliente, Chef chef ) {
+	public static Ordine newOrdine(Date data, Date ora, String comune, String provincia, String indirizzo, Double totale, String note_cliente, String cliente_mail, String chef_mail ) {
+		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = new Ordine();
 		o.setData(data);
 		o.setOra(ora);
+		o.setComune(comune);
+		o.setProvincia(provincia);
 		o.setIndirizzo(indirizzo);
 		o.setTotale(totale);
 		o.setNote_cliente(note_cliente);
 		o.setLetto(false);
 		o.setAccettato(null);
-		o.setCliente(cliente);
-		o.setChef(chef);
+		Chef c = em.find(Chef.class, chef_mail);
+		em.getTransaction().begin();
+		c.aggiungiOrdine(o);
+		em.persist(o);
+		em.getTransaction().commit();
+		Cliente u = em.find(Cliente.class, cliente_mail);
+		em.getTransaction().begin();
+		u.aggiungiOrdine(o);
+		em.persist(o);
+		em.getTransaction().commit();
 		
 		return o;		
 	}
@@ -64,7 +73,7 @@ public class OrdineManager {
 		em.getTransaction().commit();
 	}
 	
-	public static void updateOrdine(Integer id, Date data, Time ora, String indirizzo, Double totale, String note_cliente) {
+	public static void updateOrdine(Integer id, Date data, Date ora, String comune, String provincia, String indirizzo, Double totale, String note_cliente) {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
