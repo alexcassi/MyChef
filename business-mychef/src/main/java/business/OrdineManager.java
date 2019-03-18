@@ -76,15 +76,17 @@ public class OrdineManager {
 	public static void updateOrdine(Integer id, Date data, Date ora, String comune, String provincia, String indirizzo, Double totale, String note_cliente) {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
-		em.getTransaction().begin();
-		o.setData(data);
-		o.setOra(ora);
-		o.setTotale(totale);
-		o.setComune(comune);
-		o.setProvincia(provincia);
-		o.setIndirizzo(indirizzo);
-		o.setNote_cliente(note_cliente);
-		em.getTransaction().commit();
+		if(o.getAccettato()==null) {
+			em.getTransaction().begin();
+			o.setData(data);
+			o.setOra(ora);
+			o.setTotale(totale);
+			o.setComune(comune);
+			o.setProvincia(provincia);
+			o.setIndirizzo(indirizzo);
+			o.setNote_cliente(note_cliente);
+			em.getTransaction().commit();
+		}	
 	}
 
 }
