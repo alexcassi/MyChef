@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<html>
+<html style="height:100%;">
 	<head>
 		<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 		<title>ordini</title>
@@ -18,6 +18,11 @@
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
+<<<<<<< HEAD
+
+body::after{ content:''; display:block; height:100px; }
+
+=======
 .titoli {
 	color: #FF6A00;
 }
@@ -31,10 +36,11 @@
 			  border-radius:20px;
 			}
 			
+>>>>>>> branch 'master' of https://github.com/alexcassi/MyChef2.git
 		</style>					
 		
 	</head>
-	<body class="sfondo">
+	<body class="sfondo" style="min-height:100%; padding:0; margin:0; position:relative;">
 		<jsp:include page="frammenti/navbar.html"></jsp:include>
 		
 			<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">

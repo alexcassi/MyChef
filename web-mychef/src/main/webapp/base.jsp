@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html style="height:100%;">
 <head>
 <meta charset="ISO-8859-1">
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
@@ -12,10 +12,13 @@
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
+
+body::after{ content:''; display:block; height:100px; }
+
 	</style>
 
 </head>
-<body>
+<body class="sfondo" style="min-height:100%; padding:0; margin:0; position:relative;">
 	<jsp:include page="frammenti/navbar.html"></jsp:include>
 	
 	

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html style="height:100%;">
 <head>
 <link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 <meta charset="ISO-8859-1">
@@ -14,10 +14,12 @@
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
+
+body::after{ content:''; display:block; height:100px; }
 	</style>
 
 </head>
-<body class="sfondo">
+<body class="sfondo" style="min-height:100%; padding:0; margin:0; position:relative;">
 	<jsp:include page="frammenti/navbar.html"></jsp:include>
 
 <div class="card" style="width: 800px; height: relative; margin: 15px;">

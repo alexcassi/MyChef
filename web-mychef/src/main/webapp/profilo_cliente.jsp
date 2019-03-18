@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
 <head>
 <link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 <meta charset="ISO-8859-1">
@@ -14,10 +14,13 @@
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
+
+body::after{ content:''; display:block; height:100px; }
+
 	</style>
 
 </head>
-<body class="sfondo">
+<body class="sfondo" style="min-height:100%; padding:0; margin:0; position:relative;">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 
 <div class="card" style="width: 600px; height: relative; margin: 15px; padding-bottom: 25px; border-style: none;">
@@ -33,7 +36,7 @@
 	<br>
 	<a href = "modificaIndirizzoCliente.jsp">modifica indirizzo</a>
 </div>
-	 	
+</div>
  		<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
 	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -49,10 +52,5 @@
 		<script src="js/global_scripts.js"></script>
 	
 </body>
-		<b>
-			<a href="profilo_cliente.jsp" style="width: 50px; height: 50px; position: center; right: 0px;
-			 		border-radius: 20px; color: white; background-color: #FF6A00;
-					font-size: 50px; text-decoration: none;">^</a>
-		</b>
 		<jsp:include page="frammenti/footer.html"></jsp:include>
 </html>

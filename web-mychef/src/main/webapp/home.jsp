@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<html>
+<html style="height: -webkit-fill-available;">
 	<head>
 		<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 		<title>MyChef-Home</title>
@@ -18,11 +18,14 @@
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
+
+body::after{ content:''; display:block; height:100px; }
+
 	</style>					
 	
 		
 	</head>
-	<body class="sfondo">
+	<body class="sfondo" style="min-height:100%; padding:0; margin:0; position:relative;">
 	
 	<jsp:include page="frammenti/navbar.html"></jsp:include>
 		<div class="row" style="width: 100%;">
