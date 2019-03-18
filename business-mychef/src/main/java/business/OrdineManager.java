@@ -80,6 +80,8 @@ public class OrdineManager {
 		o.setData(data);
 		o.setOra(ora);
 		o.setTotale(totale);
+		o.setComune(comune);
+		o.setProvincia(provincia);
 		o.setIndirizzo(indirizzo);
 		o.setNote_cliente(note_cliente);
 		em.getTransaction().commit();
