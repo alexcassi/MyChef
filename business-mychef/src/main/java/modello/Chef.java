@@ -34,7 +34,6 @@ public class Chef extends Utente {
 		r.setChef(this);
 	}
 
-	
 	public List<Ricetta> getRicette() {
 		return ricette;
 	}

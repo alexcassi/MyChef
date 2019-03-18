@@ -29,7 +29,6 @@ public class Cliente extends Utente {
 	// private Double latitudine;
 	// private Double longitudine;
 
-	
 	public String getProvincia() {
 		return provincia;
 	}

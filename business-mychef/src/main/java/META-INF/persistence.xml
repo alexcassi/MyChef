@@ -4,6 +4,7 @@
 		<class>modello.Chef</class>
 		<class>modello.Ricetta</class>
 		<class>modello.Cliente</class>
+		<class>modello.Ordine</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://mychefdatabase.mssql.somee.com:1433;databaseName=mychefdatabase"/>
 			<property name="javax.persistence.jdbc.user" value="lexcassi_SQLLogin_1"/>
