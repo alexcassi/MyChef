@@ -8,8 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import business.RicettaManager;
 import business.SignUpChefManager;
+import business.UtenteManager;
+import modello.Chef;
 
 /**
  * Servlet implementation class RicettaController
@@ -39,7 +40,15 @@ public class ModificaIndirizzoController extends HttpServlet {
 
 		try {
 			SignUpChefManager.modificaIndirizzo(email, luogo_lavoro);
-			response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
+			// rimette nella sessione lo chef col campo aggiornato riprendendolo dal db
+			Chef c = UtenteManager.findChef(email);
+			if (c != null) {
+				request.getSession().setAttribute("chef", c);
+				response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
+			} else {
+				request.setAttribute("message", "chef non ritrovato nel database ");
+				request.getRequestDispatcher("/messaggio_errore.jsp").forward(request, response);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			response.getWriter().append("Errore interno. Riprovare. Se persiste contattarci");
