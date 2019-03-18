@@ -1,5 +1,6 @@
 package modello;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -25,6 +26,14 @@ public class Cliente extends Utente {
 	@JsonIgnore
 	@OneToMany(mappedBy = "cliente")
 	private List<Ordine> ordini;
+	
+	public void aggiungiOrdine(Ordine o) {
+		if (ordini == null) {
+			ordini = new ArrayList<Ordine>();
+		}
+		this.ordini.add(o);
+		o.setCliente(this);
+	}
 
 	// private Double latitudine;
 	// private Double longitudine;
