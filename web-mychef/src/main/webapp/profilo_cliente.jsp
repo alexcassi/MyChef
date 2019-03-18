@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html style="height: -webkit-fill-available;">
+<html style="height: 100%;">
 <head>
 <link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 <meta charset="ISO-8859-1">
@@ -36,7 +36,7 @@ body::after{ content:''; display:block; height:100px; }
 	<br>
 	<a href = "modificaIndirizzoCliente.jsp">modifica indirizzo</a>
 </div>
-	 	
+</div>
  		<script
 	  src="https://code.jquery.com/jquery-3.3.1.min.js"
 	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -52,10 +52,5 @@ body::after{ content:''; display:block; height:100px; }
 		<script src="js/global_scripts.js"></script>
 	
 </body>
-		<b>
-			<a href="profilo_cliente.jsp" style="width: 50px; height: 50px; position: center; right: 0px;
-			 		border-radius: 20px; color: white; background-color: #FF6A00;
-					font-size: 50px; text-decoration: none;">^</a>
-		</b>
 		<jsp:include page="frammenti/footer.html"></jsp:include>
 </html>
