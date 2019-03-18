@@ -37,8 +37,8 @@
 	<body class="sfondo">
 		<jsp:include page="frammenti/navbar.html"></jsp:include>
 		
-			<div class="card" style="width: relative; min-width: 800px height: relative; margin: 15px; padding: 15px; border-style: none">
-				<table class="table">
+			<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
+				<table class="table" style="width: relative;">
 				  <thead>
 				    <tr class="titoli">
 				      <th scope="col">&nbsp;</th>
@@ -69,7 +69,7 @@
 				  </tbody>
 				</table>
 				</div>
-			<div class="card" style="width: relative; min-width: 800px height: relative; margin: 15px; padding: 15px; border-style: none">
+			<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 				<table class="table">
 				  <thead>
 				    <tr class="titoli">
@@ -77,7 +77,7 @@
 				      <th scope="col" style="color: #FF6A00">Ricette selezionate</th>
 				      <th scope="col" style="color: #FF6A00">totale</th>
 				      <th scope="col" style="color: #FF6A00">data</th>
-				      <th scope="col" style="color: #FF6A00">ora</th>
+				      <th scope="col" style="color: #FF6A00;">ora</th>
 				    </tr>
 				  </thead>
 				  <tbody>
@@ -97,28 +97,35 @@
 					      <th scope="row"></th>
 					      <td></td>
 					      <td>127.0 &euro;</td>
-					      <td><input type="date" id="date"></td>
+					      <td><input type="date" id="date""></td>
 					      <td><input type="time" id="time"></td>
 					    </tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="card" style="width: relative; min-width: 800px height: relative; margin: 15px; padding: 15px; border-style: none">
-					<div style="position: center;">
+			<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 					<div class="btn-group btn-group-toggle" data-toggle="buttons">
 					  <label>
-					    <input type="text" id="input" placeholder="Comune" style="width: 173px; margin: 5px; margin-left: 0px;">
+					    <input type="text" id="input" placeholder="&nbsp;Comune" style="width: 173px; margin: 5px; margin-left: 0px;">
 					  </label>
 					  <label>
-					    <input type="text" id="input" placeholder="Provincia" style="width: 173px; margin: 5px">
+					    <input type="text" id="input" placeholder="&nbsp;Provincia" style="width: 173px; margin: 5px">
 					  </label>
 					  <label>
-					    <input type="text" id="input" placeholder="Indirizzo" style="width: 173px; margin: 5px; margin-right: 0px">
+					    <input type="text" id="input" placeholder="&nbsp;Indirizzo" style="width: 173px; margin: 5px; margin-right: 0px">
 					  </label>
 					</div>
-					<textarea id="textarea" rows="3" style="width: 539px;">Note</textarea>
-					</div>
-					<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Conferma" style="width: 173px; margin: 5px">
+					<textarea id="textarea" rows="3" style="width: 539px;" placeholder="&nbsp;Note"></textarea>
+					<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Conferma" style="width: 173px; margin: 15px; margin-left: 0px; ">
 			</div>
+				<jsp:include page="frammenti/footer.html"></jsp:include>
+					<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+		
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+	<script src="js/global_scripts.js"></script>
+		
 	</body>
 </html>
