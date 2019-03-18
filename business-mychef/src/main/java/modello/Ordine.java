@@ -1,7 +1,6 @@
 package modello;
 
-import java.sql.Date;
-import java.sql.Time;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,7 +22,11 @@ public class Ordine {
 	@Column(nullable = false)
 	private Date data;
 	@Column(nullable = false)
-	private Time ora;
+	private Date ora;
+	@Column(nullable = false)
+	private String comune;
+	@Column(nullable = false)
+	private String provincia;
 	@Column(nullable = false)
 	private String indirizzo;
 	@Column(nullable = false)
@@ -56,10 +59,10 @@ public class Ordine {
 	public void setData(Date data) {
 		this.data = data;
 	}
-	public Time getOra() {
+	public Date getOra() {
 		return ora;
 	}
-	public void setOra(Time ora) {
+	public void setOra(Date ora) {
 		this.ora = ora;
 	}
 	public String getIndirizzo() {
@@ -115,6 +118,18 @@ public class Ordine {
 	}
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
+	}
+	public String getComune() {
+		return comune;
+	}
+	public void setComune(String comune) {
+		this.comune = comune;
+	}
+	public String getProvincia() {
+		return provincia;
+	}
+	public void setProvincia(String provincia) {
+		this.provincia = provincia;
 	}
 
 }
