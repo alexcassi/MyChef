@@ -1,7 +1,12 @@
 package modello;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Entity implementation class for Entity: Cliente
@@ -17,6 +22,9 @@ public class Cliente extends Utente {
 	// private String frazione;
 	@Column(nullable = false)
 	private String indirizzo;
+	@JsonIgnore
+	@OneToMany(mappedBy = "cliente")
+	private List<Ordine> ordini;
 
 	// private Double latitudine;
 	// private Double longitudine;
