@@ -60,12 +60,11 @@ body::after{ content:''; display:block; height:100px; }
 		<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Modifica indirizzo">
 		</div>
 		</form>
-</div>
-
 	<br>
 <p style="text-align: center;"><b><a href="profilo_chef.jsp">Annulla</a></b></p>
 	<br>
 <p style="text-align: center;"><b>Non utilittare ' o caratteri accentati</b></p>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -74,5 +73,9 @@ body::after{ content:''; display:block; height:100px; }
 		<script src="js/global_scripts.js"></script>
 	
 </body>
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/alexcassi/MyChef2.git
 		<jsp:include page="frammenti/footer.html"></jsp:include>
 </html>
