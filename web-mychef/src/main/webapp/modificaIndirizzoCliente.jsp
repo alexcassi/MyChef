@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html style="height:100%;">
 <head>
 <link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 	<meta charset="UTF-8">

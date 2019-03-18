@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<html>
+<html style="height:100%;">
 	<head>
 		<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
 		<title>About</title>
