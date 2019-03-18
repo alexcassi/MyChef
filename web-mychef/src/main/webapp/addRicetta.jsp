@@ -75,10 +75,5 @@ width: 150px;}
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 	
 </body>
-		<b>
-			<a href="addRicetta.jsp" style="width: 50px; height: 50px; position: center; right: 0px;
-			 		border-radius: 20px; color: white; background-color: #FF6A00;
-					font-size: 50px; text-decoration: none;">^</a>
-		</b>
 		<jsp:include page="frammenti/footer.html"></jsp:include>
 </html>
