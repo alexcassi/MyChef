@@ -29,10 +29,12 @@
 			  border-radius:20px;
 			}
 			
+			body::after{ content:''; display:block; height:100px; }
+			
 				</style>
 		
 	</head>
-	<body class="sfondo">
+	<body class="sfondo" style="min-height:100%; padding:0; margin:0; position:relative;">
 		<jsp:include page="frammenti/navbar.html"></jsp:include>
 			<br>
 		

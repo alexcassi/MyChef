@@ -14,10 +14,13 @@
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
+
+body::after{ content:''; display:block; height:100px; }
+
 	</style>
 
 </head>
-<body class="sfondo">
+<body class="sfondo" style="min-height:100%; padding:0; margin:0; position:relative;">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 
 <div class="card" style="width: 600px; height: relative; margin: 15px; padding-bottom: 25px; border-style: none;">
