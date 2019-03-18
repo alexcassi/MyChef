@@ -16,14 +16,14 @@ import business.OrdineManager;
 /**
  * Servlet implementation class RicettaController
  */
-@WebServlet("/AggiornaOrdineController")
-public class AggiornaOrdineController extends HttpServlet {
+@WebServlet("/OrdineRifiutatoController")
+public class OrdineRifiutatoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public AggiornaOrdineController() {
+	public OrdineRifiutatoController() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -35,30 +35,10 @@ public class AggiornaOrdineController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("application/json");
-		Date data = null;
-		try {
-			data = new SimpleDateFormat("dd-MM-yyyy").parse(request.getParameter("data"));
-		} catch (ParseException e2) {
-			// TODO Auto-generated catch block
-			e2.printStackTrace();
-		}
-		Date ora = null;
-		try {
-			ora = new SimpleDateFormat("kk-mm").parse(request.getParameter("ora"));
-		} catch (ParseException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		String comune = new String(request.getParameter("comune"));
-		String provincia = new String(request.getParameter("provincia"));
-		String indirizzo = new String(request.getParameter("indirizzo"));
-		Double totale = new Double(request.getParameter("totale"));
-		String note_cliente = new String(request.getParameter("note_cliente"));
-
-		Integer id = Integer.valueOf(request.getParameter("id"));
+		Integer id = new Integer(request.getParameter("id"));
 
 		try {
-			OrdineManager.updateOrdine(id, data, ora, comune, provincia, indirizzo, totale, note_cliente);
+			OrdineManager.rifiutaOrdine(id);
 			response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
 		} catch (Exception e) {
 			e.printStackTrace();

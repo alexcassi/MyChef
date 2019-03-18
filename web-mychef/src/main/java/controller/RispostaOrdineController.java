@@ -1,9 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,14 +13,14 @@ import business.OrdineManager;
 /**
  * Servlet implementation class RicettaController
  */
-@WebServlet("/AggiornaOrdineController")
-public class AggiornaOrdineController extends HttpServlet {
+@WebServlet("/RispostaOrdineController")
+public class RispostaOrdineController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public AggiornaOrdineController() {
+	public RispostaOrdineController() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -35,30 +32,12 @@ public class AggiornaOrdineController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("application/json");
-		Date data = null;
-		try {
-			data = new SimpleDateFormat("dd-MM-yyyy").parse(request.getParameter("data"));
-		} catch (ParseException e2) {
-			// TODO Auto-generated catch block
-			e2.printStackTrace();
-		}
-		Date ora = null;
-		try {
-			ora = new SimpleDateFormat("kk-mm").parse(request.getParameter("ora"));
-		} catch (ParseException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		String comune = new String(request.getParameter("comune"));
-		String provincia = new String(request.getParameter("provincia"));
-		String indirizzo = new String(request.getParameter("indirizzo"));
-		Double totale = new Double(request.getParameter("totale"));
-		String note_cliente = new String(request.getParameter("note_cliente"));
+		String note_chef = new String(request.getParameter("note_chef"));
 
 		Integer id = Integer.valueOf(request.getParameter("id"));
 
 		try {
-			OrdineManager.updateOrdine(id, data, ora, comune, provincia, indirizzo, totale, note_cliente);
+			OrdineManager.rispostaOrdine(id, note_chef);
 			response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
 		} catch (Exception e) {
 			e.printStackTrace();
