@@ -40,11 +40,11 @@
 				  </thead>
 				  <tbody>
 					    <tr>
-					      <td> <input type=text class="mylist" value=" da inserire tramite script selezione" disabled style="width: 400px; background-color: white; border-style: none"></td>
+					      <td> <input type=text class="mylist" value="${ordine.conuto_ordine}" disabled style="width: 400px; background-color: white; border-style: none"></td>
 					      
 					      <td>&nbsp&#8364</td>
-					      <td><input type="date" name="date"></td>
-					      <td><input type="time" name="ora"></td>
+					      <td><input type="date" required name="date"></td>
+					      <td><input type="time" required name="ora"></td>
 					    </tr>
 					</tbody>
 				</table>
@@ -52,13 +52,13 @@
 				<div class="card" style="text-align: center; width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 					<div class="btn-group btn-group-toggle" data-toggle="buttons" style=" position: center; display: inline-block;">
 					  <label>
-					    <input type="text" id="input" name="comune" value=" ${ordine.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px; background-color: white;">
+					    <input type="text" id="input" required name="comune" value=" ${ordine.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px; background-color: white;">
 					  </label>
 					  <label>
-					    <input type="text" id="input" name="provincia" value=" ${ordine.provincia}" style="width: 173px; margin: 2.4px; background-color: white;">
+					    <input type="text" id="input" required name="provincia" value=" ${ordine.provincia}" style="width: 173px; margin: 2.4px; background-color: white;">
 					  </label>
 					  <label>
-					    <input type="text" id="input" name="indirizzo" value=" ${ordine.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px; background-color: white;">
+					    <input type="text" id="input" required name="indirizzo" value=" ${ordine.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px; background-color: white;">
 					  </label>
 					</div>
 

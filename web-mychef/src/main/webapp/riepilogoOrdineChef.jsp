@@ -37,18 +37,9 @@
 				    </tr>
 				  </thead>
 				  <tbody>
-					  	<tr>
-					      <td class="mylist" type="text" value="${ ricetta.nome_ricetta }" disabled></td>
-					    </tr>
-					    <tr>
-					      <td class="mylist" type="text" value="${ ricetta.nome_ricetta }" disabled></td>
-					    </tr>
-					    <tr>
-					      <td class="mylist" type="text" value="${ ricetta.nome_ricetta }" disabled></td>
-					    </tr>
-					    <tr>
-					      <td></td>
-					      <td>${ ricetta.prezzo }&nbsp;&euro;</td>
+				  		<tr>
+				  		  <td> <input type=text class="mylist" value="${ordine.conuto_ordine}" disabled style="width: 400px; background-color: white; border-style: none"></td>
+					      <td>&euro;&nbsp;${ordine.totale}</td>
 					      <td><input type="date" id="date" disabled style=" border-style: none; background-color: white;"></td>
 					      <td><input type="time" id="time" disabled style=" border-style: none; background-color: white;"></td>
 					    </tr>
@@ -57,6 +48,7 @@
 			</div>
 				<div class="card" style="text-align: center; width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 					<div class="btn-group btn-group-toggle" data-toggle="buttons" style=" position: center; display: inline-block;">
+						</form>
 					  <label>
 					    <input type="text" id="input" name="comune" disabled value=" ${ordine.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px; background-color: white; border-style: none;">
 					  </label>

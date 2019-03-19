@@ -43,8 +43,8 @@
 					      <td> <input type=text class="mylist" value="da inserire tramite script selezione" disabled style="width: 400px; background-color: white; border-style: none"></td>
 					      
 					      <td>&nbsp&#8364</td>
-					      <td><input type="date" name="date"></td>
-					      <td><input type="time" name="ora"></td>
+					      <td><input type="date" required name="date"></td>
+					      <td><input type="time" required name="ora"></td>
 					    </tr>
 					</tbody>
 				</table>
@@ -52,13 +52,13 @@
 				<div class="card" style="text-align: center; width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 					<div class="btn-group btn-group-toggle" data-toggle="buttons" style=" position: center; display: inline-block;">
 					  <label>
-					    <input type="text" id="input" name="comune" value=" ${cliente.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px;">
+					    <input type="text" id="input" name="comune" required value=" ${cliente.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px;">
 					  </label>
 					  <label>
-					    <input type="text" id="input" name="provincia" value=" ${cliente.provincia}" style="width: 173px; margin: 2.4px;">
+					    <input type="text" id="input" name="provincia" required value=" ${cliente.provincia}" style="width: 173px; margin: 2.4px;">
 					  </label>
 					  <label>
-					    <input type="text" id="input" name="indirizzo" value=" ${cliente.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px;">
+					    <input type="text" id="input" name="indirizzo" required value=" ${cliente.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px;">
 					  </label>
 					</div>
 
