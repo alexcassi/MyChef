@@ -25,6 +25,8 @@
 	<body class="sfondo">
 	
 <jsp:include page="frammenti/navbar.html"></jsp:include>
+	<form id="l" name="riepilogoOrdineChef" method="post"
+		action="RispostaOrdineController">
 	<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 				<table class="table">
 				  <thead>
@@ -38,7 +40,7 @@
 				  </thead>
 				  <tbody>
 				  		<tr>
-				  		  <td> <input type=text class="mylist" value="${ordine.conuto_ordine}" disabled style="width: 400px; background-color: white; border-style: none"></td>
+				  		  <td> <input type=text class="mylist" value="${ordine.contenuto_ordine}" disabled style="width: 400px; background-color: white; border-style: none"></td>
 					      <td>&euro;&nbsp;${ordine.totale}</td>
 					      <td><input type="date" id="date" disabled style=" border-style: none; background-color: white;"></td>
 					      <td><input type="time" id="time" disabled style=" border-style: none; background-color: white;"></td>
@@ -48,7 +50,6 @@
 			</div>
 				<div class="card" style="text-align: center; width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 					<div class="btn-group btn-group-toggle" data-toggle="buttons" style=" position: center; display: inline-block;">
-						</form>
 					  <label>
 					    <input type="text" id="input" name="comune" disabled value=" ${ordine.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px; background-color: white; border-style: none;">
 					  </label>
@@ -69,8 +70,9 @@
 					<div style=" position: center;">
 						<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Conferma" style="width: 173px; margin: 15px; margin-left: 0px; ">
 					</div>
+					<input type="hidden" name="totale" value="${ordine.id}" />
 		</div>
-		
+		</form>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

@@ -40,8 +40,7 @@
 				  </thead>
 				  <tbody>
 					    <tr>
-					      <td> <input type=text class="mylist" value="${ordine.conuto_ordine}" disabled style="width: 400px; background-color: white; border-style: none"></td>
-					      
+					      <td> <input type=text class="mylist" value="${ordine.contenuto_ordine}" disabled style="width: 400px; background-color: white; border-style: none"></td> 
 					      <td>&nbsp&#8364</td>
 					      <td><input type="date" required name="date"></td>
 					      <td><input type="time" required name="ora"></td>
@@ -73,7 +72,8 @@
 					</div>
 					<input type="hidden" name="chef_email" value="${ chef.email }" />
 					<input type="hidden" name="cliente_mail" value="${ cliente.email }" />
-					<input type="hidden" name="totale" value="da inserire in sript somma" />
+					<input type="hidden" name="totale" value="${ordine.totale}" />
+					<input type="hidden" name="totale" value="${ordine.id}" />
 		</div>
 		</form>
 
