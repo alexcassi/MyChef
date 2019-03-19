@@ -34,7 +34,9 @@ public class Ordine {
 	@Column(nullable = false)
 	private Double totale;
 	@Column(nullable = false)
-	private Boolean letto;
+	private Boolean lettoChef;
+	@Column(nullable = false)
+	private Boolean lettoCliente;
 	@Column(nullable = false)
 	private Boolean accettato;
 	@Column(nullable = false)
@@ -83,11 +85,17 @@ public class Ordine {
 	public void setTotale(Double totale) {
 		this.totale = totale;
 	}
-	public Boolean getLetto() {
-		return letto;
+	public Boolean getLettoChef() {
+		return lettoChef;
 	}
-	public void setLetto(Boolean letto) {
-		this.letto = letto;
+	public void setLettoChef(Boolean letto) {
+		this.lettoChef = letto;
+	}
+	public Boolean getLettoCliente() {
+		return lettoCliente;
+	}
+	public void setLettoCliente(Boolean letto) {
+		this.lettoCliente = letto;
 	}
 	public Boolean getAccettato() {
 		return accettato;

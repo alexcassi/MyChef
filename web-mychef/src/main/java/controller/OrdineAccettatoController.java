@@ -1,9 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,14 +13,14 @@ import business.OrdineManager;
 /**
  * Servlet implementation class RicettaController
  */
-@WebServlet("/OrdineLettoController")
-public class OrdineLettoController extends HttpServlet {
+@WebServlet("/OrdineAccettatoController")
+public class OrdineAccettatoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public OrdineLettoController() {
+	public OrdineAccettatoController() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -38,7 +35,7 @@ public class OrdineLettoController extends HttpServlet {
 		Integer id = new Integer(request.getParameter("id"));
 
 		try {
-			OrdineManager.leggiOrdine(id);
+			OrdineManager.accettaOrdine(id);
 			response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -11,9 +11,10 @@ import utility.JPAUtility;
 
 public class OrdineManager {
 
-	public static Ordine newOrdine(Date data, Date ora, String comune, String provincia, String indirizzo, Double totale, String note_cliente, String cliente_mail, String chef_mail ) {
+	public static Ordine newOrdine(Date data, Date ora, String comune, String provincia, String indirizzo, Double totale, String note_cliente, String cliente_mail, String chef_mail, String contenuto_ordine ) {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = new Ordine();
+		o.setContenuto_ordine(contenuto_ordine);
 		o.setData(data);
 		o.setOra(ora);
 		o.setComune(comune);
@@ -21,7 +22,8 @@ public class OrdineManager {
 		o.setIndirizzo(indirizzo);
 		o.setTotale(totale);
 		o.setNote_cliente(note_cliente);
-		o.setLetto(false);
+		o.setLettoChef(false);
+		o.setLettoCliente(false);
 		o.setAccettato(null);
 		Chef c = em.find(Chef.class, chef_mail);
 		em.getTransaction().begin();
@@ -37,12 +39,19 @@ public class OrdineManager {
 		return o;		
 	}
 
-	public static void leggiOrdine(Integer id) {
+	public static void leggiOrdineChef(Integer id) {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
-		o.setId(id);
-		o.setLetto(true);
+		o.setLettoChef(true);
+		em.getTransaction().commit();
+	}
+	
+	public static void leggiOrdineCliente(Integer id) {
+		EntityManager em = JPAUtility.getEntityManager();
+		Ordine o = em.find(Ordine.class, id);
+		em.getTransaction().begin();
+		o.setLettoCliente(true);
 		em.getTransaction().commit();
 	}
 	
@@ -50,7 +59,6 @@ public class OrdineManager {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
-		o.setId(id);
 		o.setAccettato(true);
 		em.getTransaction().commit();
 	}
@@ -59,7 +67,6 @@ public class OrdineManager {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
-		o.setId(id);
 		o.setAccettato(false);
 		em.getTransaction().commit();
 	}
@@ -68,7 +75,6 @@ public class OrdineManager {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
-		o.setId(id);
 		o.setNote_chef(note_chef);
 		em.getTransaction().commit();
 	}
