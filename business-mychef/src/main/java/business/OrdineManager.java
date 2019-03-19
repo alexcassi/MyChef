@@ -41,7 +41,6 @@ public class OrdineManager {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
-		o.setId(id);
 		o.setLetto(true);
 		em.getTransaction().commit();
 	}
@@ -50,7 +49,6 @@ public class OrdineManager {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
-		o.setId(id);
 		o.setAccettato(true);
 		em.getTransaction().commit();
 	}
@@ -59,7 +57,6 @@ public class OrdineManager {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
-		o.setId(id);
 		o.setAccettato(false);
 		em.getTransaction().commit();
 	}
@@ -68,7 +65,6 @@ public class OrdineManager {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
-		o.setId(id);
 		o.setNote_chef(note_chef);
 		em.getTransaction().commit();
 	}
