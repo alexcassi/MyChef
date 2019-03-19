@@ -48,7 +48,7 @@
 					    </tr>
 					    <tr>
 					      <td></td>
-					      <td>127.0 &euro;</td>
+					      <td>&nbsp; &nbsp; &nbsp; &euro;</td>
 					      <td><input type="date" id="date"></td>
 					      <td><input type="time" id="time"></td>
 					    </tr>
