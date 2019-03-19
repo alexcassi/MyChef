@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
-		<title>riepilogo ordine</title>
+		<title>ordine</title>
 		<meta charset="ISO-8859-1">
 		<link rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -25,7 +25,9 @@
 	<body class="sfondo">
 	
 <jsp:include page="frammenti/navbar.html"></jsp:include>
-	<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
+	<form id="o" name="riepilogoOrdine" method="post"
+		action="NuovoOrdineController">
+	<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none" ">
 				<table class="table">
 				  <thead>
 				    <tr class="titoli">
@@ -37,20 +39,12 @@
 				    </tr>
 				  </thead>
 				  <tbody>
-					  	<tr>
-					      <td class="mylist" type="text" value="${ ricetta.nome_ricetta }" disabled></td>
-					    </tr>
 					    <tr>
-					      <td class="mylist" type="text" value="${ ricetta.nome_ricetta }" disabled></td>
-					    </tr>
-					    <tr>
-					      <td class="mylist" type="text" value="${ ricetta.nome_ricetta }" disabled></td>
-					    </tr>
-					    <tr>
-					      <td></td>
-					      <td>${ ricetta.prezzo }&nbsp;&euro;</td>
-					      <td><input type="date" id="date" disabled style=" border-style: none; background-color: white;"></td>
-					      <td><input type="time" id="time" disabled style=" border-style: none; background-color: white;"></td>
+					      <td> <input type=text class="mylist" value="da inserire tramite script selezione" disabled style="width: 400px; background-color: white; border-style: none"></td>
+					      
+					      <td>&nbsp&#8364</td>
+					      <td><input type="date" name="date"></td>
+					      <td><input type="time" name="ora"></td>
 					    </tr>
 					</tbody>
 				</table>
@@ -58,27 +52,27 @@
 				<div class="card" style="text-align: center; width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 					<div class="btn-group btn-group-toggle" data-toggle="buttons" style=" position: center; display: inline-block;">
 					  <label>
-					    <input type="text" id="input" name="comune" disabled value=" ${ordine.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px; background-color: white; border-style: none;">
+					    <input type="text" id="input" name="comune" value=" ${cliente.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px;">
 					  </label>
 					  <label>
-					    <input type="text" id="input" name="provincia" disabled value=" ${ordine.provincia}" style="width: 173px; margin: 2.4px; background-color: white; border-style: none;">
+					    <input type="text" id="input" name="provincia" value=" ${cliente.provincia}" style="width: 173px; margin: 2.4px;">
 					  </label>
 					  <label>
-					    <input type="text" id="input" name="indirizzo" disabled value=" ${ordine.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px; background-color: white; border-style: none;">
+					    <input type="text" id="input" name="indirizzo" value=" ${cliente.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px;">
 					  </label>
 					</div>
 
 					<div style=" position: center;">
-						<textarea id="textarea" disabled rows="3" style="width: 539px; background-color: white; align: center;" placeholder="Nessuna nota"></textarea>
-					</div>
-					<div style=" position: center;">
-						<textarea id="textarea" rows="3" style="width: 539px; background-color: white; align: center;" placeholder=" Note"></textarea>
-					</div>
+						<textarea id="textarea" name="note_cliente" rows="3" style="width: 539px;" placeholder=" Note" style="align: center;"></textarea>
+						</div>
 					<div style=" position: center;">
 						<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Conferma" style="width: 173px; margin: 15px; margin-left: 0px; ">
 					</div>
+					<input type="hidden" name="chef_email" value="${ chef.email }" />
+					<input type="hidden" name="cliente_mail" value="${ cliente.email }" />
+					<input type="hidden" name="totale" value="da inserire in sript somma" />
 		</div>
-		
+		</form>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

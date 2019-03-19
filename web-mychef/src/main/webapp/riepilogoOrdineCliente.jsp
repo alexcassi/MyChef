@@ -26,8 +26,8 @@
 	
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 	<form id="o" name="riepilogoOrdine" method="post"
-		action="NuovoOrdineController">
-	<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none" ">
+		action="AggiornaOrdineController">
+	<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 				<table class="table">
 				  <thead>
 				    <tr class="titoli">
@@ -40,7 +40,7 @@
 				  </thead>
 				  <tbody>
 					    <tr>
-					      <td> <input type=text class="mylist" value="da inserire tramite script selezione" disabled></td>
+					      <td> <input type=text class="mylist" value=" da inserire tramite script selezione" disabled style="width: 400px; background-color: white; border-style: none"></td>
 					      
 					      <td>&nbsp&#8364</td>
 					      <td><input type="date" name="date"></td>
@@ -52,19 +52,22 @@
 				<div class="card" style="text-align: center; width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 					<div class="btn-group btn-group-toggle" data-toggle="buttons" style=" position: center; display: inline-block;">
 					  <label>
-					    <input type="text" id="input" name="comune" value=" ${cliente.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px;">
+					    <input type="text" id="input" name="comune" value=" ${ordine.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px; background-color: white;">
 					  </label>
 					  <label>
-					    <input type="text" id="input" name="provincia" value=" ${cliente.provincia}" style="width: 173px; margin: 2.4px;">
+					    <input type="text" id="input" name="provincia" value=" ${ordine.provincia}" style="width: 173px; margin: 2.4px; background-color: white;">
 					  </label>
 					  <label>
-					    <input type="text" id="input" name="indirizzo" value=" ${cliente.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px;">
+					    <input type="text" id="input" name="indirizzo" value=" ${ordine.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px; background-color: white;">
 					  </label>
 					</div>
 
 					<div style=" position: center;">
-						<textarea id="textarea" name="note_cliente" rows="3" style="width: 539px;" placeholder="&nbsp;Note" style="align: center;"></textarea>
-						</div>
+						<textarea id="textarea" rows="3" style="width: 539px; align: center; background-color: white;" placeholder="Note"></textarea>
+					</div>
+					<div style=" position: center;">
+						<textarea id="textarea" disabled rows="3" style="width: 539px; background-color: white; align: center;" placeholder="Nessuna nota"></textarea>
+					</div>
 					<div style=" position: center;">
 						<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Conferma" style="width: 173px; margin: 15px; margin-left: 0px; ">
 					</div>
