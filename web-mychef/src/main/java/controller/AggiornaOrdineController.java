@@ -59,7 +59,7 @@ public class AggiornaOrdineController extends HttpServlet {
 
 		try {
 			OrdineManager.updateOrdine(id, data, ora, comune, provincia, indirizzo, totale, note_cliente);
-			response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
+			response.sendRedirect(response.encodeRedirectURL("temp.jsp"));
 		} catch (Exception e) {
 			e.printStackTrace();
 			response.getWriter().append("Errore interno. Riprovare. Se persiste contattarci");
