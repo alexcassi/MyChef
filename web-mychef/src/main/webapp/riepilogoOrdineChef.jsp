@@ -38,17 +38,17 @@
 				  </thead>
 				  <tbody>
 					  	<tr>
-					      <td class="mylist">${ ricetta.nome_ricetta }</td>
+					      <td class="mylist" type="text" value="${ ricetta.nome_ricetta }" disabled></td>
 					    </tr>
 					    <tr>
-					      <td class="mylist">${ ricetta.nome_ricetta }</td>
+					      <td class="mylist" type="text" value="${ ricetta.nome_ricetta }" disabled></td>
 					    </tr>
 					    <tr>
-					      <td class="mylist">${ ricetta.nome_ricetta }</td>
+					      <td class="mylist" type="text" value="${ ricetta.nome_ricetta }" disabled></td>
 					    </tr>
 					    <tr>
 					      <td></td>
-					      <td>${ ricetta.prezzo }&nbsp&#8364</td>
+					      <td>${ ricetta.prezzo }&nbsp;&euro;</td>
 					      <td><input type="date" id="date"></td>
 					      <td><input type="time" id="time"></td>
 					    </tr>
