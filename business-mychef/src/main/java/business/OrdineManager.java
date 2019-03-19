@@ -11,9 +11,10 @@ import utility.JPAUtility;
 
 public class OrdineManager {
 
-	public static Ordine newOrdine(Date data, Date ora, String comune, String provincia, String indirizzo, Double totale, String note_cliente, String cliente_mail, String chef_mail ) {
+	public static Ordine newOrdine(Date data, Date ora, String comune, String provincia, String indirizzo, Double totale, String note_cliente, String cliente_mail, String chef_mail, String contenuto_ordine ) {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = new Ordine();
+		o.setContenuto_ordine(contenuto_ordine);
 		o.setData(data);
 		o.setOra(ora);
 		o.setComune(comune);

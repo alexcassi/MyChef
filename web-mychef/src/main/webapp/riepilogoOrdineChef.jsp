@@ -49,7 +49,7 @@
 					    <tr>
 					      <td></td>
 					      <td>${ ricetta.prezzo }&nbsp;&euro;</td>
-					      <td><input type="date" id="date"></td>
+					      <td><input type="date" id="date" disable></td>
 					      <td><input type="time" id="time"></td>
 					    </tr>
 					</tbody>
@@ -70,7 +70,10 @@
 
 					<div style=" position: center;">
 						<textarea id="textarea" rows="3" style="width: 539px;" placeholder="&nbsp;Note" style="align: center;"></textarea>
-						</div>
+					</div>
+					<div style=" position: center;">
+						<textarea id="textarea" rows="3" style="width: 539px;" placeholder="&nbsp;Note" style="align: center;"></textarea>
+					</div>
 					<div style=" position: center;">
 						<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Conferma" style="width: 173px; margin: 15px; margin-left: 0px; ">
 					</div>

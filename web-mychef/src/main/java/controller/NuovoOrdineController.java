@@ -56,9 +56,10 @@ public class NuovoOrdineController extends HttpServlet {
 		String note_cliente = new String(request.getParameter("note_cliente"));
 		String cliente_mail = new String(request.getParameter("cliente_mail"));
 		String chef_mail = new String(request.getParameter("chef_mail"));
+		String contenuto_ordine = new String(request.getParameter("contenuto_ordine"));
 
 		try {
-			OrdineManager.newOrdine(data, ora, comune, provincia, indirizzo, totale, note_cliente, cliente_mail, chef_mail);
+			OrdineManager.newOrdine(data, ora, comune, provincia, indirizzo, totale, note_cliente, cliente_mail, chef_mail, contenuto_ordine);
 			response.sendRedirect(response.encodeRedirectURL("mostra_chef.jsp"));
 		} catch (Exception e) {
 			e.printStackTrace();

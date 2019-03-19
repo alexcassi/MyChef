@@ -53,6 +53,10 @@ body::after{ content:''; display:block; height:100px; }
 				<jsp:include page="card_home/card.jsp"></jsp:include>
 				
 				<jsp:include page="card_home/card.jsp"></jsp:include>
+								
+				<jsp:include page="card_home/card.jsp"></jsp:include>
+				
+				<jsp:include page="card_home/card.jsp"></jsp:include>
 					
 			 </div>
 		 
