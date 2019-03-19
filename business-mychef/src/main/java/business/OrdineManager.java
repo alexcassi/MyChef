@@ -22,7 +22,8 @@ public class OrdineManager {
 		o.setIndirizzo(indirizzo);
 		o.setTotale(totale);
 		o.setNote_cliente(note_cliente);
-		o.setLetto(false);
+		o.setLettoChef(false);
+		o.setLettoCliente(false);
 		o.setAccettato(null);
 		Chef c = em.find(Chef.class, chef_mail);
 		em.getTransaction().begin();
@@ -38,11 +39,19 @@ public class OrdineManager {
 		return o;		
 	}
 
-	public static void leggiOrdine(Integer id) {
+	public static void leggiOrdineChef(Integer id) {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
-		o.setLetto(true);
+		o.setLettoChef(true);
+		em.getTransaction().commit();
+	}
+	
+	public static void leggiOrdineCliente(Integer id) {
+		EntityManager em = JPAUtility.getEntityManager();
+		Ordine o = em.find(Ordine.class, id);
+		em.getTransaction().begin();
+		o.setLettoCliente(true);
 		em.getTransaction().commit();
 	}
 	

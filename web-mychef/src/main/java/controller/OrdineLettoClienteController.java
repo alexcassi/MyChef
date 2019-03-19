@@ -13,14 +13,14 @@ import business.OrdineManager;
 /**
  * Servlet implementation class RicettaController
  */
-@WebServlet("/OrdineLettoController")
-public class OrdineLettoController extends HttpServlet {
+@WebServlet("/OrdineLettoClienteController")
+public class OrdineLettoClienteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public OrdineLettoController() {
+	public OrdineLettoClienteController() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -35,7 +35,7 @@ public class OrdineLettoController extends HttpServlet {
 		Integer id = new Integer(request.getParameter("id"));
 
 		try {
-			OrdineManager.leggiOrdine(id);
+			OrdineManager.leggiOrdineCliente(id);
 			response.sendRedirect(response.encodeRedirectURL("profilo_chef.jsp"));
 		} catch (Exception e) {
 			e.printStackTrace();
