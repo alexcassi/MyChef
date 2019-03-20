@@ -48,30 +48,13 @@ body::after{ content:''; display:block; height:100px; }
 				  <thead>
 				    <tr class="titoli">
 				      <th scope="col">&nbsp;</th>
+				      <th scope="col">Quantità</th>
 				      <th scope="col">Ricette</th>
 				      <th scope="col">prezzo</th>
 				      <th scope="col">&nbsp;</th>
 				  	</tr>
 				  </thead>
-				  <tbody>
-				    <tr>
-				      <th scope="row"><input type="checkbox" value=""></th>
-				      <td>Carbonara al nero di seppia</td>
-				      <td>20.0 &euro;</td>
-				      
-				    </tr>
-				    <tr>
-				      <th scope="row"><input type="checkbox" value=""></th>
-				      <td>Rotoli dolci</td>
-				      <td>27.0 &euro;</td>
-				     
-				    </tr>
-				    <tr>
-				      <th scope="row"><input type="checkbox" value=""></th>
-				      <td>Uova quadrate con lenticchie di babilonia (molto rare)</td>
-				      <td>80.0 &euro;</td>
-				      
-				    </tr>
+				  <tbody class ="da_riempire">
 				  </tbody>
 				</table>
 				</div>
@@ -86,6 +69,7 @@ body::after{ content:''; display:block; height:100px; }
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 	<script src="js/global_scripts.js"></script>
-						<jsp:include page="frammenti/footer.html"></jsp:include>
+	<script src="js/listaCreaOrdine.js"></script>
+	<jsp:include page="frammenti/footer.html"></jsp:include>
 	</body>
 </html>
