@@ -53,10 +53,11 @@
 <br>
 	<p><b>L'area dove si trova è: </b> ${ requested_chef.luogo_lavoro }</p>
 	
-	<div style="margin: 15px; text-align: right">
+	<div style="margin: 15px; text-align: right;">
+	<p style="font-size:18px; text-transform: uppercase;"><b>crea il tuo ordine qui</b></p> <!-- PROPOSTA -->
 		<input id="submit" type="submit" class="btn btn btn-outline-success" value="Ordina"> <!-- QUI BOTTONE ORDINA -->
 	</div>
-	
+	<br>
 	<p><b>Contattami: </b> ${ requested_chef.email }</p>
 	<br>
 	<br>

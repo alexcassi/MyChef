@@ -62,9 +62,11 @@
 					</div>
 
 					<div style=" position: center;">
+						<p style="color: #FF6A00;">specificare se si è allergici o intolleranti a qualche alimento</p>
 						<textarea id="textarea" rows="3" style="width: 539px; align: center; background-color: white;" placeholder="Note"></textarea>
 					</div>
 					<div style=" position: center;">
+						<p style="color: #FF6A00;">Note dello Chef</p>
 						<textarea id="textarea" disabled rows="3" style="width: 539px; background-color: white; align: center;" placeholder="Nessuna nota"></textarea>
 					</div>
 					<div style=" position: center;">

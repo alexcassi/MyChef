@@ -62,9 +62,11 @@
 					</div>
 
 					<div style=" position: center;">
+					<p style="color: #FF6A00;">Note del cliente</p>
 						<textarea id="textarea" disabled rows="3" style="width: 539px; background-color: white; align: center;" placeholder="Nessuna nota"></textarea>
 					</div>
 					<div style=" position: center;">
+					<p style="color: #FF6A00;">Note dello Chef</p>
 						<textarea id="textarea" rows="3" style="width: 539px; background-color: white; align: center;" placeholder=" Note"></textarea>
 					</div>
 					<div style=" position: center;">
