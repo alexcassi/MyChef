@@ -73,9 +73,6 @@ body::after{ content:''; display:block; height:100px; }
 		<script src="js/global_scripts.js"></script>
 	
 </body>
-<<<<<<< HEAD
-=======
 
->>>>>>> branch 'master' of https://github.com/alexcassi/MyChef2.git
 		<jsp:include page="frammenti/footer.html"></jsp:include>
 </html>
