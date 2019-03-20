@@ -56,7 +56,7 @@ body::after{ content:''; display:block; height:100px; }
 				  <thead>
 				    <tr class="titoli">
 				      <th scope="col">&nbsp;</th>
-				      <th scope="col">Totale</th>
+				      <th scope="col">Prezzo</th>
 				      <th scope="col">Ricette</th>
 				      <th scope="col">prezzo</th>
 				      <th scope="col">&nbsp;</th>
