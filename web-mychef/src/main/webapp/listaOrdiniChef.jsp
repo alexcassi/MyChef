@@ -22,12 +22,13 @@
 			  background-color: #FF6A00; /* colore di sfondo    */
 			  border: 2px solid #FF6A00; /* bordo dell'elemento */
 			  color: white;               /* colore del testo    */
+			  hover-border-color: #FF6A00;
 			  font-weight: bold;         /* testo in grassetto  */
 			  -moz-border-radius: 20px;
 			  -webkit-border-radius: 20px;
 			  border-radius: 20px;
 			  width: 120px;
-			  margin: 10px;
+			  margin-top: 5px;
 			}
 	</style>					
 	
@@ -35,84 +36,33 @@
 	</head>
 	<body class="sfondo">
 		<jsp:include page="frammenti/navbar.html"></jsp:include>
+		<form id="c" name="listaOrdiniChef" method="post"
+				action="RispostaOrdineController">
 		<div>
 			<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 				<label>
+
+						<input id="submit" type="submit" class="btn btn btn-outline-success" value="Accettato" style="margin-right:7.5px;">
+						<input id="submit" type="submit" class="btn btn btn-outline-success" value="Rifiutato" style="margin-top: 5px;">
+						<!-- no radio button, ma bottoni normali senza tasto submit -->
+
+					&nbsp;ID ${order.id}&nbsp;
 					
-					  <input type="radio" name="risp" value="accettato"> Accettato 
-					  <input type="radio" name="risp" value="rifiutato"> Rifiutato
-					  	<input id="submit"class="btn btn btn-outline-success" value="Conferma">
-					&nbsp;ID ${order.id}
-					&nbsp;
-					<input type="date" id="date" disabled style=" border-style: none; background-color: white;">
-					<input type="time" id="time" disabled style=" border-style: none; background-color: white;">
-					&nbsp;
-			    	<input type="text" id="input" name="comune" disabled value=" ${ordine.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px; background-color: white; border-style: none;">
-			    	<input type="text" id="input" name="provincia" disabled value=" ${ordine.provincia}" style="width: 173px; margin: 2.4px; background-color: white; border-style: none;">
-					<input type="text" id="input" name="indirizzo" disabled value=" ${ordine.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px; background-color: white; border-style: none;">
+					<input type="date" id="date" disabled style=" border-style: none; background-color: white; margin-top: 5px;">
+					<input type="time" id="time" disabled style=" border-style: none; background-color: white; margin-top: 5px;"> &nbsp;
 					
-					&nbsp;&euro;&nbsp;${ordine.totale}
+			    	<input type="text" id="input" name="comune" disabled value=" ${ordine.comune}" style="width: 173px; margin: 5px; margin-left: 0px; margin-top: 5px; background-color: white; border-style: none;">
+			    	<input type="text" id="input" name="provincia" disabled value=" ${ordine.provincia}" style="width: 173px; margin: 5px; margin-top: 5px; background-color: white; border-style: none;">
+					<input type="text" id="input" name="indirizzo" disabled value=" ${ordine.indirizzo}" style="width: 173px; margin: 5px; margin-right: 0px; margin-top: 5px; background-color: white; border-style: none;">
 					
-				</label>
-			</div>
-						<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
-				<label>
-					
-					  <input type="radio" name="risp" value="accettato"> Accettato 
-					  <input type="radio" name="risp" value="rifiutato"> Rifiutato
-					  	<input id="submit"class="btn btn btn-outline-success" value="Conferma">
-					&nbsp;ID ${order.id}
-					&nbsp;
-					<input type="date" id="date" disabled style=" border-style: none; background-color: white;">
-					<input type="time" id="time" disabled style=" border-style: none; background-color: white;">
-					&nbsp;
-			    	<input type="text" id="input" name="comune" disabled value=" ${ordine.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px; background-color: white; border-style: none;">
-			    	<input type="text" id="input" name="provincia" disabled value=" ${ordine.provincia}" style="width: 173px; margin: 2.4px; background-color: white; border-style: none;">
-					<input type="text" id="input" name="indirizzo" disabled value=" ${ordine.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px; background-color: white; border-style: none;">
-					
-					&nbsp;&euro;&nbsp;${ordine.totale}
-					
-				</label>
-			</div>
-						<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
-				<label>
-					
-					  <input type="radio" name="risp" value="accettato"> Accettato 
-					  <input type="radio" name="risp" value="rifiutato"> Rifiutato
-					  	<input id="submit"class="btn btn btn-outline-success" value="Conferma">
-					&nbsp;ID ${order.id}
-					&nbsp;
-					<input type="date" id="date" disabled style=" border-style: none; background-color: white;">
-					<input type="time" id="time" disabled style=" border-style: none; background-color: white;">
-					&nbsp;
-			    	<input type="text" id="input" name="comune" disabled value=" ${ordine.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px; background-color: white; border-style: none;">
-			    	<input type="text" id="input" name="provincia" disabled value=" ${ordine.provincia}" style="width: 173px; margin: 2.4px; background-color: white; border-style: none;">
-					<input type="text" id="input" name="indirizzo" disabled value=" ${ordine.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px; background-color: white; border-style: none;">
-					
-					&nbsp;&euro;&nbsp;${ordine.totale}
-					
-				</label>
-			</div>
-						<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
-				<label>
-					
-					  <input type="radio" name="risp" value="accettato"> Accettato 
-					  <input type="radio" name="risp" value="rifiutato"> Rifiutato
-					  	<input id="submit"class="btn btn btn-outline-success" value="Conferma">
-					&nbsp;ID ${order.id}
-					&nbsp;
-					<input type="date" id="date" disabled style=" border-style: none; background-color: white;">
-					<input type="time" id="time" disabled style=" border-style: none; background-color: white;">
-					&nbsp;
-			    	<input type="text" id="input" name="comune" disabled value=" ${ordine.comune}" style="width: 173px; margin: 2.4px; margin-left: 0px; background-color: white; border-style: none;">
-			    	<input type="text" id="input" name="provincia" disabled value=" ${ordine.provincia}" style="width: 173px; margin: 2.4px; background-color: white; border-style: none;">
-					<input type="text" id="input" name="indirizzo" disabled value=" ${ordine.indirizzo}" style="width: 173px; margin: 2.4px; margin-right: 0px; background-color: white; border-style: none;">
-					
-					&nbsp;&euro;&nbsp;${ordine.totale}
+					&nbsp;&nbsp;${ordine.totale}&euro;&nbsp;
+
+						<input id="submit" type="submit" class="btn btn btn-outline-success" value="dettagli" href="riepilogoOrdineChef"  style="margin-top: 5px;">
 					
 				</label>
 			</div>
 		</div>
+		</form>
 		
 			<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 				integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
