@@ -51,7 +51,7 @@
 				    	<input type="text" id="input" name="provincia" disabled value=" ${ordine.provincia}" style="width: 173px; margin: 5px; margin-top: 5px; background-color: white; border-style: none;">
 						<input type="text" id="input" name="indirizzo" disabled value=" ${ordine.indirizzo}" style="width: 173px; margin: 5px; margin-right: 0px; margin-top: 5px; background-color: white; border-style: none;">
 						
-						&nbsp;&nbsp;${ordine.totale}&euro;&nbsp;&nbsp;
+						&nbsp;&nbsp;${ordine.totale}&euro;&nbsp;&nbsp;&nbsp;
 	
 							<input id="submit" type="submit" class="btn btn btn-outline-success" value="dettagli" href="riepilogoOrdineChef"  style="margin-top: 5px;">
 						
