@@ -44,7 +44,7 @@ public class NuovoOrdineController extends HttpServlet {
 		}
 		Date ora = null;
 		try {
-			ora = new SimpleDateFormat("kk-mm").parse(request.getParameter("ora"));
+			 ora = new SimpleDateFormat("kk-mm").parse(request.getParameter("ora"));
 		} catch (ParseException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

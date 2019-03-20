@@ -55,7 +55,13 @@
 	
 	<div style="margin: 15px; text-align: right;">
 	<p style="font-size:18px; text-transform: uppercase;"><b>crea il tuo ordine qui</b></p> <!-- PROPOSTA -->
-		<input id="submit" type="submit" class="btn btn btn-outline-success" value="Ordina"> <!-- QUI BOTTONE ORDINA -->
+	
+			<form action="creaOrdineController" method="get">
+				<input type="hidden" value="" id="email_chef_request" name="email_chef_request" value="${ requested_chef.email }">
+				<input id="ordina" type="submit" class="btn btn btn-outline-success" value="ORDINA"> <!-- QUI BOTTONE ORDINA -->
+		</form>
+	
+		
 	</div>
 	<br>
 	<p><b>Contattami: </b> ${ requested_chef.email }</p>

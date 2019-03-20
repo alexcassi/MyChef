@@ -19,8 +19,10 @@ public class OutputCreaOrdineController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String risposta=new String(request.getParameter("contenuto"));
 		Double totale=Double.valueOf(request.getParameter("totale"));
+		String chef_mail=new String(request.getParameter("email_chef_request"));
 		request.setAttribute("totale", totale);
 		request.setAttribute("contenuto", risposta);
+		request.setAttribute("chef_mail", chef_mail);
 		request.getRequestDispatcher("nuovoOrdine.jsp").forward(request, response);
 	}
 }

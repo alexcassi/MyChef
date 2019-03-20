@@ -68,7 +68,7 @@
 					<div style=" position: center;">
 						<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Conferma" style="width: 173px; margin: 15px; margin-left: 0px; ">
 					</div>
-					<input type="hidden" name="chef_email" value="${ chef.email }" />
+					<input type="hidden" name="chef_email" value="${ chef_mail }" />
 					<input type="hidden" name="cliente_mail" value="${ cliente.email }" />
 		</div>
 		</form>

@@ -67,9 +67,11 @@ body::after{ content:''; display:block; height:100px; }
 				</div>
 			
 		<div style="padding-top:16px;">
-				<form action="OutputCreaOrdineController" method="get">
+		
+		<form action="OutputCreaOrdineController" method="get">
 				<input type="hidden" value="" id="contenuto" name="contenuto">
 				<input type="hidden" value="" id="totale" name="totale">
+				<input id ="email_chef_request" name="email_chef_request" type="hidden" value="${email_chef_request}">
 				<input type="submit" id="continua" class="btn btn btn-outline-success" value="CONTINUA">
 		</form>
 		
