@@ -11,11 +11,29 @@
 
 	<style>
 	.nav_img:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+		opacity: 0.5;
+		filter: alpha(opacity=50);
 }
 
-body::after{ content:''; display:block; height:100px; }
+	body::after{ 
+		content:'';
+		display:block;
+		height:100px;
+}
+
+	#submit {
+		background-color: #FF6A00;   /* colore di sfondo    */
+		border: 2px solid #FF6A00;   /* bordo dell'elemento */
+		color: white;                /* colore del testo    */
+		font-weight: bold;           /* testo in grassetto  */
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		border-radius:20px;
+		height: 40px;				 /* altezza bottone  */
+		width: 120px;				 /* larghezza bottone  */
+		font-size: 18px;			 /* grandezza testo  */
+		text-transform: uppercase;	 /* testo maiuscolo  */
+}
 
 	</style>
 
@@ -23,7 +41,7 @@ body::after{ content:''; display:block; height:100px; }
 <body class="sfondo" style="min-height:100%; padding:0; margin:0; position:relative;">
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 
-<div class="card" style="width:800px; height: relative; margin: 15px; padding-bottom: 25px">
+<div class="card" style="width:800px; width: relative; height: relative; margin: 15px; padding-bottom: 25px">
 <br>
 <div style="margin-left: 1.89%;">
 <h1><span id="lblNome">${ requested_chef.nome }</span> <span id="lblCognome">${ requested_chef.cognome }</span></h1>
@@ -33,8 +51,12 @@ body::after{ content:''; display:block; height:100px; }
     width: 400px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" onerror="standby()">
 <br>
 <br>
-	<p><b>L' area dove si trova è: </b> ${ requested_chef.luogo_lavoro }</p>
-	<br>
+	<p><b>L'area dove si trova è: </b> ${ requested_chef.luogo_lavoro }</p>
+	
+	<div style="margin: 15px; text-align: right">
+		<input id="submit" type="submit" class="btn btn btn-outline-success" value="Ordina"> <!-- QUI BOTTONE ORDINA -->
+	</div>
+	
 	<p><b>Contattami: </b> ${ requested_chef.email }</p>
 	<br>
 	<br>
