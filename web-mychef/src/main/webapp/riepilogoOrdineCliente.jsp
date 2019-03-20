@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<link rel="shortcut icon" type="image/png" href="immagini/M.png"/>
-		<title>riepilogo ordine</title>
+		<title>Riepilogo ordine MyChef</title>
 		<meta charset="ISO-8859-1">
 		<link rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
