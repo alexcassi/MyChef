@@ -66,7 +66,14 @@ body::after{ content:''; display:block; height:100px; }
 				</table>
 				</div>
 			
-
+		<div style="padding-top:16px;">
+				<form action="OutputCreaOrdineController" method="get">
+				<input type="hidden" value="" id="contenuto" name="contenuto">
+				<input type="hidden" value="" id="totale" name="totale">
+				<input type="submit" id="continua" class="btn btn btn-outline-success" value="CONTINUA">
+		</form>
+		
+		</div>	
 		
 
 					<script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -77,6 +84,7 @@ body::after{ content:''; display:block; height:100px; }
 
 	<script src="js/global_scripts.js"></script>
 	<script src="js/listaCreaOrdine.js"></script>
+	
 						<jsp:include page="frammenti/footer.html"></jsp:include>
 	</body>
 </html>
