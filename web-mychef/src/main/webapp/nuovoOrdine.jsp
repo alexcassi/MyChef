@@ -40,9 +40,9 @@
 				  </thead>
 				  <tbody>
 					    <tr>
-					      <td> <input type=text class="mylist" value="da inserire tramite script selezione" disabled style="width: 400px; background-color: white; border-style: none"></td>
+					      <td> <input type=text class="mylist" value="${contenuto}" disabled style="width: 400px; background-color: white; border-style: none"></td>
 					      
-					      <td>&nbsp&#8364</td>
+					      <td>&nbsp&#8364&nbsp<input type=number name="totale" value="${totale}"></td>
 					      <td><input type="date" required name="date"></td>
 					      <td><input type="time" required name="ora"></td>
 					    </tr>
@@ -70,7 +70,6 @@
 					</div>
 					<input type="hidden" name="chef_email" value="${ chef.email }" />
 					<input type="hidden" name="cliente_mail" value="${ cliente.email }" />
-					<input type="hidden" name="totale" value="da inserire in sript somma" />
 		</div>
 		</form>
 
