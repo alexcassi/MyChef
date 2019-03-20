@@ -66,7 +66,7 @@
 						<textarea id="textarea" disabled rows="3" style="width: 539px; background-color: white; align: center;" placeholder="Nessuna nota"></textarea>
 					</div>
 					<div style=" position: center;">
-					<p style="color: #FF6A00;">Note dello Chef</p>
+					<p style="color: #FF6A00;">Note dello Chef</p><!-- o "Eventuali messaggi per il cliente" -->
 						<textarea id="textarea" rows="3" style="width: 539px; background-color: white; align: center;" placeholder=" Note"></textarea>
 					</div>
 					<div style=" position: center;">
