@@ -24,10 +24,13 @@
 	</head>
 	<body class="sfondo">
 	
+	<script src="js/global_scripts.js"></script>
+				<jsp:include page="frammenti/footer.html"></jsp:include>
+	
 <jsp:include page="frammenti/navbar.html"></jsp:include>
 	<form id="o" name="riepilogoOrdine" method="post"
 		action="NuovoOrdineController">
-	<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none" ">
+	<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none ">
 				<table class="table">
 				  <thead>
 				    <tr class="titoli">
@@ -42,7 +45,7 @@
 					    <tr>
 					      <td> <input type=text class="mylist" value="${contenuto}" disabled style="width: 400px; background-color: white; border-style: none"></td>
 					      
-					      <td>&nbsp&#8364&nbsp<input type=number name="totale" value="${totale}"></td>
+					      <td>&nbsp&#8364&nbsp<input type=number name="totale" disabled style="background-color: white; border-style:none;" value="${totale}"></td>
 					      <td><input type="date" required name="date"></td>
 					      <td><input type="time" required name="ora"></td>
 					    </tr>
@@ -68,18 +71,24 @@
 					<div style=" position: center;">
 						<input id ="submit" type="submit" class="btn btn btn-outline-success" value="Conferma" style="width: 173px; margin: 15px; margin-left: 0px; ">
 					</div>
-					<input type="hidden" name="chef_email" value="${ chef_mail }" />
-					<input type="hidden" name="cliente_mail" value="${ cliente.email }" />
+					<input type="hidden" name="chef_mail" id="chef_mail" />
+					<input type="hidden" name="cliente_mail" id="cliente_mail" />
+					<input type="hidden" name="contenuto_ordine" value="${contenuto}" />
+					<input type="hidden" name="totale" value="${totale}" />
+					
 		</div>
 		</form>
 
+	<script>var request_chef = sessionStorage.getItem('email_request');	
+	document.getElementById('chef_mail').value = request_chef
+	var request_cliente = sessionStorage.getItem('cliente_request');
+	document.getElementById('cliente_mail').value = request_cliente</script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
 		
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 		
-			<script src="js/global_scripts.js"></script>
-				<jsp:include page="frammenti/footer.html"></jsp:include>
+			
 </body>
 </html>

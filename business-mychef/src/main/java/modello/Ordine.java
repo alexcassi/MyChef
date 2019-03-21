@@ -38,7 +38,7 @@ public class Ordine {
 	@Column(nullable = false)
 	private Boolean lettoCliente;
 	@Column(nullable = false)
-	private Boolean accettato;
+	private Integer accettato;
 	@Column(nullable = false)
 	private String note_cliente;
 	@Column(nullable = false)
@@ -97,10 +97,10 @@ public class Ordine {
 	public void setLettoCliente(Boolean letto) {
 		this.lettoCliente = letto;
 	}
-	public Boolean getAccettato() {
+	public Integer getAccettato() {
 		return accettato;
 	}
-	public void setAccettato(Boolean accettato) {
+	public void setAccettato(Integer accettato) {
 		this.accettato = accettato;
 	}
 	public String getNote_cliente() {

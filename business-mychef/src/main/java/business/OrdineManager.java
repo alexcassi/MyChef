@@ -21,20 +21,24 @@ public class OrdineManager {
 		o.setProvincia(provincia);
 		o.setIndirizzo(indirizzo);
 		o.setTotale(totale);
-		o.setNote_cliente(note_cliente);
+		if(note_cliente!=null) {
+			o.setNote_cliente(note_cliente);
+		} else {
+			o.setNote_cliente("Nessuna nota");
+		}
+		
 		o.setLettoChef(false);
 		o.setLettoCliente(false);
-		o.setAccettato(null);
+		o.setAccettato(0);
+		o.setNote_chef("Nessuna nota");
 		Chef c = em.find(Chef.class, chef_mail);
-		em.getTransaction().begin();
-		c.aggiungiOrdine(o);
-		em.persist(o);
-		em.getTransaction().commit();
 		Cliente u = em.find(Cliente.class, cliente_mail);
 		em.getTransaction().begin();
+		c.aggiungiOrdine(o);
 		u.aggiungiOrdine(o);
 		em.persist(o);
 		em.getTransaction().commit();
+		em.clear();
 		
 		return o;		
 	}
@@ -59,7 +63,7 @@ public class OrdineManager {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
-		o.setAccettato(true);
+		o.setAccettato(1);
 		em.getTransaction().commit();
 	}
 	
@@ -67,7 +71,7 @@ public class OrdineManager {
 		EntityManager em = JPAUtility.getEntityManager();
 		Ordine o = em.find(Ordine.class, id);
 		em.getTransaction().begin();
-		o.setAccettato(false);
+		o.setAccettato(-1);
 		em.getTransaction().commit();
 	}
 	

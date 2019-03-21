@@ -57,7 +57,7 @@
 	<p style="font-size:18px; text-transform: uppercase;"><b>crea il tuo ordine qui</b></p> <!-- PROPOSTA -->
 	
 			<form action="creaOrdineController" method="get">
-				<input type="hidden" value="" id="email_chef_request" name="email_chef_request" value="${ requested_chef.email }">
+				<input type="hidden" name="email_chef_request" value="${ requested_chef.email }">
 				<input id="ordina" type="submit" class="btn btn btn-outline-success" value="ORDINA"> <!-- QUI BOTTONE ORDINA -->
 		</form>
 	
@@ -85,6 +85,10 @@
 	<script>
 		sessionStorage.setItem('email', '${ requested_chef.email }');
 	</script>
+	<script>
+		sessionStorage.setItem('email_request', '${requested_chef.email}');
+	</script>
+	
 	
 	<script src="js/mostraProfiloChef.js"></script>
 	

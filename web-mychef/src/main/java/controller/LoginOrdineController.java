@@ -33,11 +33,13 @@ public class LoginOrdineController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.getSession().invalidate();
+		String emailRequest = new String(request.getParameter("email_chef_request"));
 		String email = new String(request.getParameter("email"));
 		String password = new String(request.getParameter("password"));
 		Cliente u = LoginManager.loginCliente(email, password);
 		if (u != null) {
 			request.getSession().setAttribute("cliente", u);
+			request.setAttribute("email_chef_request", emailRequest);
 			response.sendRedirect(response.encodeRedirectURL("creaOrdine.jsp"));
 		} else {
 			request.setAttribute("errorMessage", "Email o password errati.");

@@ -1,9 +1,9 @@
 //crea lista delle ricette
 $(() => {
 	var lista_ricette;
-	var email = 'marco95.cl@hotmail.it';
+	var email = sessionStorage.getItem('email_request');
 	$.ajax({
-		url: 'ListaRicetteServlet?chef_email=' + 'marco95.cl@hotmail.it',
+		url: 'ListaRicetteServlet?chef_email=' + email,
 		method: 'get'
 	})
 	.done((u) => {

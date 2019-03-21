@@ -77,7 +77,12 @@ body::after{ content:''; display:block; height:100px; }
 		
 		</div>	
 		
-
+		
+			
+		
+	<script>
+		sessionStorage.setItem('cliente_request', '${cliente.email}');
+	</script>
 					<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
