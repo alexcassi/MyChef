@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 
-<title>MyChef-registrazione dati</title>
+<title>Signup MyChef</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"

@@ -39,7 +39,7 @@
 		<jsp:include page="frammenti/navbar.html"></jsp:include>
 		<div class="card" style="width: relative; height: relative; margin: 15px; padding: 15px; border-style: none">
 		<label>
-			<p>Non puoi essere loggato come chef, devi entrare come cliente.</p>
+			<b>Non puoi essere loggato come chef, devi entrare come cliente.</b>
    			 <a class="submit" href="login.jsp">
    			 <input id="submit" type="submit" class="btn btn btn-outline-success" value="login"></a>
    			 </label>

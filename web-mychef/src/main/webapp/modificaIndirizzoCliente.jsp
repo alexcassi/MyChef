@@ -8,7 +8,7 @@
 <jsp:include page="frammenti/stili.frammento"></jsp:include>
 <link rel="stylesheet" href="css/stile.css">
 
-<title>modifica indirizzo</title>
+<title>Modifica indirizzo MyChef</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
